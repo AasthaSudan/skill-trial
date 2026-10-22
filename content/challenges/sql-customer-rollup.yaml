@@ -1,0 +1,91 @@
+slug: sql-customer-rollup
+skill: sql
+family: sql.customer-rollup.advanced
+type: sql
+title: Customer event rollup
+statement: Return one row per customer with id, count of matched orders, and total amount. Keep repeated
+  order events, show customers with no matches, treat a NULL amount as zero in the total, ignore orders
+  with no customer, and order by customer id.
+competencies: &id001
+- aggregation
+- duplicates
+- null_handling
+- joins
+language: sql
+schema: CREATE TABLE customers (id INTEGER PRIMARY KEY, name TEXT, email TEXT); CREATE TABLE orders
+  (id INTEGER PRIMARY KEY, customer_id INTEGER, amount REAL);
+sample_rows:
+  customers:
+  - - 1
+    - Ada
+    - ada@example.com
+  - - 2
+    - Lin
+    - null
+  orders:
+  - - 1
+    - 1
+    - 20
+starter: 'SELECT 1
+
+  -- Build the requested result.
+
+  '
+reference: SELECT c.id,COUNT(o.id),COALESCE(SUM(o.amount),0) FROM customers c LEFT JOIN orders o ON
+  o.customer_id=c.id GROUP BY c.id ORDER BY c.id
+hints:
+- Translate each output row into a precise group or relationship.
+- Test missing values, unmatched keys, and repeated events.
+- Make ordering explicit when the result contract requires it.
+tests:
+- label: Representative shop
+  dataset: CREATE TABLE customers (id INTEGER PRIMARY KEY, name TEXT, email TEXT); CREATE TABLE orders
+    (id INTEGER PRIMARY KEY, customer_id INTEGER, amount REAL);INSERT INTO customers VALUES (1,'Ada','a'),(2,'Lin',NULL),(3,'Sam','s');
+    INSERT INTO orders VALUES (1,1,20),(2,1,20),(3,3,15);
+  expected:
+  - - 1
+    - 2
+    - 40.0
+  - - 2
+    - 0
+    - 0
+  - - 3
+    - 1
+    - 15.0
+  visibility: sample
+  competencies: *id001
+- label: NULL values and missing links
+  dataset: CREATE TABLE customers (id INTEGER PRIMARY KEY, name TEXT, email TEXT); CREATE TABLE orders
+    (id INTEGER PRIMARY KEY, customer_id INTEGER, amount REAL);INSERT INTO customers VALUES (1,'Ada','a'),(2,'Lin',NULL);
+    INSERT INTO orders VALUES (1,1,NULL),(2,NULL,9);
+  expected:
+  - - 1
+    - 1
+    - 0
+  - - 2
+    - 0
+    - 0
+  visibility: hidden
+  competencies: *id001
+- label: Repeated business events
+  dataset: CREATE TABLE customers (id INTEGER PRIMARY KEY, name TEXT, email TEXT); CREATE TABLE orders
+    (id INTEGER PRIMARY KEY, customer_id INTEGER, amount REAL);INSERT INTO customers VALUES (1,'Ada','a');
+    INSERT INTO orders VALUES (1,1,12),(2,1,12),(3,1,18);
+  expected:
+  - - 1
+    - 3
+    - 42.0
+  visibility: hidden
+  competencies: *id001
+- label: Small or empty groups
+  dataset: CREATE TABLE customers (id INTEGER PRIMARY KEY, name TEXT, email TEXT); CREATE TABLE orders
+    (id INTEGER PRIMARY KEY, customer_id INTEGER, amount REAL);INSERT INTO customers VALUES (5,'No
+    orders',NULL);
+  expected:
+  - - 5
+    - 0
+    - 0
+  visibility: hidden
+  competencies: *id001
+level: advanced
+minutes: 18

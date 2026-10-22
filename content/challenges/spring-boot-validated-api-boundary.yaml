@@ -1,0 +1,54 @@
+slug: spring-boot-validated-api-boundary
+skill: spring-boot
+family: spring-boot.validated-api-boundary.advanced
+type: scenario
+title: Validate the request at the boundary
+statement: An API accepts a customer name and a positive quantity. Invalid requests must not reach
+  business services, and callers need a consistent validation response.
+competencies:
+- rest_apis
+- validation
+- exceptions
+questions:
+- id: dto
+  prompt: Where should the input constraints live?
+  options:
+  - id: dto-1
+    text: On a request DTO with constraints such as @NotBlank and @Positive
+  - id: dto-2
+    text: Only in a database error handler
+  - id: dto-3
+    text: In a comment above the controller method
+- id: trigger
+  prompt: How does a controller request bean-validation for a request body?
+  options:
+  - id: trigger-1
+    text: Use @Valid (or @Validated where applicable) on the request parameter
+  - id: trigger-2
+    text: Add @Transactional to the DTO
+  - id: trigger-3
+    text: Use @Autowired on every field
+- id: response
+  prompt: How should validation errors be exposed?
+  options:
+  - id: response-1
+    text: Map field errors to a stable 4xx response without leaking internals
+  - id: response-2
+    text: Return HTTP 200 with a Java stack trace
+  - id: response-3
+    text: Silently replace invalid values with arbitrary defaults
+answers:
+  dto: dto-1
+  trigger: trigger-1
+  response: response-1
+hints:
+- Name the framework boundary before choosing a fix.
+- Consider what happens on failure, not only on the success path.
+level: advanced
+minutes: 10
+explanation_prompt: In 2–4 sentences, explain the framework boundary behind your choices and one concrete
+  way you would verify the behavior.
+explanation_rubric:
+- Names the relevant Spring or application boundary accurately.
+- Connects the boundary to the failure or correctness behavior in this scenario.
+- Suggests a concrete verification step such as a focused integration test.

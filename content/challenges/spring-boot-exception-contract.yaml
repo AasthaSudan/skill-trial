@@ -1,0 +1,53 @@
+slug: spring-boot-exception-contract
+skill: spring-boot
+family: spring-boot.exception-contract.advanced
+type: scenario
+title: Keep the error contract stable
+statement: Several controllers currently catch broad exceptions and return success-shaped responses.
+  Clients need reliable HTTP status codes and safe, actionable error bodies.
+competencies:
+- rest_apis
+- exceptions
+questions:
+- id: mapping
+  prompt: Where is a shared HTTP exception mapping best expressed?
+  options:
+  - id: mapping-1
+    text: '@RestControllerAdvice with narrow @ExceptionHandler methods'
+  - id: mapping-2
+    text: A static initializer in every entity
+  - id: mapping-3
+    text: A catch-all that returns HTTP 200
+- id: specificity
+  prompt: How should unexpected internal failures be handled?
+  options:
+  - id: specificity-1
+    text: Log a correlation identifier server-side and return a generic 5xx body
+  - id: specificity-2
+    text: Return the exception message and stack trace to every caller
+  - id: specificity-3
+    text: Convert every failure to a validation 400
+- id: domain
+  prompt: A requested entity does not exist. Which response is usually the clearest contract?
+  options:
+  - id: domain-1
+    text: A deliberate 404 mapping for the domain not-found case
+  - id: domain-2
+    text: A 200 response containing null
+  - id: domain-3
+    text: A 500 for all missing records
+answers:
+  mapping: mapping-1
+  specificity: specificity-1
+  domain: domain-1
+hints:
+- Name the framework boundary before choosing a fix.
+- Consider what happens on failure, not only on the success path.
+level: advanced
+minutes: 10
+explanation_prompt: In 2–4 sentences, explain the framework boundary behind your choices and one concrete
+  way you would verify the behavior.
+explanation_rubric:
+- Names the relevant Spring or application boundary accurately.
+- Connects the boundary to the failure or correctness behavior in this scenario.
+- Suggests a concrete verification step such as a focused integration test.

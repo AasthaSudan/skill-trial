@@ -1,0 +1,76 @@
+slug: sql-inclusive-filter
+skill: sql
+family: sql.inclusive-filter.advanced
+type: sql
+title: Inclusive order window
+statement: Return id and amount for orders with amount greater than or equal to 50. Exclude NULL amounts
+  and order by id.
+competencies: &id001
+- filtering
+- null_handling
+language: sql
+schema: CREATE TABLE customers (id INTEGER PRIMARY KEY, name TEXT, email TEXT); CREATE TABLE orders
+  (id INTEGER PRIMARY KEY, customer_id INTEGER, amount REAL);
+sample_rows:
+  customers:
+  - - 1
+    - Ada
+    - ada@example.com
+  - - 2
+    - Lin
+    - null
+  orders:
+  - - 1
+    - 1
+    - 20
+starter: 'SELECT 1
+
+  -- Build the requested result.
+
+  '
+reference: SELECT id,amount FROM orders WHERE amount>=50 AND amount IS NOT NULL ORDER BY id
+hints:
+- Translate each output row into a precise group or relationship.
+- Test missing values, unmatched keys, and repeated events.
+- Make ordering explicit when the result contract requires it.
+tests:
+- label: Representative shop
+  dataset: CREATE TABLE customers (id INTEGER PRIMARY KEY, name TEXT, email TEXT); CREATE TABLE orders
+    (id INTEGER PRIMARY KEY, customer_id INTEGER, amount REAL);INSERT INTO customers VALUES (1,'A','a');
+    INSERT INTO orders VALUES (1,1,49),(2,1,50),(3,1,51);
+  expected:
+  - - 2
+    - 50.0
+  - - 3
+    - 51.0
+  visibility: sample
+  competencies: *id001
+- label: NULL values and missing links
+  dataset: CREATE TABLE customers (id INTEGER PRIMARY KEY, name TEXT, email TEXT); CREATE TABLE orders
+    (id INTEGER PRIMARY KEY, customer_id INTEGER, amount REAL);INSERT INTO customers VALUES (1,'A','a');
+    INSERT INTO orders VALUES (1,1,NULL),(2,NULL,50);
+  expected:
+  - - 2
+    - 50.0
+  visibility: hidden
+  competencies: *id001
+- label: Repeated business events
+  dataset: CREATE TABLE customers (id INTEGER PRIMARY KEY, name TEXT, email TEXT); CREATE TABLE orders
+    (id INTEGER PRIMARY KEY, customer_id INTEGER, amount REAL);INSERT INTO customers VALUES (1,'A','a');
+    INSERT INTO orders VALUES (1,1,50),(2,1,50);
+  expected:
+  - - 1
+    - 50.0
+  - - 2
+    - 50.0
+  visibility: hidden
+  competencies: *id001
+- label: Small or empty groups
+  dataset: CREATE TABLE customers (id INTEGER PRIMARY KEY, name TEXT, email TEXT); CREATE TABLE orders
+    (id INTEGER PRIMARY KEY, customer_id INTEGER, amount REAL);INSERT INTO customers VALUES (1,'A','a');
+    INSERT INTO orders VALUES (1,1,49);
+  expected: []
+  visibility: hidden
+  competencies: *id001
+level: advanced
+minutes: 18

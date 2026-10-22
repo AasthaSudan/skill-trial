@@ -1,0 +1,64 @@
+slug: java-closest-distinct-gap
+skill: java
+family: java.closest-distinct-gap.advanced
+type: coding
+title: Closest distinct values
+statement: Return the smallest absolute difference between any two distinct values. Repeated copies
+  of one value do not form a pair. Return null when fewer than two distinct values exist. Integer
+  endpoints may be far apart.
+competencies: &id001
+- collections
+- algorithms
+- edge_cases
+language: java
+starter: "class Solution {\n    public static Object solve(int[] nums) {\n        // Return the requested\
+  \ result.\n        return null;\n    }\n}"
+reference: class Solution { public static Object solve(int[] nums) { java.util.TreeSet<Integer> values=new
+  java.util.TreeSet<>(); for(int x:nums)values.add(x); if(values.size()<2)return null; long best=Long.MAX_VALUE;
+  Integer previous=null; for(int x:values){if(previous!=null)best=Math.min(best,(long)x-previous);previous=x;}
+  return best; } }
+hints:
+- Identify the invariant that stays true as the input is scanned.
+- Work through empty, repeated, and boundary-valued inputs.
+- Choose a time and memory bound that fits the stated input size.
+tests:
+- label: Representative input
+  input:
+  - 8
+  - 1
+  - 5
+  - 12
+  expected: 3
+  visibility: sample
+  competencies: *id001
+- label: Short input
+  input:
+  - 4
+  - 4
+  - 10
+  expected: 6
+  visibility: hidden
+  competencies: *id001
+- label: Boundary and sign handling
+  input:
+  - 7
+  expected: null
+  visibility: hidden
+  competencies: *id001
+- label: Repeated values
+  input:
+  - -2147483648
+  - 2147483647
+  expected: 4294967295
+  visibility: hidden
+  competencies: *id001
+- label: Scale or integer boundary
+  input:
+  - 0
+  - 0
+  - 0
+  expected: null
+  visibility: hidden
+  competencies: *id001
+level: advanced
+minutes: 18

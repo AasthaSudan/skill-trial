@@ -1,0 +1,3854 @@
+{
+  "9cd8c0cbdb060234b2d3e4e0eae08eb730e6895ce745981b0d1e6a5f90f88187": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Sample and hidden tests",
+        "passed": true
+      },
+      {
+        "name": "Expected result on every test",
+        "passed": true
+      },
+      {
+        "name": "Tests cover all declared competencies",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Mixed values",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Empty input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Only negatives",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Large sum",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Repeated positives",
+        "passed": true
+      }
+    ],
+    "executed": true
+  },
+  "866bf22b1d14e3daa8912ff5dced6bdfd88b14c47e0711d299654a34e1de8563": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Sample and hidden tests",
+        "passed": true
+      },
+      {
+        "name": "Expected result on every test",
+        "passed": true
+      },
+      {
+        "name": "Tests cover all declared competencies",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Mixed values",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Empty input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Only negatives",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Large sum",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Repeated positives",
+        "passed": true
+      }
+    ],
+    "executed": true
+  },
+  "af057591d013738e28b7edee6f2689c9df2b3f6eab629dcaa711d4a5d82c53a8": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Every question has an answer key",
+        "passed": true
+      }
+    ],
+    "executed": true
+  },
+  "9362e5a9200962e7fbd41131341e816eebac5a978a9b0206de83b8289e1397fc": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Sample and hidden tests",
+        "passed": true
+      },
+      {
+        "name": "Expected result on every test",
+        "passed": true
+      },
+      {
+        "name": "Tests cover all declared competencies",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: A typical collection",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: All values equal",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Empty input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Negative values",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Integer boundaries",
+        "passed": true
+      }
+    ],
+    "executed": true
+  },
+  "35b5383e2fc3dedd6035bdef8efec2c828bb5e618bdde8777210221ed103817f": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Correct and flawed suggestions",
+        "passed": true
+      },
+      {
+        "name": "Counterexample reference and domain",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Empty input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Fractional result",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Mixed signs",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Large values",
+        "passed": true
+      },
+      {
+        "name": "Validated suggestion classification: option-1",
+        "passed": true
+      },
+      {
+        "name": "Validated suggestion classification: option-2",
+        "passed": true
+      },
+      {
+        "name": "Validated suggestion classification: option-3",
+        "passed": true
+      }
+    ],
+    "executed": true
+  },
+  "972254dc3e0c39a16994b8b1f9309983e99e1d1b32954dd61bb7868f30744fce": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Sample and hidden tests",
+        "passed": true
+      },
+      {
+        "name": "Expected result on every test",
+        "passed": true
+      },
+      {
+        "name": "Tests cover all declared competencies",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Repeated values",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Empty input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: All zero",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Mixed signs",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: All distinct",
+        "passed": true
+      }
+    ],
+    "executed": true
+  },
+  "578a0245c7ccbf83c975dae06986d1c28758c3f688de41adca1c4fc427cf7ade": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Sample and hidden tests",
+        "passed": true
+      },
+      {
+        "name": "Expected result on every test",
+        "passed": true
+      },
+      {
+        "name": "Tests cover all declared competencies",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Mixed values",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Empty input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Only negatives",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Large sum",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Repeated positives",
+        "passed": true
+      }
+    ],
+    "executed": true
+  },
+  "f3bd1f3533eca979f289dd92188ef7ad35ac8170c924f4dcc5a19c8ff5d61239": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Sample and hidden tests",
+        "passed": true
+      },
+      {
+        "name": "Expected result on every test",
+        "passed": true
+      },
+      {
+        "name": "Tests cover all declared competencies",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Mixed values",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Empty input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Only negatives",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Large sum",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Repeated positives",
+        "passed": true
+      }
+    ],
+    "executed": true
+  },
+  "49264316ec074416c6789446ccfe87330bfd586938d9643754888d10f534abac": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Every question has an answer key",
+        "passed": true
+      }
+    ],
+    "executed": true
+  },
+  "dbe2029900efb635c6128b11fa8ca25e3bb53cb0677f551ce807aaee25d55e69": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Sample and hidden tests",
+        "passed": true
+      },
+      {
+        "name": "Expected result on every test",
+        "passed": true
+      },
+      {
+        "name": "Tests cover all declared competencies",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: A typical collection",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: All values equal",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Empty input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Negative values",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Integer boundaries",
+        "passed": true
+      }
+    ],
+    "executed": true
+  },
+  "55e19306cc75b87830b01522b1e36483a833fa2a4fd3ff0120fd425358da4a13": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Correct and flawed suggestions",
+        "passed": true
+      },
+      {
+        "name": "Counterexample reference and domain",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Empty input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Fractional result",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Mixed signs",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Large values",
+        "passed": true
+      },
+      {
+        "name": "Validated suggestion classification: option-1",
+        "passed": true
+      },
+      {
+        "name": "Validated suggestion classification: option-2",
+        "passed": true
+      },
+      {
+        "name": "Validated suggestion classification: option-3",
+        "passed": true
+      }
+    ],
+    "executed": true
+  },
+  "5f7fc086a313a6f912778771588168750f2f3573e475f85904c20842cf2f985a": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Sample and hidden tests",
+        "passed": true
+      },
+      {
+        "name": "Expected result on every test",
+        "passed": true
+      },
+      {
+        "name": "Tests cover all declared competencies",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Repeated values",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Empty input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: All zero",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Mixed signs",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: All distinct",
+        "passed": true
+      }
+    ],
+    "executed": true
+  },
+  "77be967b2b454ecfe59e94776826b8044bd47f9244a15e5e8d6c538960e6e284": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Sample and hidden tests",
+        "passed": true
+      },
+      {
+        "name": "Expected result on every test",
+        "passed": true
+      },
+      {
+        "name": "Tests cover all declared competencies",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Mixed values",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Empty input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Only negatives",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Large sum",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Repeated positives",
+        "passed": true
+      }
+    ],
+    "executed": true
+  },
+  "15e5f98518002e13718038dabc69ad4aec3c1440c56771257f9d665c3fef5800": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Sample and hidden tests",
+        "passed": true
+      },
+      {
+        "name": "Expected result on every test",
+        "passed": true
+      },
+      {
+        "name": "Tests cover all declared competencies",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Mixed values",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Empty input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Only negatives",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Large sum",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Repeated positives",
+        "passed": true
+      }
+    ],
+    "executed": true
+  },
+  "97971a5fa631c166976e92f12c211c5d6cde1edda3db4335cc8e59f95bb805db": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Every question has an answer key",
+        "passed": true
+      }
+    ],
+    "executed": true
+  },
+  "530d19bb8af8639cb3efd1a320b1b32c1c7535c81e567229c21f734f998a2027": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Sample and hidden tests",
+        "passed": true
+      },
+      {
+        "name": "Expected result on every test",
+        "passed": true
+      },
+      {
+        "name": "Tests cover all declared competencies",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: A typical collection",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: All values equal",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Empty input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Negative values",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Integer boundaries",
+        "passed": true
+      }
+    ],
+    "executed": true
+  },
+  "ad7e5eadfbc55e20d9efd9d77b82e6f2d2ac3ca8944f9922da002d54e3a9ec29": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Correct and flawed suggestions",
+        "passed": true
+      },
+      {
+        "name": "Counterexample reference and domain",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Empty input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Fractional result",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Mixed signs",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Large values",
+        "passed": true
+      },
+      {
+        "name": "Validated suggestion classification: option-1",
+        "passed": true
+      },
+      {
+        "name": "Validated suggestion classification: option-2",
+        "passed": true
+      },
+      {
+        "name": "Validated suggestion classification: option-3",
+        "passed": true
+      }
+    ],
+    "executed": true
+  },
+  "488a9bc8ea70fcd1cb69545581e5d33662691922872b1035db74ea5e332f0473": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Sample and hidden tests",
+        "passed": true
+      },
+      {
+        "name": "Expected result on every test",
+        "passed": true
+      },
+      {
+        "name": "Tests cover all declared competencies",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Repeated values",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Empty input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: All zero",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Mixed signs",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: All distinct",
+        "passed": true
+      }
+    ],
+    "executed": true
+  },
+  "e707c930211896901bc172ef43c51096ad8ebe3348652604438da9e7e8391741": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Sample and hidden tests",
+        "passed": true
+      },
+      {
+        "name": "Expected result on every test",
+        "passed": true
+      },
+      {
+        "name": "Tests cover all declared competencies",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Sample shop",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: NULL foreign key",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Duplicate amounts",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: No orders",
+        "passed": true
+      }
+    ],
+    "executed": true
+  },
+  "1f2024d4b0774e19e443e19dd5d89a48d9bf89392953052c4a67f58fa43fe32a": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Sample and hidden tests",
+        "passed": true
+      },
+      {
+        "name": "Expected result on every test",
+        "passed": true
+      },
+      {
+        "name": "Tests cover all declared competencies",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Sample shop",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: NULL foreign key",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Duplicate amounts",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: No orders",
+        "passed": true
+      }
+    ],
+    "executed": true
+  },
+  "809f27a42496c82e0855053e12d284942d841126ee3d2a394b4a3b579093bc95": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Sample and hidden tests",
+        "passed": true
+      },
+      {
+        "name": "Expected result on every test",
+        "passed": true
+      },
+      {
+        "name": "Tests cover all declared competencies",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Sample shop",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: NULL foreign key",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Duplicate amounts",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: No orders",
+        "passed": true
+      }
+    ],
+    "executed": true
+  },
+  "a9a02ebfd6e85ab10c38c287049499e15f3ea0b2e3f86ba177a6bcff91ca2e4b": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Every question has an answer key",
+        "passed": true
+      }
+    ],
+    "executed": true
+  },
+  "088f6a3e9bf1845bf4a5182ccc601e05c1bce29849cdb71bc26987cf8a4d6d3e": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Sample and hidden tests",
+        "passed": true
+      },
+      {
+        "name": "Expected result on every test",
+        "passed": true
+      },
+      {
+        "name": "Tests cover all declared competencies",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Mixed values",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Empty input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Only negatives",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Large sum",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Repeated positives",
+        "passed": true
+      }
+    ],
+    "executed": true
+  },
+  "72236d850b68365e8ceab0419d607f6e086a1abe081d25a1ea57207eac6a29a8": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Sample and hidden tests",
+        "passed": true
+      },
+      {
+        "name": "Expected result on every test",
+        "passed": true
+      },
+      {
+        "name": "Tests cover all declared competencies",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Mixed values",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Empty input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Only negatives",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Large sum",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Repeated positives",
+        "passed": true
+      }
+    ],
+    "executed": true
+  },
+  "97362060821e5b1a5132dee2fdfee444cfeb5b49491175b4c74f4e8d0b1f3bb4": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Every question has an answer key",
+        "passed": true
+      }
+    ],
+    "executed": true
+  },
+  "b05209f3b5a77be65aa06bc9567e23da7775983a1992ff366a8ab04ee893a9ec": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Sample and hidden tests",
+        "passed": true
+      },
+      {
+        "name": "Expected result on every test",
+        "passed": true
+      },
+      {
+        "name": "Tests cover all declared competencies",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: A typical collection",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: All values equal",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Empty input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Negative values",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Integer boundaries",
+        "passed": true
+      }
+    ],
+    "executed": true
+  },
+  "6d1c055bfc2af9e2b5915f0aa015c88ca2712eb87a179f0bd997d1409bc6b6d6": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Correct and flawed suggestions",
+        "passed": true
+      },
+      {
+        "name": "Counterexample reference and domain",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Empty input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Fractional result",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Mixed signs",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Large values",
+        "passed": true
+      },
+      {
+        "name": "Validated suggestion classification: option-1",
+        "passed": true
+      },
+      {
+        "name": "Validated suggestion classification: option-2",
+        "passed": true
+      },
+      {
+        "name": "Validated suggestion classification: option-3",
+        "passed": true
+      }
+    ],
+    "executed": true
+  },
+  "470851fbdf684b81b665c7a2eeb3cb9d1120cda14a04bb2ee346b518b12dc754": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Sample and hidden tests",
+        "passed": true
+      },
+      {
+        "name": "Expected result on every test",
+        "passed": true
+      },
+      {
+        "name": "Tests cover all declared competencies",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Repeated values",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Empty input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: All zero",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Mixed signs",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: All distinct",
+        "passed": true
+      }
+    ],
+    "executed": true
+  },
+  "dc78ac85d844fb9ea0faa1dccb2cfd48aa0fa131a7178d79e49ce4870d19c326": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Sample and hidden tests",
+        "passed": true
+      },
+      {
+        "name": "Expected result on every test",
+        "passed": true
+      },
+      {
+        "name": "Tests cover all declared competencies",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Mixed values",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Empty input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Only negatives",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Large sum",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Repeated positives",
+        "passed": true
+      }
+    ],
+    "executed": true
+  },
+  "6c95ec6e7f091fbd408a787c2b2e6e1e9f2d40fdbfa148506f2c0949129b4b4b": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Sample and hidden tests",
+        "passed": true
+      },
+      {
+        "name": "Expected result on every test",
+        "passed": true
+      },
+      {
+        "name": "Tests cover all declared competencies",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Mixed values",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Empty input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Only negatives",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Large sum",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Repeated positives",
+        "passed": true
+      }
+    ],
+    "executed": true
+  },
+  "5281b70ef8ca6caede1c6cad6efcd24fd7c9821c312f9be9fbee9ce0b8260192": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Every question has an answer key",
+        "passed": true
+      }
+    ],
+    "executed": true
+  },
+  "135c0de3074f232a3d53b9fc04c54f01d2ff466c27bec4350c72fea3d11fa267": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Sample and hidden tests",
+        "passed": true
+      },
+      {
+        "name": "Expected result on every test",
+        "passed": true
+      },
+      {
+        "name": "Tests cover all declared competencies",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: A typical collection",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: All values equal",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Empty input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Negative values",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Integer boundaries",
+        "passed": true
+      }
+    ],
+    "executed": true
+  },
+  "e5f5a08325cf59f35551420d0156f8171e7d0a97ed419b9681373951afc83c78": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Correct and flawed suggestions",
+        "passed": true
+      },
+      {
+        "name": "Counterexample reference and domain",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Empty input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Fractional result",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Mixed signs",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Large values",
+        "passed": true
+      },
+      {
+        "name": "Validated suggestion classification: option-1",
+        "passed": true
+      },
+      {
+        "name": "Validated suggestion classification: option-2",
+        "passed": true
+      },
+      {
+        "name": "Validated suggestion classification: option-3",
+        "passed": true
+      }
+    ],
+    "executed": true
+  },
+  "2466731aa08a55b5b9e7b0242ec82b73bd2354ab0420b284605059bcab12518e": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Sample and hidden tests",
+        "passed": true
+      },
+      {
+        "name": "Expected result on every test",
+        "passed": true
+      },
+      {
+        "name": "Tests cover all declared competencies",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Repeated values",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Empty input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: All zero",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Mixed signs",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: All distinct",
+        "passed": true
+      }
+    ],
+    "executed": true
+  },
+  "be662c095b2e63f0e4be41ae4654dae879f7bd7b091c19ff0b6e62bd948209ec": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Sample and hidden tests",
+        "passed": true
+      },
+      {
+        "name": "Expected result on every test",
+        "passed": true
+      },
+      {
+        "name": "Tests cover all declared competencies",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Mixed values",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Empty input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Only negatives",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Large sum",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Repeated positives",
+        "passed": true
+      }
+    ],
+    "executed": true
+  },
+  "06827cf2b4809fcd795a480c57d22791eeb34313d436017e50323173b81dd930": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Sample and hidden tests",
+        "passed": true
+      },
+      {
+        "name": "Expected result on every test",
+        "passed": true
+      },
+      {
+        "name": "Tests cover all declared competencies",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Mixed values",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Empty input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Only negatives",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Large sum",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Repeated positives",
+        "passed": true
+      }
+    ],
+    "executed": true
+  },
+  "842204abcb7671b4dd64e60f6d92febad3fad4d09ffba5a6bdc67440755448a0": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Every question has an answer key",
+        "passed": true
+      }
+    ],
+    "executed": true
+  },
+  "4b51ad8bac63c7346c23420b30175d5cbc0af92b9133f471bd5e2ab8db577829": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Sample and hidden tests",
+        "passed": true
+      },
+      {
+        "name": "Expected result on every test",
+        "passed": true
+      },
+      {
+        "name": "Tests cover all declared competencies",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: A typical collection",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: All values equal",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Empty input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Negative values",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Integer boundaries",
+        "passed": true
+      }
+    ],
+    "executed": true
+  },
+  "e5e0e0a42c7d84a71568321d95199d170730d99622e84f599fe2ac2f6cac1e16": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Correct and flawed suggestions",
+        "passed": true
+      },
+      {
+        "name": "Counterexample reference and domain",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Empty input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Fractional result",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Mixed signs",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Large values",
+        "passed": true
+      },
+      {
+        "name": "Validated suggestion classification: option-1",
+        "passed": true
+      },
+      {
+        "name": "Validated suggestion classification: option-2",
+        "passed": true
+      },
+      {
+        "name": "Validated suggestion classification: option-3",
+        "passed": true
+      }
+    ],
+    "executed": true
+  },
+  "68a3852f37eee550f371905fc6b75eb389311f5fcaf51fb22e821fc900f99284": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Sample and hidden tests",
+        "passed": true
+      },
+      {
+        "name": "Expected result on every test",
+        "passed": true
+      },
+      {
+        "name": "Tests cover all declared competencies",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Repeated values",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Empty input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: All zero",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Mixed signs",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: All distinct",
+        "passed": true
+      }
+    ],
+    "executed": true
+  },
+  "eaafd0d2874ac754ea9567c14ff8553537d46fe86e02e2b431d944e9296c1364": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Sample and hidden tests",
+        "passed": true
+      },
+      {
+        "name": "Expected result on every test",
+        "passed": true
+      },
+      {
+        "name": "Tests cover all declared competencies",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Sample shop",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: NULL foreign key",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Duplicate amounts",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: No orders",
+        "passed": true
+      }
+    ],
+    "executed": true
+  },
+  "163ed5aa856867c7b93fe69c7b4d51667f0ef5e24973c35634bd2d3d78e86899": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Sample and hidden tests",
+        "passed": true
+      },
+      {
+        "name": "Expected result on every test",
+        "passed": true
+      },
+      {
+        "name": "Tests cover all declared competencies",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Sample shop",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: NULL foreign key",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Duplicate amounts",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: No orders",
+        "passed": true
+      }
+    ],
+    "executed": true
+  },
+  "98dfeb0a1021d843bae8f93459d4dda6fcf5b0a523878c0385c87af3f73bc217": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Sample and hidden tests",
+        "passed": true
+      },
+      {
+        "name": "Expected result on every test",
+        "passed": true
+      },
+      {
+        "name": "Tests cover all declared competencies",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Sample shop",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: NULL foreign key",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Duplicate amounts",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: No orders",
+        "passed": true
+      }
+    ],
+    "executed": true
+  },
+  "25cee1d1c5ea3aff1df88d9883780bd0a3d07609484fd237216f747cfaae1340": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Every question has an answer key",
+        "passed": true
+      }
+    ],
+    "executed": true
+  },
+  "7579453308398e699b7b93ad96d869e3c92b752324581fab289163d82a520921": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Sample and hidden tests",
+        "passed": true
+      },
+      {
+        "name": "Expected result on every test",
+        "passed": true
+      },
+      {
+        "name": "Tests cover all declared competencies",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Representative input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Short input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Boundary and sign handling",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Repeated values",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Scale or integer boundary",
+        "passed": true
+      }
+    ],
+    "executed": true,
+    "publication": "pending_review"
+  },
+  "ee0421e25e3cfa8000a389b185696d2a3817c9c368cdbabe1c9f2bc4a5b8db2f": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Sample and hidden tests",
+        "passed": true
+      },
+      {
+        "name": "Expected result on every test",
+        "passed": true
+      },
+      {
+        "name": "Tests cover all declared competencies",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Representative input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Short input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Boundary and sign handling",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Repeated values",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Scale or integer boundary",
+        "passed": true
+      }
+    ],
+    "executed": true,
+    "publication": "pending_review"
+  },
+  "e968d4bbc28227bbe7663d83fb3ea7cdb1f78b4984fb0ebbaba8a8cfe96712d6": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Sample and hidden tests",
+        "passed": true
+      },
+      {
+        "name": "Expected result on every test",
+        "passed": true
+      },
+      {
+        "name": "Tests cover all declared competencies",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Representative input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Short input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Boundary and sign handling",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Repeated values",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Scale or integer boundary",
+        "passed": true
+      }
+    ],
+    "executed": true,
+    "publication": "pending_review"
+  },
+  "eb4f45e6d0720caebfca7d8b18e68d65a38873f91bf7be4911b383e692c69471": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Sample and hidden tests",
+        "passed": true
+      },
+      {
+        "name": "Expected result on every test",
+        "passed": true
+      },
+      {
+        "name": "Tests cover all declared competencies",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Representative input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Short input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Boundary and sign handling",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Repeated values",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Scale or integer boundary",
+        "passed": true
+      }
+    ],
+    "executed": true,
+    "publication": "pending_review"
+  },
+  "21fe018ebce38efb24bdb1be9b164ed089338f2b5ff60ba326823d2880f1d035": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Sample and hidden tests",
+        "passed": true
+      },
+      {
+        "name": "Expected result on every test",
+        "passed": true
+      },
+      {
+        "name": "Tests cover all declared competencies",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Representative input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Short input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Boundary and sign handling",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Repeated values",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Scale or integer boundary",
+        "passed": true
+      }
+    ],
+    "executed": true,
+    "publication": "pending_review"
+  },
+  "35e52dc9199daa0bd1db8329e6e02f454eac37234504f7cd38f0997f08308be0": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Sample and hidden tests",
+        "passed": true
+      },
+      {
+        "name": "Expected result on every test",
+        "passed": true
+      },
+      {
+        "name": "Tests cover all declared competencies",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Representative input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Short input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Boundary and sign handling",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Repeated values",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Scale or integer boundary",
+        "passed": true
+      }
+    ],
+    "executed": true,
+    "publication": "pending_review"
+  },
+  "029132231f5f9b18cc210ede86c991d82808ad09463d98a70432d7f6f02d89d6": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Sample and hidden tests",
+        "passed": true
+      },
+      {
+        "name": "Expected result on every test",
+        "passed": true
+      },
+      {
+        "name": "Tests cover all declared competencies",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Representative input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Short input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Boundary and sign handling",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Repeated values",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Scale or integer boundary",
+        "passed": true
+      }
+    ],
+    "executed": true,
+    "publication": "pending_review"
+  },
+  "4152a7207b97a00a87f8fde74f46127edf0ad8d3819aa61c5123ecc1f008d818": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Sample and hidden tests",
+        "passed": true
+      },
+      {
+        "name": "Expected result on every test",
+        "passed": true
+      },
+      {
+        "name": "Tests cover all declared competencies",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Representative input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Short input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Boundary and sign handling",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Repeated values",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Scale or integer boundary",
+        "passed": true
+      }
+    ],
+    "executed": true,
+    "publication": "pending_review"
+  },
+  "9e3361de5227069ce9ee89edbdce88e36fdd75bacd370cb0c2fa1d76a756a9cf": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Sample and hidden tests",
+        "passed": true
+      },
+      {
+        "name": "Expected result on every test",
+        "passed": true
+      },
+      {
+        "name": "Tests cover all declared competencies",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Representative input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Short input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Boundary and sign handling",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Repeated values",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Scale or integer boundary",
+        "passed": true
+      }
+    ],
+    "executed": true,
+    "publication": "pending_review"
+  },
+  "46a1ba355805a13ba0eb33360e32e714c8415da15b92da58d98e310ba8086542": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Sample and hidden tests",
+        "passed": true
+      },
+      {
+        "name": "Expected result on every test",
+        "passed": true
+      },
+      {
+        "name": "Tests cover all declared competencies",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Representative input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Short input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Boundary and sign handling",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Repeated values",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Scale or integer boundary",
+        "passed": true
+      }
+    ],
+    "executed": true,
+    "publication": "pending_review"
+  },
+  "85862266f0b4326c850cfcdd1fc20d86821ed9e4e62d041adafcb4573baebe5c": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Sample and hidden tests",
+        "passed": true
+      },
+      {
+        "name": "Expected result on every test",
+        "passed": true
+      },
+      {
+        "name": "Tests cover all declared competencies",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Representative input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Short input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Boundary and sign handling",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Repeated values",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Scale or integer boundary",
+        "passed": true
+      }
+    ],
+    "executed": true,
+    "publication": "pending_review"
+  },
+  "432463d271aa4ac98e9808b0284cceb659fcb4db2a39e08bb8d203d2d43c11e6": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Sample and hidden tests",
+        "passed": true
+      },
+      {
+        "name": "Expected result on every test",
+        "passed": true
+      },
+      {
+        "name": "Tests cover all declared competencies",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Representative input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Short input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Boundary and sign handling",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Repeated values",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Scale or integer boundary",
+        "passed": true
+      }
+    ],
+    "executed": true,
+    "publication": "pending_review"
+  },
+  "0abd508129efff2b4d17d1878fd6e9191a885acf9973f4a6301874dccae08ec2": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Sample and hidden tests",
+        "passed": true
+      },
+      {
+        "name": "Expected result on every test",
+        "passed": true
+      },
+      {
+        "name": "Tests cover all declared competencies",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Representative input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Short input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Boundary and sign handling",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Repeated values",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Scale or integer boundary",
+        "passed": true
+      }
+    ],
+    "executed": true,
+    "publication": "pending_review"
+  },
+  "c5cfeef900b36fd61ea93603cbf980a85e8efbe06d6dcb8e00ac4d4e1ee0fd24": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Sample and hidden tests",
+        "passed": true
+      },
+      {
+        "name": "Expected result on every test",
+        "passed": true
+      },
+      {
+        "name": "Tests cover all declared competencies",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Representative input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Short input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Boundary and sign handling",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Repeated values",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Scale or integer boundary",
+        "passed": true
+      }
+    ],
+    "executed": true,
+    "publication": "pending_review"
+  },
+  "cabc59d193005e56b97357f7dd92af21d90a2baf3f7a9e17c030c5dec391da01": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Sample and hidden tests",
+        "passed": true
+      },
+      {
+        "name": "Expected result on every test",
+        "passed": true
+      },
+      {
+        "name": "Tests cover all declared competencies",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Representative input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Short input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Boundary and sign handling",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Repeated values",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Scale or integer boundary",
+        "passed": true
+      }
+    ],
+    "executed": true,
+    "publication": "pending_review"
+  },
+  "719eee3853aa0f1f8f1f88ae326bac43d01d534d66d38cb7af9b4cdacc55f673": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Sample and hidden tests",
+        "passed": true
+      },
+      {
+        "name": "Expected result on every test",
+        "passed": true
+      },
+      {
+        "name": "Tests cover all declared competencies",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Representative input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Short input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Boundary and sign handling",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Repeated values",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Scale or integer boundary",
+        "passed": true
+      }
+    ],
+    "executed": true,
+    "publication": "pending_review"
+  },
+  "3455acb300b1615b1fd028c09bf82f9ea962565959bb205d06c1e831076c5fcd": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Sample and hidden tests",
+        "passed": true
+      },
+      {
+        "name": "Expected result on every test",
+        "passed": true
+      },
+      {
+        "name": "Tests cover all declared competencies",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Representative input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Short input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Boundary and sign handling",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Repeated values",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Scale or integer boundary",
+        "passed": true
+      }
+    ],
+    "executed": true,
+    "publication": "pending_review"
+  },
+  "92e0b4695b2f8de1b4268d14dd219d96fa41be9be29f97699e88acb410921962": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Sample and hidden tests",
+        "passed": true
+      },
+      {
+        "name": "Expected result on every test",
+        "passed": true
+      },
+      {
+        "name": "Tests cover all declared competencies",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Representative input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Short input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Boundary and sign handling",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Repeated values",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Scale or integer boundary",
+        "passed": true
+      }
+    ],
+    "executed": true,
+    "publication": "pending_review"
+  },
+  "c15b7c652efc6a0258662ec0281abe75cfdccbf008a86f0d5ff2b341c481092c": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Sample and hidden tests",
+        "passed": true
+      },
+      {
+        "name": "Expected result on every test",
+        "passed": true
+      },
+      {
+        "name": "Tests cover all declared competencies",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Representative input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Short input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Boundary and sign handling",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Repeated values",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Scale or integer boundary",
+        "passed": true
+      }
+    ],
+    "executed": true,
+    "publication": "pending_review"
+  },
+  "5cb376366c392fca6638f4c61ee7e67a271e94d4d8a382544b7586c566530e30": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Sample and hidden tests",
+        "passed": true
+      },
+      {
+        "name": "Expected result on every test",
+        "passed": true
+      },
+      {
+        "name": "Tests cover all declared competencies",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Representative input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Short input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Boundary and sign handling",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Repeated values",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Scale or integer boundary",
+        "passed": true
+      }
+    ],
+    "executed": true,
+    "publication": "pending_review"
+  },
+  "a7259289797eeb30038d4e38f1dbb15b1572fe15f5ad1138795da6aa6717c8f9": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Sample and hidden tests",
+        "passed": true
+      },
+      {
+        "name": "Expected result on every test",
+        "passed": true
+      },
+      {
+        "name": "Tests cover all declared competencies",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Representative input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Short input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Boundary and sign handling",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Repeated values",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Scale or integer boundary",
+        "passed": true
+      }
+    ],
+    "executed": true,
+    "publication": "pending_review"
+  },
+  "7220305a3ddad50c3a1345288661117e64dc6f12fed304f7958ff4426d22c5ad": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Sample and hidden tests",
+        "passed": true
+      },
+      {
+        "name": "Expected result on every test",
+        "passed": true
+      },
+      {
+        "name": "Tests cover all declared competencies",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Representative input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Short input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Boundary and sign handling",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Repeated values",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Scale or integer boundary",
+        "passed": true
+      }
+    ],
+    "executed": true,
+    "publication": "pending_review"
+  },
+  "d769c3a3427d092e79eb1f5fbf2f4f3788b3af683705577c318fded4423c48d1": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Sample and hidden tests",
+        "passed": true
+      },
+      {
+        "name": "Expected result on every test",
+        "passed": true
+      },
+      {
+        "name": "Tests cover all declared competencies",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Representative shop",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: NULL values and missing links",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Repeated business events",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Small or empty groups",
+        "passed": true
+      }
+    ],
+    "executed": true,
+    "publication": "pending_review"
+  },
+  "73feb1cbe4dd4e392801a79a6838c26ce88489572b4cd5500e0ffc342e1b10cc": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Sample and hidden tests",
+        "passed": true
+      },
+      {
+        "name": "Expected result on every test",
+        "passed": true
+      },
+      {
+        "name": "Tests cover all declared competencies",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Representative input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Short input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Boundary and sign handling",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Repeated values",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Scale or integer boundary",
+        "passed": true
+      }
+    ],
+    "executed": true,
+    "publication": "pending_review"
+  },
+  "d65bbf32c31272bc7e1a4ab8466aff12edc9fc65b66874f4638162337b853bc7": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Sample and hidden tests",
+        "passed": true
+      },
+      {
+        "name": "Expected result on every test",
+        "passed": true
+      },
+      {
+        "name": "Tests cover all declared competencies",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Representative input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Short input",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Boundary and sign handling",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Repeated values",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Scale or integer boundary",
+        "passed": true
+      }
+    ],
+    "executed": true,
+    "publication": "pending_review"
+  },
+  "e950ce9775a22359169b4d57598d3fd4461b00b970eb28dd9beaecfeab47cea3": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Sample and hidden tests",
+        "passed": true
+      },
+      {
+        "name": "Expected result on every test",
+        "passed": true
+      },
+      {
+        "name": "Tests cover all declared competencies",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Representative shop",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: NULL values and missing links",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Repeated business events",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Small or empty groups",
+        "passed": true
+      }
+    ],
+    "executed": true,
+    "publication": "pending_review"
+  },
+  "c629f0e0086459a47642bbc9497a615214799cc3807ffb8551d5e936e0daf667": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Sample and hidden tests",
+        "passed": true
+      },
+      {
+        "name": "Expected result on every test",
+        "passed": true
+      },
+      {
+        "name": "Tests cover all declared competencies",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Representative shop",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: NULL values and missing links",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Repeated business events",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Small or empty groups",
+        "passed": true
+      }
+    ],
+    "executed": true,
+    "publication": "pending_review"
+  },
+  "6646dc9c6934010dc55c4558de8d48f9855eea53db52db2e4e18f60613cf1abd": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Sample and hidden tests",
+        "passed": true
+      },
+      {
+        "name": "Expected result on every test",
+        "passed": true
+      },
+      {
+        "name": "Tests cover all declared competencies",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Representative shop",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: NULL values and missing links",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Repeated business events",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Small or empty groups",
+        "passed": true
+      }
+    ],
+    "executed": true,
+    "publication": "pending_review"
+  },
+  "57455fa8c6bf3dc2cc1d14db5fb2c33e4db841555ddf9f8b0427d9573aca5ad4": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Sample and hidden tests",
+        "passed": true
+      },
+      {
+        "name": "Expected result on every test",
+        "passed": true
+      },
+      {
+        "name": "Tests cover all declared competencies",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Representative shop",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: NULL values and missing links",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Repeated business events",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Small or empty groups",
+        "passed": true
+      }
+    ],
+    "executed": true,
+    "publication": "pending_review"
+  },
+  "2d1d3ee1b8011536abcad94b1ee958c01ed3adc819dbc0a6fcf3c10c14a1825d": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Sample and hidden tests",
+        "passed": true
+      },
+      {
+        "name": "Expected result on every test",
+        "passed": true
+      },
+      {
+        "name": "Tests cover all declared competencies",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Representative shop",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: NULL values and missing links",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Repeated business events",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Small or empty groups",
+        "passed": true
+      }
+    ],
+    "executed": true,
+    "publication": "pending_review"
+  },
+  "a708e91cc67563b215c9d4d23373d717610dfd963ca42bba92ae8cab5f69f4f8": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Sample and hidden tests",
+        "passed": true
+      },
+      {
+        "name": "Expected result on every test",
+        "passed": true
+      },
+      {
+        "name": "Tests cover all declared competencies",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Representative shop",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: NULL values and missing links",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Repeated business events",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Small or empty groups",
+        "passed": true
+      }
+    ],
+    "executed": true,
+    "publication": "pending_review"
+  },
+  "d31afbaa4dd6c2cbc1bec0dcabc9ce8207e5f2e355c568afc18926a90a8d06c7": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Sample and hidden tests",
+        "passed": true
+      },
+      {
+        "name": "Expected result on every test",
+        "passed": true
+      },
+      {
+        "name": "Tests cover all declared competencies",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Representative shop",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: NULL values and missing links",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Repeated business events",
+        "passed": true
+      },
+      {
+        "name": "Executed reference: Small or empty groups",
+        "passed": true
+      }
+    ],
+    "executed": true,
+    "publication": "pending_review"
+  },
+  "ed134476c0df2d758cf228241d92a055f1a124d7d659175185f3ec85da58330a": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Every question has an answer key",
+        "passed": true
+      }
+    ],
+    "executed": true,
+    "publication": "pending_review"
+  },
+  "77a14951b3b49737b570b2c46ddf4e348f859402b74222e3525d70bba8535982": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Every question has an answer key",
+        "passed": true
+      }
+    ],
+    "executed": true,
+    "publication": "pending_review"
+  },
+  "c39382550f8c1e1849ed978b567118aeab3dd6b9e98a5dd99546ea5ebe0cefe5": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Every question has an answer key",
+        "passed": true
+      }
+    ],
+    "executed": true,
+    "publication": "pending_review"
+  },
+  "dcb4129dcf0c0ca51b5d952fde8e21a87ac6c8bdb8796008fb4043157d849cbb": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Every question has an answer key",
+        "passed": true
+      }
+    ],
+    "executed": true,
+    "publication": "pending_review"
+  },
+  "907664c698157f606521063a51d1bc48eab84565e4e3fe7022e967a8dcb8aec2": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Every question has an answer key",
+        "passed": true
+      }
+    ],
+    "executed": true,
+    "publication": "pending_review"
+  },
+  "0b5a807cafcab5126a77bd8703db8e628e581852808ce8498fedca6d9fd22b51": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Every question has an answer key",
+        "passed": true
+      }
+    ],
+    "executed": true,
+    "publication": "pending_review"
+  },
+  "fe5ec92be32760c42d245a458c7cc840316177c5edc3d37891cd960e90b0de57": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Every question has an answer key",
+        "passed": true
+      }
+    ],
+    "executed": true,
+    "publication": "pending_review"
+  },
+  "b5bdb7e73af8043c79cfbf3f0fde349944970c513de712db175835ce3573e30a": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Every question has an answer key",
+        "passed": true
+      }
+    ],
+    "executed": true,
+    "publication": "pending_review"
+  },
+  "5b516cb02076c7b7c94f248f5a191de756af8ff0381c3724188ab55b38adcd31": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Every question has an answer key",
+        "passed": true
+      }
+    ],
+    "executed": true,
+    "publication": "pending_review"
+  },
+  "abd830ac32ca74096b54e6ad053228ae2b243d18f023ca25df17f2226a830e7c": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Every question has an answer key",
+        "passed": true
+      }
+    ],
+    "executed": true,
+    "publication": "pending_review"
+  },
+  "57a2206858857a00f58f45b17450a05beba5ac4ac431dac34cf71167034f19d0": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Every question has an answer key",
+        "passed": true
+      }
+    ],
+    "executed": true,
+    "publication": "pending_review"
+  },
+  "43541f15b88610959a64b518cd017d551b15fc6fd6c658ec389468f1c85bf73b": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "Statement and title",
+        "passed": true
+      },
+      {
+        "name": "Supported challenge type",
+        "passed": true
+      },
+      {
+        "name": "Known skill and competencies",
+        "passed": true
+      },
+      {
+        "name": "Every question has an answer key",
+        "passed": true
+      }
+    ],
+    "executed": true,
+    "publication": "pending_review"
+  }
+}

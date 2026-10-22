@@ -1,0 +1,91 @@
+slug: sql-customers-without-orders
+skill: sql
+family: sql.customers-without-orders
+type: sql
+title: Customers without orders
+statement: Return the **id, name** of customers who have no orders, ordered by id.
+  An order may have a NULL customer_id. Every customer should appear at most once.
+competencies: &id001
+- joins
+- null_handling
+language: sql
+schema: CREATE TABLE customers (id INTEGER PRIMARY KEY, name TEXT, email TEXT); CREATE
+  TABLE orders (id INTEGER PRIMARY KEY, customer_id INTEGER, amount REAL);
+sample_rows:
+  customers:
+  - - 1
+    - Ada
+    - ada@example.com
+  - - 2
+    - Lin
+    - null
+  - - 3
+    - Sam
+    - sam@example.com
+  orders:
+  - - 1
+    - 1
+    - 20
+  - - 2
+    - 1
+    - 30
+  - - 3
+    - 3
+    - 15
+starter: 'SELECT id, name FROM customers
+
+  -- Find customers who have never ordered
+
+  '
+reference: SELECT c.id,c.name FROM customers c LEFT JOIN orders o ON o.customer_id=c.id
+  WHERE o.id IS NULL ORDER BY c.id
+hints:
+- Use the stated output columns and ordering.
+- Think about NULL values and repeated rows.
+- For totals, join before grouping; avoid SUM(DISTINCT amount).
+tests:
+- label: Sample shop
+  dataset: CREATE TABLE customers (id INTEGER PRIMARY KEY, name TEXT, email TEXT);
+    CREATE TABLE orders (id INTEGER PRIMARY KEY, customer_id INTEGER, amount REAL);INSERT
+    INTO customers VALUES (1,'Ada','ada@example.com'),(2,'Lin',NULL),(3,'Sam','sam@example.com');
+    INSERT INTO orders VALUES (1,1,20),(2,1,30),(3,3,15);
+  expected:
+  - - 2
+    - Lin
+  visibility: sample
+  competencies: *id001
+- label: NULL foreign key
+  dataset: CREATE TABLE customers (id INTEGER PRIMARY KEY, name TEXT, email TEXT);
+    CREATE TABLE orders (id INTEGER PRIMARY KEY, customer_id INTEGER, amount REAL);INSERT
+    INTO customers VALUES (1,'Ada','ada@example.com'),(2,'Lin',NULL),(3,'Sam','sam@example.com');
+    INSERT INTO orders VALUES (1,1,20),(2,1,30),(3,3,15); INSERT INTO orders VALUES
+    (4,NULL,80);
+  expected:
+  - - 2
+    - Lin
+  visibility: hidden
+  competencies: *id001
+- label: Duplicate amounts
+  dataset: CREATE TABLE customers (id INTEGER PRIMARY KEY, name TEXT, email TEXT);
+    CREATE TABLE orders (id INTEGER PRIMARY KEY, customer_id INTEGER, amount REAL);INSERT
+    INTO customers VALUES (1,'Ada','ada@example.com'),(2,'Lin',NULL),(3,'Sam','sam@example.com');
+    INSERT INTO orders VALUES (1,1,20),(2,1,30),(3,3,15); INSERT INTO orders VALUES
+    (4,3,15);
+  expected:
+  - - 2
+    - Lin
+  visibility: hidden
+  competencies: *id001
+- label: No orders
+  dataset: CREATE TABLE customers (id INTEGER PRIMARY KEY, name TEXT, email TEXT);
+    CREATE TABLE orders (id INTEGER PRIMARY KEY, customer_id INTEGER, amount REAL);INSERT
+    INTO customers VALUES (1,'Ada',NULL),(2,'Lin','lin@example.com');
+  expected:
+  - - 1
+    - Ada
+  - - 2
+    - Lin
+  visibility: hidden
+  competencies: *id001
+level: intermediate
+minutes: 12

@@ -1,0 +1,12 @@
+Alex Morgan
+Backend Developer
+
+TECHNICAL SKILLS
+Intermediate: SQL, Python
+Familiar with: Docker, Git
+
+PROJECTS
+Built a payment reconciliation tool in Python using SQL joins and aggregation. Used PostgreSQL to track transactions and automated retries.
+
+EXPERIENCE
+Developed internal reporting tools and wrote tests for data-processing edge cases.

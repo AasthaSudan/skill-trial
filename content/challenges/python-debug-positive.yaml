@@ -1,0 +1,67 @@
+slug: python-debug-positive
+skill: python
+family: python.debug-positive
+type: debugging
+title: The refund that reduced the total
+statement: A report should sum **strictly positive** amounts, but negative adjustments
+  are reducing the result. Fix solve(nums), returning 0 for an empty array. Preserve
+  correct behavior for ordinary positive values and use a sufficiently large numeric
+  type.
+competencies:
+- algorithms
+- edge_cases
+language: python
+starter: "def solve(nums):\n    return sum(nums)\n"
+reference: "def solve(nums):\n    return sum(n for n in nums if n > 0)"
+hints:
+- Compare the stated behavior with what the loop includes.
+- A value must satisfy a condition before it contributes.
+tests:
+- input:
+  - 4
+  - -2
+  - 7
+  - 0
+  expected: 11
+  label: Mixed values
+  visibility: sample
+  competencies:
+  - algorithms
+  - edge_cases
+- input: []
+  expected: 0
+  label: Empty input
+  visibility: hidden
+  competencies:
+  - algorithms
+  - edge_cases
+- input:
+  - -4
+  - -1
+  expected: 0
+  label: Only negatives
+  visibility: hidden
+  competencies:
+  - algorithms
+  - edge_cases
+- input:
+  - 2147483647
+  - 2147483647
+  expected: 4294967294
+  label: Large sum
+  visibility: hidden
+  competencies:
+  - algorithms
+  - edge_cases
+- input:
+  - 1
+  - 1
+  - 1
+  expected: 3
+  label: Repeated positives
+  visibility: hidden
+  competencies:
+  - algorithms
+  - edge_cases
+level: intermediate
+minutes: 12

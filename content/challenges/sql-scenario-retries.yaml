@@ -1,0 +1,50 @@
+slug: sql-scenario-retries
+skill: sql
+family: sql.scenario-retries
+type: scenario
+minutes: 8
+title: One payment, many retries
+statement: A payment provider retries a webhook when your endpoint times out. Two
+  requests can arrive at the same time. Your database now contains duplicate payments
+  with the same provider transaction ID. Choose a strategy that remains correct under
+  concurrency.
+competencies:
+- duplicates
+- null_handling
+questions:
+- id: prevention
+  prompt: Which prevention strategy is reliable under concurrent requests?
+  options:
+  - id: unique
+    text: A unique provider transaction ID with an atomic upsert
+  - id: select
+    text: Check with SELECT, then INSERT if absent
+  - id: timeout
+    text: Increase the HTTP timeout
+- id: cleanup
+  prompt: How should existing duplicates be cleaned up?
+  options:
+  - id: transaction
+    text: Back up, retain one canonical row per transaction, clean up transactionally,
+      then add the constraint
+  - id: all
+    text: Delete every payment and retry all webhooks
+  - id: ignore
+    text: Leave existing duplicates and only fix new requests
+- id: 'null'
+  prompt: What else must the transaction identifier rule establish?
+  options:
+  - id: required
+    text: The identifier is required and validated, with explicit handling of missing
+      values
+  - id: any
+    text: All missing identifiers refer to the same payment
+  - id: client
+    text: The browser alone can enforce uniqueness
+answers:
+  prevention: unique
+  cleanup: transaction
+  'null': required
+hints:
+- Think about two requests passing the same check at the same time.
+level: intermediate

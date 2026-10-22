@@ -1,0 +1,30 @@
+services:
+  skilltrial-runner:
+    build:
+      context: ..
+      dockerfile: runner_service/Dockerfile
+    restart: unless-stopped
+    env_file:
+      - ../.env.runner
+    environment:
+      RUNNER_HMAC_SECRET: ${RUNNER_HMAC_SECRET:?Set a 32+ character secret in the runner environment}
+      RUNNER_WORKDIR: ${RUNNER_HOST_WORKDIR:-/srv/skilltrial-runner-work}
+      OCI_RUNTIME: ${OCI_RUNTIME:-runsc}
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ${RUNNER_HOST_WORKDIR:-/srv/skilltrial-runner-work}:${RUNNER_HOST_WORKDIR:-/srv/skilltrial-runner-work}
+    ports:
+      - "${RUNNER_BIND_ADDRESS:-127.0.0.1}:8080:8080"
+    read_only: true
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,size=64m
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8080/readyz',timeout=3)"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 10s

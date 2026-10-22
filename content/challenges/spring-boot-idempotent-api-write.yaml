@@ -1,0 +1,57 @@
+slug: spring-boot-idempotent-api-write
+skill: spring-boot
+family: spring-boot.idempotent-api-write.advanced
+type: scenario
+title: Make retried API writes safe
+statement: A client retries a POST after a timeout and the server may have committed the first request.
+  Prevent duplicate orders while returning the original outcome for a retry with the same idempotency
+  key.
+competencies:
+- rest_apis
+- services
+- persistence
+- transactions
+questions:
+- id: key
+  prompt: Where should the idempotency key be enforced?
+  options:
+  - id: key-1
+    text: Persist it under a unique constraint scoped to the caller and operation
+  - id: key-2
+    text: Keep it only in a controller field
+  - id: key-3
+    text: Treat every retry as a new order
+- id: atomicity
+  prompt: How should key registration and the business write relate?
+  options:
+  - id: atomicity-1
+    text: Make the key claim and order result durable atomically, handling a concurrent unique-key
+      conflict by loading the existing result
+  - id: atomicity-2
+    text: Commit the key first and never recover if the order write fails
+  - id: atomicity-3
+    text: Use an in-memory map that disappears on restart
+- id: replay
+  prompt: What should a matching retry receive?
+  options:
+  - id: replay-1
+    text: The stored outcome for the same request; reject reuse of the key for a different payload
+  - id: replay-2
+    text: A second order with a different identifier
+  - id: replay-3
+    text: A success response before checking the stored request
+answers:
+  key: key-1
+  atomicity: atomicity-1
+  replay: replay-1
+explanation_prompt: In 2–4 sentences, explain the framework boundary behind your choices and one concrete
+  way you would verify the behavior.
+explanation_rubric:
+- Names the relevant Spring or application boundary accurately.
+- Connects the boundary to the failure or correctness behavior in this scenario.
+- Suggests a concrete verification step such as a focused integration test.
+hints:
+- Name the framework boundary before choosing a fix.
+- Consider what happens on failure, not only on the success path.
+level: advanced
+minutes: 10

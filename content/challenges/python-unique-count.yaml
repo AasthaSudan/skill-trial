@@ -1,0 +1,59 @@
+slug: python-unique-count
+skill: python
+family: python.unique-count
+type: coding
+title: Count what is different
+statement: Return the number of distinct integers in nums. Repeated occurrences count
+  only once. For an empty array return 0. Input may contain negative numbers and zero.
+competencies: &id001
+- collections
+- edge_cases
+language: python
+starter: "def solve(nums):\n    # Return the requested value.\n    return None\n"
+reference: "def solve(nums):\n    return len(set(nums))"
+hints:
+- Trace the simplest input before coding.
+- Consider empty arrays, duplicates, and negative values.
+- A set separates distinct values from occurrences.
+tests:
+- input:
+  - 1
+  - 2
+  - 2
+  - 3
+  expected: 3
+  label: Repeated values
+  visibility: sample
+  competencies: *id001
+- input: []
+  expected: 0
+  label: Empty input
+  visibility: hidden
+  competencies: *id001
+- input:
+  - 0
+  - 0
+  - 0
+  expected: 1
+  label: All zero
+  visibility: hidden
+  competencies: *id001
+- input:
+  - -2
+  - -2
+  - 1
+  expected: 2
+  label: Mixed signs
+  visibility: hidden
+  competencies: *id001
+- input:
+  - 9
+  - 8
+  - 7
+  - 6
+  expected: 4
+  label: All distinct
+  visibility: hidden
+  competencies: *id001
+level: intermediate
+minutes: 12

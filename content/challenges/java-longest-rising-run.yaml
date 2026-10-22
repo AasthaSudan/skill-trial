@@ -1,0 +1,66 @@
+slug: java-longest-rising-run
+skill: java
+family: java.longest-rising-run.advanced
+type: coding
+title: Longest rising run
+statement: Return the length of the longest contiguous strictly increasing run. Equal neighboring
+  values break a run. Empty input returns zero. The algorithm should scan the input once.
+competencies: &id001
+- collections
+- algorithms
+- edge_cases
+language: java
+starter: "class Solution {\n    public static Object solve(int[] nums) {\n        // Return the requested\
+  \ result.\n        return null;\n    }\n}"
+reference: class Solution { public static Object solve(int[] nums) { if(nums.length==0)return 0; int
+  best=1,current=1; for(int i=1;i<nums.length;i++){current=nums[i]>nums[i-1]?current+1:1;best=Math.max(best,current);}
+  return best; } }
+hints:
+- Identify the invariant that stays true as the input is scanned.
+- Work through empty, repeated, and boundary-valued inputs.
+- Choose a time and memory bound that fits the stated input size.
+tests:
+- label: Representative input
+  input:
+  - 1
+  - 2
+  - 2
+  - 3
+  - 4
+  expected: 3
+  visibility: sample
+  competencies: *id001
+- label: Short input
+  input: []
+  expected: 0
+  visibility: hidden
+  competencies: *id001
+- label: Boundary and sign handling
+  input:
+  - -5
+  - -4
+  - -3
+  - -10
+  - -8
+  expected: 3
+  visibility: hidden
+  competencies: *id001
+- label: Repeated values
+  input:
+  - 9
+  - 8
+  - 7
+  expected: 1
+  visibility: hidden
+  competencies: *id001
+- label: Scale or integer boundary
+  input:
+  - 3
+  - 4
+  - 5
+  - 6
+  expected: 4
+  visibility: hidden
+  competencies: *id001
+level: advanced
+minutes: 18

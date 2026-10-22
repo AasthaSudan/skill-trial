@@ -1,0 +1,57 @@
+slug: python-positive-total
+skill: python
+family: python.positive-total
+type: coding
+title: A positive contribution
+statement: Return the sum of all **strictly positive** values in nums. Zero and negative
+  values contribute nothing. For an empty array return 0. The total can exceed a 32-bit
+  integer.
+competencies: &id001
+- algorithms
+- edge_cases
+language: python
+starter: "def solve(nums):\n    # Return the requested value.\n    return None\n"
+reference: "def solve(nums):\n    return sum(n for n in nums if n > 0)"
+hints:
+- Trace the simplest input before coding.
+- Consider empty arrays, duplicates, and negative values.
+- A set separates distinct values from occurrences.
+tests:
+- input:
+  - 4
+  - -2
+  - 7
+  - 0
+  expected: 11
+  label: Mixed values
+  visibility: sample
+  competencies: *id001
+- input: []
+  expected: 0
+  label: Empty input
+  visibility: hidden
+  competencies: *id001
+- input:
+  - -4
+  - -1
+  expected: 0
+  label: Only negatives
+  visibility: hidden
+  competencies: *id001
+- input:
+  - 2147483647
+  - 2147483647
+  expected: 4294967294
+  label: Large sum
+  visibility: hidden
+  competencies: *id001
+- input:
+  - 1
+  - 1
+  - 1
+  expected: 3
+  label: Repeated positives
+  visibility: hidden
+  competencies: *id001
+level: intermediate
+minutes: 12

@@ -1,0 +1,55 @@
+slug: spring-boot-service-proxy-boundary
+skill: spring-boot
+family: spring-boot.service-proxy-boundary.advanced
+type: scenario
+title: Keep framework proxy boundaries real
+statement: A service relies on transactions and method security. A same-class call appears to work
+  locally, while calls through the injected bean behave differently.
+competencies:
+- services
+- transactions
+questions:
+- id: selfcall
+  prompt: Why can same-instance calls skip declarative advice?
+  options:
+  - id: selfcall-1
+    text: Calls made with this.method bypass the proxy intercepting the bean
+  - id: selfcall-2
+    text: Java annotations execute themselves at bytecode runtime
+  - id: selfcall-3
+    text: The proxy only wraps repository interfaces
+- id: design
+  prompt: What is the clearest repair when a cross-method boundary needs advice?
+  options:
+  - id: design-1
+    text: Move the advised operation behind an injected bean/proxy boundary or redesign the unit of
+      work
+  - id: design-2
+    text: Add more annotations to the same private method
+  - id: design-3
+    text: Make the method static
+- id: verify
+  prompt: How should the boundary be confirmed?
+  options:
+  - id: verify-1
+    text: Exercise the operation through the Spring context and verify committed and rolled-back database
+      state
+  - id: verify-2
+    text: Call the method directly on new Service()
+  - id: verify-3
+    text: Check only that the application context starts
+answers:
+  selfcall: selfcall-1
+  design: design-1
+  verify: verify-1
+hints:
+- Name the framework boundary before choosing a fix.
+- Consider what happens on failure, not only on the success path.
+level: advanced
+minutes: 10
+explanation_prompt: In 2–4 sentences, explain the framework boundary behind your choices and one concrete
+  way you would verify the behavior.
+explanation_rubric:
+- Names the relevant Spring or application boundary accurately.
+- Connects the boundary to the failure or correctness behavior in this scenario.
+- Suggests a concrete verification step such as a focused integration test.

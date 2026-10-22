@@ -1,0 +1,71 @@
+slug: java-nondecreasing-removals
+skill: java
+family: java.nondecreasing-removals.advanced
+type: coding
+title: Fewest removals for ordered data
+statement: Return the minimum number of elements to remove so the remaining values, kept in their
+  original order, are non-decreasing. Equal values may remain. Use an algorithm suitable for 100,000
+  values.
+competencies: &id001
+- collections
+- algorithms
+- edge_cases
+language: java
+starter: "class Solution {\n    public static Object solve(int[] nums) {\n        // Return the requested\
+  \ result.\n        return null;\n    }\n}"
+reference: class Solution { public static Object solve(int[] nums) { int[] tails=new int[nums.length];
+  int n=0; for(int x:nums){int lo=0,hi=n;while(lo<hi){int m=(lo+hi)>>>1;if(tails[m]<=x)lo=m+1;else
+  hi=m;}tails[lo]=x;if(lo==n)n++;} return nums.length-n; } }
+hints:
+- Identify the invariant that stays true as the input is scanned.
+- Work through empty, repeated, and boundary-valued inputs.
+- Choose a time and memory bound that fits the stated input size.
+tests:
+- label: Representative input
+  input:
+  - 4
+  - 2
+  - 3
+  - 1
+  - 5
+  expected: 2
+  visibility: sample
+  competencies: *id001
+- label: Short input
+  input:
+  - 1
+  - 2
+  - 3
+  expected: 0
+  visibility: hidden
+  competencies: *id001
+- label: Boundary and sign handling
+  input:
+  - 3
+  - 3
+  - 2
+  - 2
+  - 1
+  expected: 3
+  visibility: hidden
+  competencies: *id001
+- label: Repeated values
+  input: []
+  expected: 0
+  visibility: hidden
+  competencies: *id001
+- label: Scale or integer boundary
+  input:
+  - 10
+  - 9
+  - 2
+  - 5
+  - 3
+  - 7
+  - 101
+  - 18
+  expected: 4
+  visibility: hidden
+  competencies: *id001
+level: advanced
+minutes: 18

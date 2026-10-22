@@ -1,0 +1,55 @@
+slug: spring-boot-transaction-rollback
+skill: spring-boot
+family: spring-boot.transaction-rollback.advanced
+type: scenario
+title: A failed order must roll back
+statement: A service writes an order and then calls a payment provider. The payment operation can
+  fail after the write. Make the transaction boundary explicit and preserve correct rollback behavior.
+competencies:
+- services
+- persistence
+- transactions
+questions:
+- id: boundary
+  prompt: Where should the transaction usually begin?
+  options:
+  - id: boundary-1
+    text: Around the service operation that owns the whole write unit
+  - id: boundary-2
+    text: Only around the controller serialization
+  - id: boundary-3
+    text: Only around the repository read
+- id: proxy
+  prompt: A @Transactional method is called from another method on the same bean. What is the key
+    risk?
+  options:
+  - id: proxy-1
+    text: The proxy may be bypassed, so transaction advice may not run
+  - id: proxy-2
+    text: Spring starts two network requests automatically
+  - id: proxy-3
+    text: The database changes to read-only mode
+- id: rollback
+  prompt: A checked exception is thrown after a write. What makes rollback behavior reliable?
+  options:
+  - id: rollback-1
+    text: Declare the intended rollback rule, for example rollbackFor, and test the transaction boundary
+  - id: rollback-2
+    text: Catch and ignore every exception in the controller
+  - id: rollback-3
+    text: Assume every exception type always triggers rollback
+answers:
+  boundary: boundary-1
+  proxy: proxy-1
+  rollback: rollback-1
+hints:
+- Name the framework boundary before choosing a fix.
+- Consider what happens on failure, not only on the success path.
+level: advanced
+minutes: 10
+explanation_prompt: In 2–4 sentences, explain the framework boundary behind your choices and one concrete
+  way you would verify the behavior.
+explanation_rubric:
+- Names the relevant Spring or application boundary accurately.
+- Connects the boundary to the failure or correctness behavior in this scenario.
+- Suggests a concrete verification step such as a focused integration test.

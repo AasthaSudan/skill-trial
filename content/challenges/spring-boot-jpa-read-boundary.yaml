@@ -1,0 +1,56 @@
+slug: spring-boot-jpa-read-boundary
+skill: spring-boot
+family: spring-boot.jpa-read-boundary.advanced
+type: scenario
+title: Keep JPA reads bounded
+statement: An endpoint returns a page of projects and each project includes its owner name. The current
+  implementation triggers one owner query per project and sometimes serializes lazy entities after
+  the transaction has closed.
+competencies:
+- persistence
+- services
+questions:
+- id: shape
+  prompt: What is a safe response boundary for this endpoint?
+  options:
+  - id: shape-1
+    text: Load the required fields in a deliberate query and map them to a response DTO inside the
+      service boundary
+  - id: shape-2
+    text: Serialize every managed entity and all lazy relations from the controller
+  - id: shape-3
+    text: Mark every relation EAGER so all future reads fetch everything
+- id: fetch
+  prompt: How should the repeated owner lookups be addressed?
+  options:
+  - id: fetch-1
+    text: Fetch the needed relation for this use case with a targeted projection, entity graph, or
+      fetch join, and verify query counts
+  - id: fetch-2
+    text: Add a database query inside the JSON serializer
+  - id: fetch-3
+    text: Increase the page size until the extra queries disappear
+- id: page
+  prompt: What should remain true when changing the fetch plan?
+  options:
+  - id: page-1
+    text: Preserve pagination semantics and check for duplicate root rows from collection joins
+  - id: page-2
+    text: Remove ordering so the database can pick any page
+  - id: page-3
+    text: Load the entire table and paginate in memory
+answers:
+  shape: shape-1
+  fetch: fetch-1
+  page: page-1
+explanation_prompt: In 2–4 sentences, explain the framework boundary behind your choices and one concrete
+  way you would verify the behavior.
+explanation_rubric:
+- Names the relevant Spring or application boundary accurately.
+- Connects the boundary to the failure or correctness behavior in this scenario.
+- Suggests a concrete verification step such as a focused integration test.
+hints:
+- Name the framework boundary before choosing a fix.
+- Consider what happens on failure, not only on the success path.
+level: advanced
+minutes: 10

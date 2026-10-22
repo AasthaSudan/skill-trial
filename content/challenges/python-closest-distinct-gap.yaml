@@ -1,0 +1,61 @@
+slug: python-closest-distinct-gap
+skill: python
+family: python.closest-distinct-gap.advanced
+type: coding
+title: Closest distinct values
+statement: Return the smallest absolute difference between any two distinct values. Repeated copies
+  of one value do not form a pair. Return null when fewer than two distinct values exist. Integer
+  endpoints may be far apart.
+competencies: &id001
+- collections
+- algorithms
+- edge_cases
+language: python
+starter: "def solve(nums):\n    # Return the requested result.\n    return None\n"
+reference: "def solve(nums):\n    vals=sorted(set(nums))\n    if len(vals)<2:return None\n    return\
+  \ min(vals[i]-vals[i-1] for i in range(1,len(vals)))"
+hints:
+- Identify the invariant that stays true as the input is scanned.
+- Work through empty, repeated, and boundary-valued inputs.
+- Choose a time and memory bound that fits the stated input size.
+tests:
+- label: Representative input
+  input:
+  - 8
+  - 1
+  - 5
+  - 12
+  expected: 3
+  visibility: sample
+  competencies: *id001
+- label: Short input
+  input:
+  - 4
+  - 4
+  - 10
+  expected: 6
+  visibility: hidden
+  competencies: *id001
+- label: Boundary and sign handling
+  input:
+  - 7
+  expected: null
+  visibility: hidden
+  competencies: *id001
+- label: Repeated values
+  input:
+  - -2147483648
+  - 2147483647
+  expected: 4294967295
+  visibility: hidden
+  competencies: *id001
+- label: Scale or integer boundary
+  input:
+  - 0
+  - 0
+  - 0
+  expected: null
+  visibility: hidden
+  competencies: *id001
+level: advanced
+minutes: 18

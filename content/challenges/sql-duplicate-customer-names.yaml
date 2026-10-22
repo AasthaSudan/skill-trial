@@ -1,0 +1,69 @@
+slug: sql-duplicate-customer-names
+skill: sql
+family: sql.duplicate-customer-names.advanced
+type: sql
+title: Repeated customer names
+statement: Return each non-NULL customer name that appears at least twice, with its row count, ordered
+  by name. Repeated names are distinct customer records.
+competencies: &id001
+- aggregation
+- duplicates
+- null_handling
+- filtering
+language: sql
+schema: CREATE TABLE customers (id INTEGER PRIMARY KEY, name TEXT, email TEXT); CREATE TABLE orders
+  (id INTEGER PRIMARY KEY, customer_id INTEGER, amount REAL);
+sample_rows:
+  customers:
+  - - 1
+    - Ada
+    - ada@example.com
+  - - 2
+    - Lin
+    - null
+  orders:
+  - - 1
+    - 1
+    - 20
+starter: 'SELECT 1
+
+  -- Build the requested result.
+
+  '
+reference: SELECT name,COUNT(*) FROM customers WHERE name IS NOT NULL GROUP BY name HAVING COUNT(*)>=2
+  ORDER BY name
+hints:
+- Translate each output row into a precise group or relationship.
+- Test missing values, unmatched keys, and repeated events.
+- Make ordering explicit when the result contract requires it.
+tests:
+- label: Representative shop
+  dataset: CREATE TABLE customers (id INTEGER PRIMARY KEY, name TEXT, email TEXT); CREATE TABLE orders
+    (id INTEGER PRIMARY KEY, customer_id INTEGER, amount REAL);INSERT INTO customers VALUES (1,'Ada','a'),(2,'Ada','b'),(3,'Lin','l');
+  expected:
+  - - Ada
+    - 2
+  visibility: sample
+  competencies: *id001
+- label: NULL values and missing links
+  dataset: CREATE TABLE customers (id INTEGER PRIMARY KEY, name TEXT, email TEXT); CREATE TABLE orders
+    (id INTEGER PRIMARY KEY, customer_id INTEGER, amount REAL);INSERT INTO customers VALUES (1,NULL,'a'),(2,NULL,'b'),(3,'Lin',NULL);
+  expected: []
+  visibility: hidden
+  competencies: *id001
+- label: Repeated business events
+  dataset: CREATE TABLE customers (id INTEGER PRIMARY KEY, name TEXT, email TEXT); CREATE TABLE orders
+    (id INTEGER PRIMARY KEY, customer_id INTEGER, amount REAL);INSERT INTO customers VALUES (1,'Sam','a'),(2,'Sam','b'),(3,'Sam','c');
+  expected:
+  - - Sam
+    - 3
+  visibility: hidden
+  competencies: *id001
+- label: Small or empty groups
+  dataset: CREATE TABLE customers (id INTEGER PRIMARY KEY, name TEXT, email TEXT); CREATE TABLE orders
+    (id INTEGER PRIMARY KEY, customer_id INTEGER, amount REAL);INSERT INTO customers VALUES (1,'Only','a');
+  expected: []
+  visibility: hidden
+  competencies: *id001
+level: advanced
+minutes: 18

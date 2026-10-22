@@ -1,0 +1,72 @@
+slug: python-trust-average
+skill: python
+family: python.trust-average
+type: trust
+minutes: 15
+title: Would you ship this average?
+statement: Review three suggestions for solve(nums). It must return the arithmetic
+  mean **without losing the fractional part**, and return 0 for an empty array. Integers
+  are between -1,000,000 and 1,000,000. Judge each suggestion, provide a counterexample
+  and expected result, then fix the implementation.
+competencies:
+- edge_cases
+- algorithms
+language: python
+starter: "def solve(nums):\n    return sum(nums) / len(nums)"
+reference: "def solve(nums):\n    return sum(nums) / len(nums) if nums else 0"
+categories:
+- correct
+- edge_case_failure
+- logic_defect
+suggestions:
+- id: option-1
+  code: "def solve(nums):\n    return sum(nums) / len(nums) if nums else 0"
+  acceptable: true
+  category: correct
+- id: option-2
+  code: "def solve(nums):\n    return sum(nums) / len(nums)"
+  acceptable: false
+  category: edge_case_failure
+- id: option-3
+  code: "def solve(nums):\n    return sum(nums) // len(nums) if nums else 0"
+  acceptable: false
+  category: logic_defect
+tests:
+- input: []
+  expected: 0
+  label: Empty input
+  visibility: hidden
+  competencies:
+  - edge_cases
+  - algorithms
+- input:
+  - 1
+  - 2
+  expected: 1.5
+  label: Fractional result
+  visibility: hidden
+  competencies:
+  - edge_cases
+  - algorithms
+- input:
+  - -2
+  - 2
+  expected: 0
+  label: Mixed signs
+  visibility: hidden
+  competencies:
+  - edge_cases
+  - algorithms
+- input:
+  - 1000000
+  - 1000000
+  expected: 1000000
+  label: Large values
+  visibility: hidden
+  competencies:
+  - edge_cases
+  - algorithms
+hints:
+- What happens when the list is empty?
+- What kind of division preserves a fraction?
+level: intermediate

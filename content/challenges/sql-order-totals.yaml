@@ -1,0 +1,107 @@
+slug: sql-order-totals
+skill: sql
+family: sql.order-totals
+type: sql
+title: Every customer counts
+statement: 'Return **id, total** for every customer. Sum their order amounts; customers
+  with no orders have total 0. Keep repeated orders: equal amounts can represent different
+  purchases. Order by id.'
+competencies: &id001
+- aggregation
+- duplicates
+- null_handling
+language: sql
+schema: CREATE TABLE customers (id INTEGER PRIMARY KEY, name TEXT, email TEXT); CREATE
+  TABLE orders (id INTEGER PRIMARY KEY, customer_id INTEGER, amount REAL);
+sample_rows:
+  customers:
+  - - 1
+    - Ada
+    - ada@example.com
+  - - 2
+    - Lin
+    - null
+  - - 3
+    - Sam
+    - sam@example.com
+  orders:
+  - - 1
+    - 1
+    - 20
+  - - 2
+    - 1
+    - 30
+  - - 3
+    - 3
+    - 15
+starter: 'SELECT c.id
+
+  FROM customers c
+
+  -- Include every customer and calculate their total
+
+  '
+reference: SELECT c.id,COALESCE(SUM(o.amount),0) AS total FROM customers c LEFT JOIN
+  orders o ON o.customer_id=c.id GROUP BY c.id ORDER BY c.id
+hints:
+- Use the stated output columns and ordering.
+- Think about NULL values and repeated rows.
+- For totals, join before grouping; avoid SUM(DISTINCT amount).
+tests:
+- label: Sample shop
+  dataset: CREATE TABLE customers (id INTEGER PRIMARY KEY, name TEXT, email TEXT);
+    CREATE TABLE orders (id INTEGER PRIMARY KEY, customer_id INTEGER, amount REAL);INSERT
+    INTO customers VALUES (1,'Ada','ada@example.com'),(2,'Lin',NULL),(3,'Sam','sam@example.com');
+    INSERT INTO orders VALUES (1,1,20),(2,1,30),(3,3,15);
+  expected:
+  - - 1
+    - 50
+  - - 2
+    - 0
+  - - 3
+    - 15
+  visibility: sample
+  competencies: *id001
+- label: NULL foreign key
+  dataset: CREATE TABLE customers (id INTEGER PRIMARY KEY, name TEXT, email TEXT);
+    CREATE TABLE orders (id INTEGER PRIMARY KEY, customer_id INTEGER, amount REAL);INSERT
+    INTO customers VALUES (1,'Ada','ada@example.com'),(2,'Lin',NULL),(3,'Sam','sam@example.com');
+    INSERT INTO orders VALUES (1,1,20),(2,1,30),(3,3,15); INSERT INTO orders VALUES
+    (4,NULL,80);
+  expected:
+  - - 1
+    - 50
+  - - 2
+    - 0
+  - - 3
+    - 15
+  visibility: hidden
+  competencies: *id001
+- label: Duplicate amounts
+  dataset: CREATE TABLE customers (id INTEGER PRIMARY KEY, name TEXT, email TEXT);
+    CREATE TABLE orders (id INTEGER PRIMARY KEY, customer_id INTEGER, amount REAL);INSERT
+    INTO customers VALUES (1,'Ada','ada@example.com'),(2,'Lin',NULL),(3,'Sam','sam@example.com');
+    INSERT INTO orders VALUES (1,1,20),(2,1,30),(3,3,15); INSERT INTO orders VALUES
+    (4,3,15);
+  expected:
+  - - 1
+    - 50
+  - - 2
+    - 0
+  - - 3
+    - 30
+  visibility: hidden
+  competencies: *id001
+- label: No orders
+  dataset: CREATE TABLE customers (id INTEGER PRIMARY KEY, name TEXT, email TEXT);
+    CREATE TABLE orders (id INTEGER PRIMARY KEY, customer_id INTEGER, amount REAL);INSERT
+    INTO customers VALUES (1,'Ada',NULL),(2,'Lin','lin@example.com');
+  expected:
+  - - 1
+    - 0
+  - - 2
+    - 0
+  visibility: hidden
+  competencies: *id001
+level: intermediate
+minutes: 12
