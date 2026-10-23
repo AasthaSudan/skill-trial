@@ -1,0 +1,34 @@
+slug: aws-intermediate-decision-6
+family: aws.decision-6.intermediate
+skill: aws
+type: scenario
+level: intermediate
+minutes: 6
+title: Availability zones
+statement: AWS scenario assessment. A service must tolerate losing one availability zone. Which architecture
+  helps? Choose the response that satisfies the stated technical requirement. This task assesses decisions
+  and reasoning rather than running a full application.
+competencies:
+- storage_reliability
+questions:
+- id: q1
+  prompt: A service must tolerate losing one availability zone. Which architecture helps?
+  options:
+  - id: q1-1
+    text: Place redundant capacity across zones and design failover for stateful dependencies
+  - id: q1-2
+    text: Keep every replica on one host in one zone
+  - id: q1-3
+    text: Assume one large instance prevents all outages
+answers:
+  q1: q1-1
+answer_rationale:
+- Place redundant capacity across zones and design failover for stateful dependencies.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.
+explanation_prompt: Explain why your choice fits this scenario and how you would verify its behavior.
+explanation_rubric:
+- Names the relevant technical boundary.
+- Connects the choice to the failure or correctness requirement.
+- Gives a concrete verification step.

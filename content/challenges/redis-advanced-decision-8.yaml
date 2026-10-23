@@ -1,0 +1,35 @@
+slug: redis-advanced-decision-8
+family: redis.decision-8.advanced
+skill: redis
+type: scenario
+level: advanced
+minutes: 8
+title: Safe lock release
+statement: Redis scenario assessment. A worker's lock lease expired and another worker acquired it. How
+  should the old worker release safely? Choose the response that satisfies the stated technical requirement.
+  This task assesses decisions and reasoning rather than running a full application.
+competencies:
+- atomic_operations
+questions:
+- id: q1
+  prompt: A worker's lock lease expired and another worker acquired it. How should the old worker release
+    safely?
+  options:
+  - id: q1-1
+    text: Delete only if the stored ownership token still matches, using an atomic check
+  - id: q1-2
+    text: Delete the lock key unconditionally
+  - id: q1-3
+    text: Assume the first owner can never pause
+answers:
+  q1: q1-1
+answer_rationale:
+- Delete only if the stored ownership token still matches, using an atomic check.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.
+explanation_prompt: Explain why your choice fits this scenario and how you would verify its behavior.
+explanation_rubric:
+- Names the relevant technical boundary.
+- Connects the choice to the failure or correctness requirement.
+- Gives a concrete verification step.

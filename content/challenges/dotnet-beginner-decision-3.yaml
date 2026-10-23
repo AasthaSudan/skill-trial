@@ -1,0 +1,29 @@
+slug: dotnet-beginner-decision-3
+family: dotnet.decision-3.beginner
+skill: dotnet
+type: scenario
+level: beginner
+minutes: 4
+title: Database scope
+statement: .NET scenario assessment. Which lifetime commonly fits a request-scoped EF Core DbContext?
+  Choose the response that satisfies the stated technical requirement. This task assesses decisions and
+  reasoning rather than running a full application.
+competencies:
+- data_lifetimes
+questions:
+- id: q1
+  prompt: Which lifetime commonly fits a request-scoped EF Core DbContext?
+  options:
+  - id: q1-1
+    text: A scoped lifetime within the unit of work
+  - id: q1-2
+    text: One unsynchronized global context for all concurrent requests
+  - id: q1-3
+    text: A new permanent static context for each table row
+answers:
+  q1: q1-1
+answer_rationale:
+- A scoped lifetime within the unit of work.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.

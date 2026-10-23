@@ -1,0 +1,34 @@
+slug: css-intermediate-decision-5
+family: css.decision-5.intermediate
+skill: css
+type: scenario
+level: intermediate
+minutes: 6
+title: Responsive columns
+statement: CSS scenario assessment. A card layout must adapt to a narrow viewport. What is appropriate?
+  Choose the response that satisfies the stated technical requirement. This task assesses decisions and
+  reasoning rather than running a full application.
+competencies:
+- layout_responsiveness
+questions:
+- id: q1
+  prompt: A card layout must adapt to a narrow viewport. What is appropriate?
+  options:
+  - id: q1-1
+    text: Use flexible/grid sizing and suitable breakpoints based on content
+  - id: q1-2
+    text: Fix the page to a wide pixel width with no overflow plan
+  - id: q1-3
+    text: Shrink all text until the wide layout fits
+answers:
+  q1: q1-1
+answer_rationale:
+- Use flexible/grid sizing and suitable breakpoints based on content.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.
+explanation_prompt: Explain why your choice fits this scenario and how you would verify its behavior.
+explanation_rubric:
+- Names the relevant technical boundary.
+- Connects the choice to the failure or correctness requirement.
+- Gives a concrete verification step.

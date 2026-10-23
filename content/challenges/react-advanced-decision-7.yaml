@@ -1,0 +1,35 @@
+slug: react-advanced-decision-7
+family: react.decision-7.advanced
+skill: react
+type: scenario
+level: advanced
+minutes: 8
+title: Stale request race
+statement: React scenario assessment. A slower old search response arrives after a newer search result.
+  What preserves the current result? Choose the response that satisfies the stated technical requirement.
+  This task assesses decisions and reasoning rather than running a full application.
+competencies:
+- components_state
+questions:
+- id: q1
+  prompt: A slower old search response arrives after a newer search result. What preserves the current
+    result?
+  options:
+  - id: q1-1
+    text: Cancel or ignore stale responses using request identity
+  - id: q1-2
+    text: Always render the response that arrives last
+  - id: q1-3
+    text: Clear the search text whenever any response finishes
+answers:
+  q1: q1-1
+answer_rationale:
+- Cancel or ignore stale responses using request identity.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.
+explanation_prompt: Explain why your choice fits this scenario and how you would verify its behavior.
+explanation_rubric:
+- Names the relevant technical boundary.
+- Connects the choice to the failure or correctness requirement.
+- Gives a concrete verification step.

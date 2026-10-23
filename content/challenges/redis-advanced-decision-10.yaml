@@ -1,0 +1,37 @@
+slug: redis-advanced-decision-10
+family: redis.decision-10.advanced
+skill: redis
+type: scenario
+level: advanced
+minutes: 8
+title: Stale writer
+statement: Redis scenario assessment. A paused lock holder resumes after its lease expired and may overwrite
+  newer work. What can prevent stale writes? Choose the response that satisfies the stated technical requirement.
+  This task assesses decisions and reasoning rather than running a full application.
+competencies:
+- structures_expiry
+- atomic_operations
+- cache_reliability
+questions:
+- id: q1
+  prompt: A paused lock holder resumes after its lease expired and may overwrite newer work. What can
+    prevent stale writes?
+  options:
+  - id: q1-1
+    text: Use a fencing/version mechanism enforced by the authoritative write target
+  - id: q1-2
+    text: Only use a longer lock-key name
+  - id: q1-3
+    text: Assume expiry alone prevents all old owners from writing
+answers:
+  q1: q1-1
+answer_rationale:
+- Use a fencing/version mechanism enforced by the authoritative write target.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.
+explanation_prompt: Explain why your choice fits this scenario and how you would verify its behavior.
+explanation_rubric:
+- Names the relevant technical boundary.
+- Connects the choice to the failure or correctness requirement.
+- Gives a concrete verification step.

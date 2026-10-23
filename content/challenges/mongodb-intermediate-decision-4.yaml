@@ -1,0 +1,34 @@
+slug: mongodb-intermediate-decision-4
+family: mongodb.decision-4.intermediate
+skill: mongodb
+type: scenario
+level: intermediate
+minutes: 6
+title: Compound index order
+statement: MongoDB scenario assessment. A common query filters tenant and status then sorts createdAt.
+  How should indexing be chosen? Choose the response that satisfies the stated technical requirement.
+  This task assesses decisions and reasoning rather than running a full application.
+competencies:
+- documents_queries
+questions:
+- id: q1
+  prompt: A common query filters tenant and status then sorts createdAt. How should indexing be chosen?
+  options:
+  - id: q1-1
+    text: Evaluate a compound index matching the query pattern and verify with explain
+  - id: q1-2
+    text: Create random single-field indexes and assume sort is covered
+  - id: q1-3
+    text: Index only a rarely used debug field
+answers:
+  q1: q1-1
+answer_rationale:
+- Evaluate a compound index matching the query pattern and verify with explain.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.
+explanation_prompt: Explain why your choice fits this scenario and how you would verify its behavior.
+explanation_rubric:
+- Names the relevant technical boundary.
+- Connects the choice to the failure or correctness requirement.
+- Gives a concrete verification step.

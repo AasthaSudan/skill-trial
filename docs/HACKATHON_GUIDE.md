@@ -295,7 +295,7 @@ The pure function in `backend/app/verification.py` averages evaluable task ratio
 
 Too few evaluable tasks or insufficient coverage leads to **Insufficient Evidence**. With enough evidence, meeting all required criteria leads to **Verified**. Otherwise, demonstrating some competencies yields **Partially Verified**, and demonstrating none yields **Not Verified**. Untouched tasks are excluded; infrastructure failures are identified and make a free retake available.
 
-The current beginner/intermediate offerings use the baseline challenge pool; the policy and target-level requirements differ. The system is not an adaptive difficulty model.
+Each skill now uses distinct beginner, intermediate and advanced question banks, with exact level selection. The system is not an adaptive difficulty model. The additional 16 skills use scenario assessments rather than full code or framework execution.
 
 ## Local startup
 
@@ -316,3 +316,5 @@ For verification links locally, use **Settings → Security → Development inbo
 ## What was actually checked
 
 See `FLOW_AUDIT.md` for the tested paths, fixes, and remaining limits. The checks use real local requests, a disposable QA account, isolated test databases, and actual Docker language containers. QA reference answers are used only by the test harness to establish expected outcomes; the application does not substitute them for user submissions.
+
+Current level coverage: all 21 catalog skills support three distinct levels in the local development preview. See LEVEL_ASSESSMENTS.md / Level_Assessment_Update.md for inventory, execution scope and checks.

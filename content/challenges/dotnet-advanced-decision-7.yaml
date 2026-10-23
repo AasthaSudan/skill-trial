@@ -1,0 +1,34 @@
+slug: dotnet-advanced-decision-7
+family: dotnet.decision-7.advanced
+skill: dotnet
+type: scenario
+level: advanced
+minutes: 8
+title: Background service scope
+statement: .NET scenario assessment. A hosted background service processes jobs using scoped dependencies.
+  How should it obtain them? Choose the response that satisfies the stated technical requirement. This
+  task assesses decisions and reasoning rather than running a full application.
+competencies:
+- dependency_injection
+questions:
+- id: q1
+  prompt: A hosted background service processes jobs using scoped dependencies. How should it obtain them?
+  options:
+  - id: q1-1
+    text: Create and dispose an explicit scope for each appropriate unit of work
+  - id: q1-2
+    text: Retain one request scope after the request ends
+  - id: q1-3
+    text: Assume a singleton host automatically makes DbContext thread-safe
+answers:
+  q1: q1-1
+answer_rationale:
+- Create and dispose an explicit scope for each appropriate unit of work.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.
+explanation_prompt: Explain why your choice fits this scenario and how you would verify its behavior.
+explanation_rubric:
+- Names the relevant technical boundary.
+- Connects the choice to the failure or correctness requirement.
+- Gives a concrete verification step.

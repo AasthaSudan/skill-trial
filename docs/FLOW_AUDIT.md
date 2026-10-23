@@ -72,3 +72,7 @@ Backend tests use isolated databases. Live rehearsal checks intentionally create
 ## Gemini continuation
 
 Added native Gemini generateContent support while retaining Anthropic. The full backend suite now passes **71 tests**, including 20 provider cases. A synthetic Google API request passed with the owner's locally stored key. Tests cover request/auth formatting, structured output, ignored thought parts, blocked/incomplete/malformed/oversized responses, quota/auth/timeouts, supported configuration, quote validation and redaction, and deterministic fallback. No personal resume data was used in the live check. See GEMINI_SETUP.md for activation and SCREENWISE_PITCH.md for the complete presentation script. Historical audit statements above describe the earlier pre-Gemini rehearsal.
+
+## Separate level banks and expanded skill coverage
+
+The latest continuation enables all 21 catalog skills at three distinct difficulty levels in development. Exact-level selection replaces the shared baseline bank. The additional 16 skills use scenario assessments, with no claim of running their compilers or platforms. Added 179 definitions / 358 validated formal-and-practice versions. The full suite now passes 80 backend tests, and the frontend build and three tests pass. See [level assessment update](LEVEL_ASSESSMENTS.md) for current scope and checks. Earlier counts in this document describe earlier rehearsals.

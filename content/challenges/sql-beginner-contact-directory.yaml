@@ -1,0 +1,100 @@
+slug: sql-beginner-contact-directory
+family: sql.contact-directory.beginner
+skill: sql
+type: sql
+level: beginner
+minutes: 6
+title: Build a contact directory
+statement: Return id, name and contact for every customer, ordered by id. contact is the email, or the
+  literal string unknown when email is NULL. Preserve different customers that share a name.
+competencies: &id001
+- null_handling
+- duplicates
+language: sql
+schema: CREATE TABLE customers (id INTEGER PRIMARY KEY, name TEXT, email TEXT); CREATE TABLE orders (id
+  INTEGER PRIMARY KEY, customer_id INTEGER, amount REAL);
+sample_rows:
+  customers:
+  - - 1
+    - Ada
+    - a@example.test
+  - - 2
+    - Lin
+    - null
+  - - 3
+    - Ada
+    - c@example.test
+  orders:
+  - - 1
+    - 1
+    - 12
+  - - 2
+    - 1
+    - 12
+  - - 3
+    - 3
+    - 0
+starter: 'SELECT
+
+  -- Choose the requested columns and tables.
+
+  '
+reference: SELECT id,name,COALESCE(email,'unknown') AS contact FROM customers ORDER BY id
+tests:
+- label: Sample shop
+  dataset: CREATE TABLE customers (id INTEGER PRIMARY KEY, name TEXT, email TEXT); CREATE TABLE orders
+    (id INTEGER PRIMARY KEY, customer_id INTEGER, amount REAL);INSERT INTO customers VALUES (1,'Ada','a@example.test'),(2,'Lin',NULL),(3,'Ada','c@example.test');
+    INSERT INTO orders VALUES (1,1,12),(2,1,12),(3,3,0);
+  expected:
+  - - 1
+    - Ada
+    - a@example.test
+  - - 2
+    - Lin
+    - unknown
+  - - 3
+    - Ada
+    - c@example.test
+  visibility: sample
+  competencies: *id001
+- label: Missing values
+  dataset: CREATE TABLE customers (id INTEGER PRIMARY KEY, name TEXT, email TEXT); CREATE TABLE orders
+    (id INTEGER PRIMARY KEY, customer_id INTEGER, amount REAL);INSERT INTO customers VALUES (1,'Zed',NULL),(2,'Lin',NULL);
+    INSERT INTO orders VALUES (1,1,NULL),(2,NULL,9),(3,2,5);
+  expected:
+  - - 1
+    - Zed
+    - unknown
+  - - 2
+    - Lin
+    - unknown
+  visibility: hidden
+  competencies: *id001
+- label: Repeated events
+  dataset: CREATE TABLE customers (id INTEGER PRIMARY KEY, name TEXT, email TEXT); CREATE TABLE orders
+    (id INTEGER PRIMARY KEY, customer_id INTEGER, amount REAL);INSERT INTO customers VALUES (1,'Ada','a'),(2,'Ada','b');
+    INSERT INTO orders VALUES (1,1,4),(2,1,4),(3,2,-2);
+  expected:
+  - - 1
+    - Ada
+    - a
+  - - 2
+    - Ada
+    - b
+  visibility: hidden
+  competencies: *id001
+- label: No orders
+  dataset: CREATE TABLE customers (id INTEGER PRIMARY KEY, name TEXT, email TEXT); CREATE TABLE orders
+    (id INTEGER PRIMARY KEY, customer_id INTEGER, amount REAL);INSERT INTO customers VALUES (1,'No orders',NULL),(2,'Other','o');
+  expected:
+  - - 1
+    - No orders
+    - unknown
+  - - 2
+    - Other
+    - o
+  visibility: hidden
+  competencies: *id001
+hints:
+- Keep the requested output column order.
+- Use IS NULL or COALESCE when the contract mentions missing values.

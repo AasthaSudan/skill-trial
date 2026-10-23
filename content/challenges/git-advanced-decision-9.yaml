@@ -1,0 +1,34 @@
+slug: git-advanced-decision-9
+family: git.decision-9.advanced
+skill: git
+type: scenario
+level: advanced
+minutes: 8
+title: Leaked credential
+statement: Git scenario assessment. A secret was committed and pushed. What is the first essential response?
+  Choose the response that satisfies the stated technical requirement. This task assesses decisions and
+  reasoning rather than running a full application.
+competencies:
+- collaboration_safety
+questions:
+- id: q1
+  prompt: A secret was committed and pushed. What is the first essential response?
+  options:
+  - id: q1-1
+    text: Revoke or rotate the secret, then clean history and coordinate cleanup
+  - id: q1-2
+    text: Only remove the line in a new commit and keep the key active
+  - id: q1-3
+    text: Make the repository private and assume the key is safe forever
+answers:
+  q1: q1-1
+answer_rationale:
+- Revoke or rotate the secret, then clean history and coordinate cleanup.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.
+explanation_prompt: Explain why your choice fits this scenario and how you would verify its behavior.
+explanation_rubric:
+- Names the relevant technical boundary.
+- Connects the choice to the failure or correctness requirement.
+- Gives a concrete verification step.

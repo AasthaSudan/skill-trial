@@ -1,0 +1,34 @@
+slug: kubernetes-advanced-decision-9
+family: kubernetes.decision-9.advanced
+skill: kubernetes
+type: scenario
+level: advanced
+minutes: 8
+title: Network isolation
+statement: Kubernetes scenario assessment. A namespace must restrict workload-to-workload traffic. What
+  is needed? Choose the response that satisfies the stated technical requirement. This task assesses decisions
+  and reasoning rather than running a full application.
+competencies:
+- reliability_operations
+questions:
+- id: q1
+  prompt: A namespace must restrict workload-to-workload traffic. What is needed?
+  options:
+  - id: q1-1
+    text: A network-policy-capable implementation and explicit policies tested against required traffic
+  - id: q1-2
+    text: Only different namespace names with no enforcement
+  - id: q1-3
+    text: A comment in the deployment YAML
+answers:
+  q1: q1-1
+answer_rationale:
+- A network-policy-capable implementation and explicit policies tested against required traffic.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.
+explanation_prompt: Explain why your choice fits this scenario and how you would verify its behavior.
+explanation_rubric:
+- Names the relevant technical boundary.
+- Connects the choice to the failure or correctness requirement.
+- Gives a concrete verification step.

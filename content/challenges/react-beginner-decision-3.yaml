@@ -1,0 +1,29 @@
+slug: react-beginner-decision-3
+family: react.decision-3.beginner
+skill: react
+type: scenario
+level: beginner
+minutes: 4
+title: Accessible controls
+statement: React scenario assessment. An icon triggers an action. Which element gives keyboard activation
+  by default? Choose the response that satisfies the stated technical requirement. This task assesses
+  decisions and reasoning rather than running a full application.
+competencies:
+- rendering_accessibility
+questions:
+- id: q1
+  prompt: An icon triggers an action. Which element gives keyboard activation by default?
+  options:
+  - id: q1-1
+    text: A button with an accessible name
+  - id: q1-2
+    text: An unlabelled div with only a mouse click handler
+  - id: q1-3
+    text: A span hidden from assistive technology
+answers:
+  q1: q1-1
+answer_rationale:
+- A button with an accessible name.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.

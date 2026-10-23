@@ -1,0 +1,34 @@
+slug: csharp-intermediate-decision-5
+family: csharp.decision-5.intermediate
+skill: csharp
+type: scenario
+level: intermediate
+minutes: 6
+title: Disposable resource
+statement: C# scenario assessment. A method opens a disposable file stream. How should ownership be expressed?
+  Choose the response that satisfies the stated technical requirement. This task assesses decisions and
+  reasoning rather than running a full application.
+competencies:
+- collections_linq
+questions:
+- id: q1
+  prompt: A method opens a disposable file stream. How should ownership be expressed?
+  options:
+  - id: q1-1
+    text: Use a deterministic disposal boundary such as using
+  - id: q1-2
+    text: Leave every stream open until the machine reboots
+  - id: q1-3
+    text: Store all streams in a static list
+answers:
+  q1: q1-1
+answer_rationale:
+- Use a deterministic disposal boundary such as using.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.
+explanation_prompt: Explain why your choice fits this scenario and how you would verify its behavior.
+explanation_rubric:
+- Names the relevant technical boundary.
+- Connects the choice to the failure or correctness requirement.
+- Gives a concrete verification step.

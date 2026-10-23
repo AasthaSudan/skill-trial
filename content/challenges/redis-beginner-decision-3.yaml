@@ -1,0 +1,29 @@
+slug: redis-beginner-decision-3
+family: redis.decision-3.beginner
+skill: redis
+type: scenario
+level: beginner
+minutes: 4
+title: Data structure
+statement: Redis scenario assessment. Which Redis structure suits membership checks on unique values?
+  Choose the response that satisfies the stated technical requirement. This task assesses decisions and
+  reasoning rather than running a full application.
+competencies:
+- cache_reliability
+questions:
+- id: q1
+  prompt: Which Redis structure suits membership checks on unique values?
+  options:
+  - id: q1-1
+    text: A set
+  - id: q1-2
+    text: A single concatenated string with ambiguous separators
+  - id: q1-3
+    text: A browser cookie shared by all users
+answers:
+  q1: q1-1
+answer_rationale:
+- A set.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.

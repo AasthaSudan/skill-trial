@@ -1,0 +1,36 @@
+slug: fastapi-advanced-decision-10
+family: fastapi.decision-10.advanced
+skill: fastapi
+type: scenario
+level: advanced
+minutes: 8
+title: Worker session boundary
+statement: FastAPI scenario assessment. A worker continues after the request closes. How should it access
+  the database? Choose the response that satisfies the stated technical requirement. This task assesses
+  decisions and reasoning rather than running a full application.
+competencies:
+- request_validation
+- dependencies_auth
+- async_persistence
+questions:
+- id: q1
+  prompt: A worker continues after the request closes. How should it access the database?
+  options:
+  - id: q1-1
+    text: Create its own scoped session and load work by durable identifiers
+  - id: q1-2
+    text: Reuse the closed request session on an unrelated thread
+  - id: q1-3
+    text: Keep the HTTP connection open forever as the job queue
+answers:
+  q1: q1-1
+answer_rationale:
+- Create its own scoped session and load work by durable identifiers.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.
+explanation_prompt: Explain why your choice fits this scenario and how you would verify its behavior.
+explanation_rubric:
+- Names the relevant technical boundary.
+- Connects the choice to the failure or correctness requirement.
+- Gives a concrete verification step.

@@ -1,0 +1,29 @@
+slug: redis-beginner-decision-1
+family: redis.decision-1.beginner
+skill: redis
+type: scenario
+level: beginner
+minutes: 4
+title: Cache lookup
+statement: Redis scenario assessment. What should an application do on a normal cache miss? Choose the
+  response that satisfies the stated technical requirement. This task assesses decisions and reasoning
+  rather than running a full application.
+competencies:
+- structures_expiry
+questions:
+- id: q1
+  prompt: What should an application do on a normal cache miss?
+  options:
+  - id: q1-1
+    text: Load from the authoritative source and populate the cache under its policy
+  - id: q1-2
+    text: Treat absence as proof the authoritative record was deleted
+  - id: q1-3
+    text: Return a fabricated permanent record
+answers:
+  q1: q1-1
+answer_rationale:
+- Load from the authoritative source and populate the cache under its policy.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.

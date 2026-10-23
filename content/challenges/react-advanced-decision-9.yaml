@@ -1,0 +1,35 @@
+slug: react-advanced-decision-9
+family: react.decision-9.advanced
+skill: react
+type: scenario
+level: advanced
+minutes: 8
+title: Unexpected side effects
+statement: React scenario assessment. A development render is invoked more than once and creates duplicate
+  subscriptions. What should change? Choose the response that satisfies the stated technical requirement.
+  This task assesses decisions and reasoning rather than running a full application.
+competencies:
+- rendering_accessibility
+questions:
+- id: q1
+  prompt: A development render is invoked more than once and creates duplicate subscriptions. What should
+    change?
+  options:
+  - id: q1-1
+    text: Keep render pure and make effect setup and cleanup symmetric
+  - id: q1-2
+    text: Disable all checks and keep subscribing during render
+  - id: q1-3
+    text: Mutate incoming props so later renders are skipped
+answers:
+  q1: q1-1
+answer_rationale:
+- Keep render pure and make effect setup and cleanup symmetric.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.
+explanation_prompt: Explain why your choice fits this scenario and how you would verify its behavior.
+explanation_rubric:
+- Names the relevant technical boundary.
+- Connects the choice to the failure or correctness requirement.
+- Gives a concrete verification step.

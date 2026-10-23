@@ -1,0 +1,29 @@
+slug: css-beginner-decision-1
+family: css.decision-1.beginner
+skill: css
+type: scenario
+level: beginner
+minutes: 4
+title: Box sizing
+statement: CSS scenario assessment. What does border-box sizing make the declared width include? Choose
+  the response that satisfies the stated technical requirement. This task assesses decisions and reasoning
+  rather than running a full application.
+competencies:
+- cascade_selectors
+questions:
+- id: q1
+  prompt: What does border-box sizing make the declared width include?
+  options:
+  - id: q1-1
+    text: Content, padding and border
+  - id: q1-2
+    text: Only the margin around the element
+  - id: q1-3
+    text: The width of every sibling element
+answers:
+  q1: q1-1
+answer_rationale:
+- Content, padding and border.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.

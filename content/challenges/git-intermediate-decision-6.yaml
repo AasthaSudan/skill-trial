@@ -1,0 +1,34 @@
+slug: git-intermediate-decision-6
+family: git.decision-6.intermediate
+skill: git
+type: scenario
+level: intermediate
+minutes: 6
+title: Fetch versus pull
+statement: Git scenario assessment. You want remote updates without merging into the current branch. Which
+  command fits? Choose the response that satisfies the stated technical requirement. This task assesses
+  decisions and reasoning rather than running a full application.
+competencies:
+- collaboration_safety
+questions:
+- id: q1
+  prompt: You want remote updates without merging into the current branch. Which command fits?
+  options:
+  - id: q1-1
+    text: Fetch and inspect the remote-tracking branch
+  - id: q1-2
+    text: Pull and assume it never changes the working branch
+  - id: q1-3
+    text: Push to retrieve remote commits
+answers:
+  q1: q1-1
+answer_rationale:
+- Fetch and inspect the remote-tracking branch.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.
+explanation_prompt: Explain why your choice fits this scenario and how you would verify its behavior.
+explanation_rubric:
+- Names the relevant technical boundary.
+- Connects the choice to the failure or correctness requirement.
+- Gives a concrete verification step.

@@ -7,7 +7,6 @@ import { PageTitle, Loading, ErrorPanel, useAction, Modal } from '../components'
 import { ResourceForm, BadgeForm } from './AdminEditors';
 
 const permissions = ['content.read','content.manage','content.validate','content.review','content.publish','stats.read','users.manage','settings.manage'];
-const skills = ['sql','python','java','javascript','spring-boot'];
 
 export function Admin() {
   const { user } = useOutletContext<any>();
@@ -20,7 +19,8 @@ export function Admin() {
   const aiStatus=useQuery({queryKey:['admin-ai-status'],queryFn:()=>api('/admin/ai/status'),enabled:user.role==='admin'&&tab==='content'});
   const resources=useQuery({queryKey:['admin-resources'],queryFn:()=>api('/admin/resources'),enabled:user.role==='admin'&&tab==='resources'});
   const badgeDefs=useQuery({queryKey:['admin-badges'],queryFn:()=>api('/admin/badges'),enabled:user.role==='admin'&&tab==='badges'});
-  const catalog=useQuery({queryKey:['skills'],queryFn:()=>api('/skills'),enabled:user.role==='admin'&&tab==='resources'});
+  const catalog=useQuery({queryKey:['skills'],queryFn:()=>api('/skills'),enabled:user.role==='admin'});
+  const skills:string[]=(catalog.data||[]).filter((s:any)=>s.assessable).map((s:any)=>s.slug);
   const rules=useQuery({queryKey:['admin-badge-rules'],queryFn:()=>api('/admin/badge-rules'),enabled:user.role==='admin'&&tab==='badges'});
   if(user.role!=='admin')return <ErrorPanel error={{message:'Administrator access is required.'}} retry={()=>{}}/>;
   const refresh=()=>{cache.invalidateQueries({queryKey:['admin-content']});cache.invalidateQueries({queryKey:['admin-resources']});cache.invalidateQueries({queryKey:['admin-badges']});cache.invalidateQueries({queryKey:['admin-stats']});};

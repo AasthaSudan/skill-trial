@@ -1,0 +1,35 @@
+slug: cpp-intermediate-decision-5
+family: cpp.decision-5.intermediate
+skill: cpp
+type: scenario
+level: intermediate
+minutes: 6
+title: Iterator validity
+statement: C++ scenario assessment. A vector may reallocate during push_back. What must callers assume
+  about existing element references and iterators? Choose the response that satisfies the stated technical
+  requirement. This task assesses decisions and reasoning rather than running a full application.
+competencies:
+- containers_algorithms
+questions:
+- id: q1
+  prompt: A vector may reallocate during push_back. What must callers assume about existing element references
+    and iterators?
+  options:
+  - id: q1-1
+    text: They can be invalidated by reallocation
+  - id: q1-2
+    text: They remain valid for every future operation unconditionally
+  - id: q1-3
+    text: They become automatic copies of the new elements
+answers:
+  q1: q1-1
+answer_rationale:
+- They can be invalidated by reallocation.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.
+explanation_prompt: Explain why your choice fits this scenario and how you would verify its behavior.
+explanation_rubric:
+- Names the relevant technical boundary.
+- Connects the choice to the failure or correctness requirement.
+- Gives a concrete verification step.

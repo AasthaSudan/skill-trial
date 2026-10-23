@@ -1,0 +1,34 @@
+slug: csharp-intermediate-decision-6
+family: csharp.decision-6.intermediate
+skill: csharp
+type: scenario
+level: intermediate
+minutes: 6
+title: Async blocking
+statement: C# scenario assessment. A server method blocks on an async operation with Result. What should
+  be considered? Choose the response that satisfies the stated technical requirement. This task assesses
+  decisions and reasoning rather than running a full application.
+competencies:
+- async_resources
+questions:
+- id: q1
+  prompt: A server method blocks on an async operation with Result. What should be considered?
+  options:
+  - id: q1-1
+    text: Use async/await through the call chain and avoid unnecessary synchronous blocking
+  - id: q1-2
+    text: Add more nested blocking waits
+  - id: q1-3
+    text: Assume async APIs never consume threads or locks
+answers:
+  q1: q1-1
+answer_rationale:
+- Use async/await through the call chain and avoid unnecessary synchronous blocking.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.
+explanation_prompt: Explain why your choice fits this scenario and how you would verify its behavior.
+explanation_rubric:
+- Names the relevant technical boundary.
+- Connects the choice to the failure or correctness requirement.
+- Gives a concrete verification step.

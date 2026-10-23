@@ -1,0 +1,34 @@
+slug: css-intermediate-decision-6
+family: css.decision-6.intermediate
+skill: css
+type: scenario
+level: intermediate
+minutes: 6
+title: Keyboard focus
+statement: CSS scenario assessment. An interactive control has no visible keyboard focus after a reset.
+  What should be restored? Choose the response that satisfies the stated technical requirement. This task
+  assesses decisions and reasoning rather than running a full application.
+competencies:
+- accessibility_motion
+questions:
+- id: q1
+  prompt: An interactive control has no visible keyboard focus after a reset. What should be restored?
+  options:
+  - id: q1-1
+    text: A visible focus indication consistent with the design
+  - id: q1-2
+    text: outline:none on every element permanently
+  - id: q1-3
+    text: Focus only when a mouse button is held
+answers:
+  q1: q1-1
+answer_rationale:
+- A visible focus indication consistent with the design.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.
+explanation_prompt: Explain why your choice fits this scenario and how you would verify its behavior.
+explanation_rubric:
+- Names the relevant technical boundary.
+- Connects the choice to the failure or correctness requirement.
+- Gives a concrete verification step.

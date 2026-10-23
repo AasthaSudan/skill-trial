@@ -1,0 +1,95 @@
+slug: javascript-beginner-count-even
+family: javascript.count-even.beginner
+skill: javascript
+type: coding
+level: beginner
+minutes: 6
+title: Count even readings
+statement: Return the number of even integers in nums. Zero and negative even values count. Count occurrences,
+  not distinct values. An empty array returns 0. Input contains at most 10,000 signed 32-bit integers.
+  Implement solve(nums).
+competencies: &id001
+- collections
+- algorithms
+- edge_cases
+language: javascript
+starter: "function solve(nums) {\n  return null;\n}\n"
+reference: function solve(nums) { return nums.filter(n => n % 2 === 0).length; }
+tests:
+- input:
+  - 2
+  - 7
+  - 2
+  - 0
+  expected: 3
+  label: Typical readings
+  visibility: sample
+  competencies: *id001
+- input: []
+  expected: 0
+  label: Boundary input
+  visibility: hidden
+  competencies: *id001
+- input:
+  - -7
+  - -3
+  - -8
+  expected: 1
+  label: Empty or negative readings
+  visibility: hidden
+  competencies: *id001
+- input:
+  - 5
+  expected: 0
+  label: Short or repeated readings
+  visibility: hidden
+  competencies: *id001
+- input:
+  - 2147483647
+  - -2147483648
+  expected: 1
+  label: Integer or relationship boundary
+  visibility: hidden
+  competencies: *id001
+practice_tests:
+- input:
+  - 6
+  - 6
+  - 1
+  - 0
+  expected: 3
+  label: Typical readings
+  visibility: sample
+  competencies: *id001
+- input:
+  - -11
+  - -4
+  - -9
+  expected: 1
+  label: Boundary input
+  visibility: hidden
+  competencies: *id001
+- input: []
+  expected: 0
+  label: Empty or negative readings
+  visibility: hidden
+  competencies: *id001
+- input:
+  - 3
+  - 3
+  - 3
+  expected: 0
+  label: Short or repeated readings
+  visibility: hidden
+  competencies: *id001
+- input:
+  - 8
+  - 1
+  - 8
+  expected: 2
+  label: Integer or relationship boundary
+  visibility: hidden
+  competencies: *id001
+hints:
+- Trace the loop with an empty array and a negative value.
+- Count only the occurrences or neighboring pairs required by the contract.

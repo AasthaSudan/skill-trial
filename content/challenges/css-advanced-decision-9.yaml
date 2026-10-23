@@ -1,0 +1,35 @@
+slug: css-advanced-decision-9
+family: css.decision-9.advanced
+skill: css
+type: scenario
+level: advanced
+minutes: 8
+title: Visual order
+statement: CSS scenario assessment. A layout visually reorders controls but keyboard order becomes confusing.
+  What is the appropriate repair? Choose the response that satisfies the stated technical requirement.
+  This task assesses decisions and reasoning rather than running a full application.
+competencies:
+- accessibility_motion
+questions:
+- id: q1
+  prompt: A layout visually reorders controls but keyboard order becomes confusing. What is the appropriate
+    repair?
+  options:
+  - id: q1-1
+    text: Align meaningful DOM order with the intended reading and focus sequence
+  - id: q1-2
+    text: Assign arbitrary positive tabindex values to every control
+  - id: q1-3
+    text: Remove keyboard access to reordered controls
+answers:
+  q1: q1-1
+answer_rationale:
+- Align meaningful DOM order with the intended reading and focus sequence.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.
+explanation_prompt: Explain why your choice fits this scenario and how you would verify its behavior.
+explanation_rubric:
+- Names the relevant technical boundary.
+- Connects the choice to the failure or correctness requirement.
+- Gives a concrete verification step.

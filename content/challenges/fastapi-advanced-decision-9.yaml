@@ -1,0 +1,34 @@
+slug: fastapi-advanced-decision-9
+family: fastapi.decision-9.advanced
+skill: fastapi
+type: scenario
+level: advanced
+minutes: 8
+title: Transaction failure
+statement: FastAPI scenario assessment. An endpoint updates two related records and the second write fails.
+  What preserves consistency? Choose the response that satisfies the stated technical requirement. This
+  task assesses decisions and reasoning rather than running a full application.
+competencies:
+- async_persistence
+questions:
+- id: q1
+  prompt: An endpoint updates two related records and the second write fails. What preserves consistency?
+  options:
+  - id: q1-1
+    text: Roll back the unit of work and return a deliberate failure
+  - id: q1-2
+    text: Commit the first write after claiming the whole operation succeeded
+  - id: q1-3
+    text: Reuse the failed session without rollback
+answers:
+  q1: q1-1
+answer_rationale:
+- Roll back the unit of work and return a deliberate failure.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.
+explanation_prompt: Explain why your choice fits this scenario and how you would verify its behavior.
+explanation_rubric:
+- Names the relevant technical boundary.
+- Connects the choice to the failure or correctness requirement.
+- Gives a concrete verification step.

@@ -1,0 +1,29 @@
+slug: nodejs-beginner-decision-1
+family: nodejs.decision-1.beginner
+skill: nodejs
+type: scenario
+level: beginner
+minutes: 4
+title: Asynchronous file read
+statement: Node.js scenario assessment. How should an HTTP service read a file without blocking the event
+  loop during disk I/O? Choose the response that satisfies the stated technical requirement. This task
+  assesses decisions and reasoning rather than running a full application.
+competencies:
+- async_execution
+questions:
+- id: q1
+  prompt: How should an HTTP service read a file without blocking the event loop during disk I/O?
+  options:
+  - id: q1-1
+    text: Use an asynchronous file API and await completion
+  - id: q1-2
+    text: Use a synchronous read for every request regardless of load
+  - id: q1-3
+    text: Spin in a loop until the file appears
+answers:
+  q1: q1-1
+answer_rationale:
+- Use an asynchronous file API and await completion.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.

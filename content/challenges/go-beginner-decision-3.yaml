@@ -1,0 +1,29 @@
+slug: go-beginner-decision-3
+family: go.decision-3.beginner
+skill: go
+type: scenario
+level: beginner
+minutes: 4
+title: Concurrent task
+statement: Go scenario assessment. Which language construct starts a function running as a goroutine?
+  Choose the response that satisfies the stated technical requirement. This task assesses decisions and
+  reasoning rather than running a full application.
+competencies:
+- errors_context
+questions:
+- id: q1
+  prompt: Which language construct starts a function running as a goroutine?
+  options:
+  - id: q1-1
+    text: A go statement invoking the function
+  - id: q1-2
+    text: A comment beginning with async
+  - id: q1-3
+    text: A database transaction keyword
+answers:
+  q1: q1-1
+answer_rationale:
+- A go statement invoking the function.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.

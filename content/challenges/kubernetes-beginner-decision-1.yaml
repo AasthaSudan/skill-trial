@@ -1,0 +1,29 @@
+slug: kubernetes-beginner-decision-1
+family: kubernetes.decision-1.beginner
+skill: kubernetes
+type: scenario
+level: beginner
+minutes: 4
+title: Pod workload
+statement: Kubernetes scenario assessment. Which object commonly manages interchangeable replicated application
+  Pods? Choose the response that satisfies the stated technical requirement. This task assesses decisions
+  and reasoning rather than running a full application.
+competencies:
+- workloads_services
+questions:
+- id: q1
+  prompt: Which object commonly manages interchangeable replicated application Pods?
+  options:
+  - id: q1-1
+    text: A Deployment
+  - id: q1-2
+    text: A source-code comment
+  - id: q1-3
+    text: A local browser tab
+answers:
+  q1: q1-1
+answer_rationale:
+- A Deployment.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.

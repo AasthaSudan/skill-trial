@@ -1,0 +1,29 @@
+slug: dotnet-beginner-decision-1
+family: dotnet.decision-1.beginner
+skill: dotnet
+type: scenario
+level: beginner
+minutes: 4
+title: Injected dependency
+statement: .NET scenario assessment. How should a controller receive a registered service in an ASP.NET
+  Core app? Choose the response that satisfies the stated technical requirement. This task assesses decisions
+  and reasoning rather than running a full application.
+competencies:
+- dependency_injection
+questions:
+- id: q1
+  prompt: How should a controller receive a registered service in an ASP.NET Core app?
+  options:
+  - id: q1-1
+    text: Use the configured dependency injection mechanism
+  - id: q1-2
+    text: Construct every dependency manually with missing configuration
+  - id: q1-3
+    text: Read a service instance from a browser cookie
+answers:
+  q1: q1-1
+answer_rationale:
+- Use the configured dependency injection mechanism.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.

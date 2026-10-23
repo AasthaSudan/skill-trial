@@ -1,0 +1,34 @@
+slug: cpp-intermediate-decision-6
+family: cpp.decision-6.intermediate
+skill: cpp
+type: scenario
+level: intermediate
+minutes: 6
+title: Checked boundary
+statement: C++ scenario assessment. An untrusted index arrives for a vector read. What should the code
+  do? Choose the response that satisfies the stated technical requirement. This task assesses decisions
+  and reasoning rather than running a full application.
+competencies:
+- bounds_correctness
+questions:
+- id: q1
+  prompt: An untrusted index arrives for a vector read. What should the code do?
+  options:
+  - id: q1-1
+    text: Validate the index or use the appropriate checked access and handle failure
+  - id: q1-2
+    text: Use unchecked access regardless of the index
+  - id: q1-3
+    text: Cast every negative index to a large unsigned value and continue
+answers:
+  q1: q1-1
+answer_rationale:
+- Validate the index or use the appropriate checked access and handle failure.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.
+explanation_prompt: Explain why your choice fits this scenario and how you would verify its behavior.
+explanation_rubric:
+- Names the relevant technical boundary.
+- Connects the choice to the failure or correctness requirement.
+- Gives a concrete verification step.

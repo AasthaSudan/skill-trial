@@ -664,7 +664,7 @@ Technical detail
 For each evaluable task, we compute a ratio and mapped competency evidence. The policy checks the amount of evidence, coverage, competency thresholds, overall performance and passing tasks at the target level. Too little evidence gives Insufficient Evidence. Meeting every verification criterion gives Verified. Otherwise demonstrated competencies distinguish partial from no verification.
 
 ### How it is implemented
-Beginner: minimum 2 tasks, 100% coverage, competency 70%, overall 75%, at-level passes 1. Intermediate: minimum 3, coverage 80%, competency 70%, overall 75%, at-level passes 2. Advanced: minimum 4, coverage 90%, competency 75%, overall 80%, at-level passes 3. Beginner/intermediate currently use a baseline pool with different policy/level requirements. The system is not adaptive testing. Practice uses a separate feedback result. Reward calculations do not enter decide().
+Beginner: minimum 2 tasks, 100% coverage, competency 70%, overall 75%, at-level passes 1. Intermediate: minimum 3, coverage 80%, competency 70%, overall 75%, at-level passes 2. Advanced: minimum 4, coverage 90%, competency 75%, overall 80%, at-level passes 3. Each skill now uses separate beginner, intermediate and advanced question banks with no cross-level fallback. The system is not adaptive testing. Practice uses a separate feedback result. Reward calculations do not enter decide().
 
 ### Code / source
 backend/app/verification.py; backend/app/catalog.py; backend/app/service.py
@@ -796,3 +796,5 @@ Restart the backend after changing `.env`. Enable the admin AI switch, then opt 
 - Saved formal reports available and a short practice task selected.
 - SMTP remains optional and unconfigured. Use the development inbox locally.
 - Gemini free-tier quotas can reject calls. The backend retains deterministic fallback.
+
+Current level coverage: all 21 catalog skills support three distinct levels in the local development preview. See LEVEL_ASSESSMENTS.md / Level_Assessment_Update.md for inventory, execution scope and checks.

@@ -1,0 +1,29 @@
+slug: cpp-beginner-decision-3
+family: cpp.decision-3.beginner
+skill: cpp
+type: scenario
+level: beginner
+minutes: 4
+title: Read-only parameter
+statement: C++ scenario assessment. A function needs to read a large vector without copying it. Which
+  parameter often fits? Choose the response that satisfies the stated technical requirement. This task
+  assesses decisions and reasoning rather than running a full application.
+competencies:
+- bounds_correctness
+questions:
+- id: q1
+  prompt: A function needs to read a large vector without copying it. Which parameter often fits?
+  options:
+  - id: q1-1
+    text: A const reference with a valid caller-managed lifetime
+  - id: q1-2
+    text: An owning raw pointer to a temporary local vector
+  - id: q1-3
+    text: A mutable global vector shared by every caller
+answers:
+  q1: q1-1
+answer_rationale:
+- A const reference with a valid caller-managed lifetime.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.

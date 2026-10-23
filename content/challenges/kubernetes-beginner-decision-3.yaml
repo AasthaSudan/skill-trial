@@ -1,0 +1,29 @@
+slug: kubernetes-beginner-decision-3
+family: kubernetes.decision-3.beginner
+skill: kubernetes
+type: scenario
+level: beginner
+minutes: 4
+title: Nonsecret config
+statement: Kubernetes scenario assessment. Where can an application receive ordinary environment configuration?
+  Choose the response that satisfies the stated technical requirement. This task assesses decisions and
+  reasoning rather than running a full application.
+competencies:
+- reliability_operations
+questions:
+- id: q1
+  prompt: Where can an application receive ordinary environment configuration?
+  options:
+  - id: q1-1
+    text: A ConfigMap wired into its workload
+  - id: q1-2
+    text: A password pasted into a public image tag
+  - id: q1-3
+    text: An untracked value known only to one developer
+answers:
+  q1: q1-1
+answer_rationale:
+- A ConfigMap wired into its workload.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.

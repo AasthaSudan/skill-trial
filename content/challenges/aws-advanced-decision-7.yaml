@@ -1,0 +1,34 @@
+slug: aws-advanced-decision-7
+family: aws.decision-7.advanced
+skill: aws
+type: scenario
+level: advanced
+minutes: 8
+title: Duplicate queue delivery
+statement: AWS scenario assessment. A standard queue can redeliver a message. How should a payment worker
+  behave? Choose the response that satisfies the stated technical requirement. This task assesses decisions
+  and reasoning rather than running a full application.
+competencies:
+- identity_access
+questions:
+- id: q1
+  prompt: A standard queue can redeliver a message. How should a payment worker behave?
+  options:
+  - id: q1-1
+    text: Use durable idempotency and acknowledge only after a safe processing outcome
+  - id: q1-2
+    text: Charge again for every delivery
+  - id: q1-3
+    text: Assume queue delivery proves the business action ran exactly once
+answers:
+  q1: q1-1
+answer_rationale:
+- Use durable idempotency and acknowledge only after a safe processing outcome.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.
+explanation_prompt: Explain why your choice fits this scenario and how you would verify its behavior.
+explanation_rubric:
+- Names the relevant technical boundary.
+- Connects the choice to the failure or correctness requirement.
+- Gives a concrete verification step.

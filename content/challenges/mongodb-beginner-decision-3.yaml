@@ -1,0 +1,29 @@
+slug: mongodb-beginner-decision-3
+family: mongodb.decision-3.beginner
+skill: mongodb
+type: scenario
+level: beginner
+minutes: 4
+title: Index purpose
+statement: MongoDB scenario assessment. What is a primary reason to add a suitable query index? Choose
+  the response that satisfies the stated technical requirement. This task assesses decisions and reasoning
+  rather than running a full application.
+competencies:
+- consistency_updates
+questions:
+- id: q1
+  prompt: What is a primary reason to add a suitable query index?
+  options:
+  - id: q1-1
+    text: Reduce the documents scanned for supported query patterns
+  - id: q1-2
+    text: Guarantee that every query becomes faster without cost
+  - id: q1-3
+    text: Replace all validation and authorization
+answers:
+  q1: q1-1
+answer_rationale:
+- Reduce the documents scanned for supported query patterns.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.

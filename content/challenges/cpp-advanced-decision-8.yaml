@@ -1,0 +1,34 @@
+slug: cpp-advanced-decision-8
+family: cpp.decision-8.advanced
+skill: cpp
+type: scenario
+level: advanced
+minutes: 8
+title: Dangling view
+statement: C++ scenario assessment. A function returns a string_view into a local string. What is the
+  defect? Choose the response that satisfies the stated technical requirement. This task assesses decisions
+  and reasoning rather than running a full application.
+competencies:
+- containers_algorithms
+questions:
+- id: q1
+  prompt: A function returns a string_view into a local string. What is the defect?
+  options:
+  - id: q1-1
+    text: The view outlives the referenced local storage
+  - id: q1-2
+    text: string_view automatically owns a full copied string
+  - id: q1-3
+    text: The caller's variable name extends the local lifetime
+answers:
+  q1: q1-1
+answer_rationale:
+- The view outlives the referenced local storage.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.
+explanation_prompt: Explain why your choice fits this scenario and how you would verify its behavior.
+explanation_rubric:
+- Names the relevant technical boundary.
+- Connects the choice to the failure or correctness requirement.
+- Gives a concrete verification step.

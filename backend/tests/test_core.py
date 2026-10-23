@@ -120,8 +120,16 @@ def test_content_and_no_secret_dtos(client):
         for c in db.scalars(select(Challenge)):
             assert validate(c.content)['ok']
             out=public_content(c)
-            for secret in ['reference','answers','acceptable','expected_output','dataset']:
-                assert secret not in json.dumps({k:v for k,v in out.items() if k!='samples'})
+            # Check secret field names recursively. Technical prose may legitimately
+            # mention a C++ reference or an acceptable design without exposing a key.
+            def field_names(value):
+                if isinstance(value,dict):
+                    return set(value).union(*(field_names(v) for v in value.values()))
+                if isinstance(value,list):
+                    return set().union(*(field_names(v) for v in value))
+                return set()
+            fields=field_names({k:v for k,v in out.items() if k!='samples'})
+            assert fields.isdisjoint({'reference','answers','acceptable','expected_output','dataset','answer_rationale','practice_tests'})
 
 def test_practice_never_changes_verification(client):
     signup(client);a=create(client,mode='practice');item=a['items'][0]

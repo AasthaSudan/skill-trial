@@ -1,0 +1,29 @@
+slug: aws-beginner-decision-3
+family: aws.decision-3.beginner
+skill: aws
+type: scenario
+level: beginner
+minutes: 4
+title: Scale a service
+statement: AWS scenario assessment. Traffic changes through the day. Which capability adjusts application
+  compute capacity? Choose the response that satisfies the stated technical requirement. This task assesses
+  decisions and reasoning rather than running a full application.
+competencies:
+- storage_reliability
+questions:
+- id: q1
+  prompt: Traffic changes through the day. Which capability adjusts application compute capacity?
+  options:
+  - id: q1-1
+    text: A suitably configured autoscaling policy
+  - id: q1-2
+    text: Editing every customer record manually
+  - id: q1-3
+    text: Using the root account for all requests
+answers:
+  q1: q1-1
+answer_rationale:
+- A suitably configured autoscaling policy.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.

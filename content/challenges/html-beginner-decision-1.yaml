@@ -1,0 +1,29 @@
+slug: html-beginner-decision-1
+family: html.decision-1.beginner
+skill: html
+type: scenario
+level: beginner
+minutes: 4
+title: Page language
+statement: HTML scenario assessment. What declares the document language for assistive tools? Choose the
+  response that satisfies the stated technical requirement. This task assesses decisions and reasoning
+  rather than running a full application.
+competencies:
+- document_structure
+questions:
+- id: q1
+  prompt: What declares the document language for assistive tools?
+  options:
+  - id: q1-1
+    text: The lang attribute on the document's html element
+  - id: q1-2
+    text: The font color of the first paragraph
+  - id: q1-3
+    text: A CSS class named english
+answers:
+  q1: q1-1
+answer_rationale:
+- The lang attribute on the document's html element.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.

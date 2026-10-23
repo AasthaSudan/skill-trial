@@ -1,0 +1,29 @@
+slug: cpp-beginner-decision-2
+family: cpp.decision-2.beginner
+skill: cpp
+type: scenario
+level: beginner
+minutes: 4
+title: Container length
+statement: C++ scenario assessment. How can a loop avoid indexing past the end of a vector? Choose the
+  response that satisfies the stated technical requirement. This task assesses decisions and reasoning
+  rather than running a full application.
+competencies:
+- containers_algorithms
+questions:
+- id: q1
+  prompt: How can a loop avoid indexing past the end of a vector?
+  options:
+  - id: q1-1
+    text: Use its valid size bounds or an appropriate range-based loop
+  - id: q1-2
+    text: Always access index size() as the last element
+  - id: q1-3
+    text: Assume every vector has at least one element
+answers:
+  q1: q1-1
+answer_rationale:
+- Use its valid size bounds or an appropriate range-based loop.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.

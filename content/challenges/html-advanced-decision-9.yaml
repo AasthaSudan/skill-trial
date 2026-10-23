@@ -1,0 +1,34 @@
+slug: html-advanced-decision-9
+family: html.decision-9.advanced
+skill: html
+type: scenario
+level: advanced
+minutes: 8
+title: Untrusted markup
+statement: HTML scenario assessment. A profile field contains attacker-controlled HTML. What is required
+  before rendering it as markup? Choose the response that satisfies the stated technical requirement.
+  This task assesses decisions and reasoning rather than running a full application.
+competencies:
+- semantics_accessibility
+questions:
+- id: q1
+  prompt: A profile field contains attacker-controlled HTML. What is required before rendering it as markup?
+  options:
+  - id: q1-1
+    text: Use safe text rendering or a deliberately validated sanitization boundary
+  - id: q1-2
+    text: Insert arbitrary HTML because the field came from a database
+  - id: q1-3
+    text: Hide the attacker string with CSS after executing it
+answers:
+  q1: q1-1
+answer_rationale:
+- Use safe text rendering or a deliberately validated sanitization boundary.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.
+explanation_prompt: Explain why your choice fits this scenario and how you would verify its behavior.
+explanation_rubric:
+- Names the relevant technical boundary.
+- Connects the choice to the failure or correctness requirement.
+- Gives a concrete verification step.

@@ -1,0 +1,34 @@
+slug: docker-intermediate-decision-5
+family: docker.decision-5.intermediate
+skill: docker
+type: scenario
+level: intermediate
+minutes: 6
+title: Service discovery
+statement: Docker scenario assessment. One Compose service needs to call another named api. Which address
+  fits the shared network? Choose the response that satisfies the stated technical requirement. This task
+  assesses decisions and reasoning rather than running a full application.
+competencies:
+- containers_networking
+questions:
+- id: q1
+  prompt: One Compose service needs to call another named api. Which address fits the shared network?
+  options:
+  - id: q1-1
+    text: The api service DNS name and its container port
+  - id: q1-2
+    text: localhost inside the calling container
+  - id: q1-3
+    text: An IP copied from last week's container instance
+answers:
+  q1: q1-1
+answer_rationale:
+- The api service DNS name and its container port.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.
+explanation_prompt: Explain why your choice fits this scenario and how you would verify its behavior.
+explanation_rubric:
+- Names the relevant technical boundary.
+- Connects the choice to the failure or correctness requirement.
+- Gives a concrete verification step.

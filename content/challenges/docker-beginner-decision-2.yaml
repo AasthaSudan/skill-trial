@@ -1,0 +1,29 @@
+slug: docker-beginner-decision-2
+family: docker.decision-2.beginner
+skill: docker
+type: scenario
+level: beginner
+minutes: 4
+title: Published port
+statement: Docker scenario assessment. A web service listens on container port 8080. How can a host client
+  reach it? Choose the response that satisfies the stated technical requirement. This task assesses decisions
+  and reasoning rather than running a full application.
+competencies:
+- containers_networking
+questions:
+- id: q1
+  prompt: A web service listens on container port 8080. How can a host client reach it?
+  options:
+  - id: q1-1
+    text: Publish a host port to container port 8080
+  - id: q1-2
+    text: Assume EXPOSE alone opens the host port
+  - id: q1-3
+    text: Write the port number in a comment only
+answers:
+  q1: q1-1
+answer_rationale:
+- Publish a host port to container port 8080.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.

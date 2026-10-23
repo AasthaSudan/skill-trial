@@ -1,0 +1,35 @@
+slug: typescript-advanced-decision-9
+family: typescript.decision-9.advanced
+skill: typescript
+type: scenario
+level: advanced
+minutes: 8
+title: Compile-time boundary
+statement: TypeScript scenario assessment. A third-party API returns malformed data despite matching an
+  imported interface. What explains the failure? Choose the response that satisfies the stated technical
+  requirement. This task assesses decisions and reasoning rather than running a full application.
+competencies:
+- runtime_boundaries
+questions:
+- id: q1
+  prompt: A third-party API returns malformed data despite matching an imported interface. What explains
+    the failure?
+  options:
+  - id: q1-1
+    text: Types erase at runtime, so external data still needs validation
+  - id: q1-2
+    text: TypeScript automatically repairs the response
+  - id: q1-3
+    text: The interface encrypts and authenticates the response
+answers:
+  q1: q1-1
+answer_rationale:
+- Types erase at runtime, so external data still needs validation.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.
+explanation_prompt: Explain why your choice fits this scenario and how you would verify its behavior.
+explanation_rubric:
+- Names the relevant technical boundary.
+- Connects the choice to the failure or correctness requirement.
+- Gives a concrete verification step.

@@ -101,3 +101,7 @@ References: [context](PROJECT_CONTEXT.md), [original specification](docs/SkillTr
 ## Gemini and presentation guide
 
 See [Gemini setup](docs/GEMINI_SETUP.md) for the root `.env` fields and consent controls, and [screen-by-screen pitch](docs/SCREENWISE_PITCH.md) for the presentation script and architecture. The latest suite has 71 passing backend cases, including 20 provider regression cases. A synthetic live Gemini API check passed.
+
+## Separate level banks and expanded skill coverage
+
+The latest continuation enables all 21 catalog skills at three distinct difficulty levels in development. Exact-level selection replaces the shared baseline bank. The additional 16 skills use scenario assessments, with no claim of running their compilers or platforms. Added 179 definitions / 358 validated formal-and-practice versions. The full suite now passes 80 backend tests, and the frontend build and three tests pass. See [level assessment update](docs/LEVEL_ASSESSMENTS.md) for current scope and checks. Earlier counts in this document describe earlier rehearsals.

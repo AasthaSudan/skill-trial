@@ -1,0 +1,35 @@
+slug: kubernetes-advanced-decision-7
+family: kubernetes.decision-7.advanced
+skill: kubernetes
+type: scenario
+level: advanced
+minutes: 8
+title: Bad rollout
+statement: Kubernetes scenario assessment. A new version fails readiness and starts harming service availability.
+  What is an appropriate response? Choose the response that satisfies the stated technical requirement.
+  This task assesses decisions and reasoning rather than running a full application.
+competencies:
+- workloads_services
+questions:
+- id: q1
+  prompt: A new version fails readiness and starts harming service availability. What is an appropriate
+    response?
+  options:
+  - id: q1-1
+    text: Use rollout status and health evidence to pause or roll back while investigating
+  - id: q1-2
+    text: Delete all healthy replicas first
+  - id: q1-3
+    text: Remove every probe to make the dashboard green
+answers:
+  q1: q1-1
+answer_rationale:
+- Use rollout status and health evidence to pause or roll back while investigating.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.
+explanation_prompt: Explain why your choice fits this scenario and how you would verify its behavior.
+explanation_rubric:
+- Names the relevant technical boundary.
+- Connects the choice to the failure or correctness requirement.
+- Gives a concrete verification step.

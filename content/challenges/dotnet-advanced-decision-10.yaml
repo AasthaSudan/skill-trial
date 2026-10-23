@@ -1,0 +1,37 @@
+slug: dotnet-advanced-decision-10
+family: dotnet.decision-10.advanced
+skill: dotnet
+type: scenario
+level: advanced
+minutes: 8
+title: Atomic acceptance
+statement: .NET scenario assessment. An endpoint accepts a job and changes application state. What must
+  the design ensure across a crash? Choose the response that satisfies the stated technical requirement.
+  This task assesses decisions and reasoning rather than running a full application.
+competencies:
+- dependency_injection
+- api_configuration
+- data_lifetimes
+questions:
+- id: q1
+  prompt: An endpoint accepts a job and changes application state. What must the design ensure across
+    a crash?
+  options:
+  - id: q1-1
+    text: Durable coordinated state and job acceptance with an explicit recovery/idempotency strategy
+  - id: q1-2
+    text: Return success before saving either record
+  - id: q1-3
+    text: Keep the accepted job only in the response object's memory
+answers:
+  q1: q1-1
+answer_rationale:
+- Durable coordinated state and job acceptance with an explicit recovery/idempotency strategy.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.
+explanation_prompt: Explain why your choice fits this scenario and how you would verify its behavior.
+explanation_rubric:
+- Names the relevant technical boundary.
+- Connects the choice to the failure or correctness requirement.
+- Gives a concrete verification step.

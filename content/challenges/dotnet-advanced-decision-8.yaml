@@ -1,0 +1,34 @@
+slug: dotnet-advanced-decision-8
+family: dotnet.decision-8.advanced
+skill: dotnet
+type: scenario
+level: advanced
+minutes: 8
+title: Optimistic concurrency
+statement: .NET scenario assessment. Two requests update the same business row. What can detect a conflicting
+  stale write? Choose the response that satisfies the stated technical requirement. This task assesses
+  decisions and reasoning rather than running a full application.
+competencies:
+- api_configuration
+questions:
+- id: q1
+  prompt: Two requests update the same business row. What can detect a conflicting stale write?
+  options:
+  - id: q1-1
+    text: A configured concurrency token and deliberate conflict handling
+  - id: q1-2
+    text: Only changing the response message after overwriting data
+  - id: q1-3
+    text: Disabling every database constraint
+answers:
+  q1: q1-1
+answer_rationale:
+- A configured concurrency token and deliberate conflict handling.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.
+explanation_prompt: Explain why your choice fits this scenario and how you would verify its behavior.
+explanation_rubric:
+- Names the relevant technical boundary.
+- Connects the choice to the failure or correctness requirement.
+- Gives a concrete verification step.

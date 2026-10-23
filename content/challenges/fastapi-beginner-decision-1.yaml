@@ -1,0 +1,29 @@
+slug: fastapi-beginner-decision-1
+family: fastapi.decision-1.beginner
+skill: fastapi
+type: scenario
+level: beginner
+minutes: 4
+title: Request model
+statement: FastAPI scenario assessment. What declares and validates a structured JSON request in FastAPI?
+  Choose the response that satisfies the stated technical requirement. This task assesses decisions and
+  reasoning rather than running a full application.
+competencies:
+- request_validation
+questions:
+- id: q1
+  prompt: What declares and validates a structured JSON request in FastAPI?
+  options:
+  - id: q1-1
+    text: A Pydantic request model used by the endpoint
+  - id: q1-2
+    text: A comment describing the desired JSON
+  - id: q1-3
+    text: A browser-only check without server validation
+answers:
+  q1: q1-1
+answer_rationale:
+- A Pydantic request model used by the endpoint.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.

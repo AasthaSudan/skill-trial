@@ -14,6 +14,8 @@ class LLMUnavailable(RuntimeError):
     pass
 
 PROPOSAL_TYPES={'sql':['sql','scenario'],'python':['coding','debugging','scenario','trust'],'java':['coding','debugging','scenario','trust'],'javascript':['coding','debugging','scenario','trust'],'spring-boot':['scenario']}
+for catalog_skill in SKILLS:
+    PROPOSAL_TYPES.setdefault(catalog_skill['slug'],['scenario'])
 
 def _redact(text,names=()):
     value=str(text)[:60000]

@@ -1,0 +1,36 @@
+slug: css-advanced-decision-10
+family: css.decision-10.advanced
+skill: css
+type: scenario
+level: advanced
+minutes: 8
+title: Layout shift
+statement: CSS scenario assessment. Images load late and push surrounding content down. What reduces this
+  avoidable shift? Choose the response that satisfies the stated technical requirement. This task assesses
+  decisions and reasoning rather than running a full application.
+competencies:
+- cascade_selectors
+- layout_responsiveness
+- accessibility_motion
+questions:
+- id: q1
+  prompt: Images load late and push surrounding content down. What reduces this avoidable shift?
+  options:
+  - id: q1-1
+    text: Reserve the image's intended dimensions or aspect ratio before loading
+  - id: q1-2
+    text: Remove all image dimensions and wait for layout to settle
+  - id: q1-3
+    text: Animate the entire page height repeatedly
+answers:
+  q1: q1-1
+answer_rationale:
+- Reserve the image's intended dimensions or aspect ratio before loading.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.
+explanation_prompt: Explain why your choice fits this scenario and how you would verify its behavior.
+explanation_rubric:
+- Names the relevant technical boundary.
+- Connects the choice to the failure or correctness requirement.
+- Gives a concrete verification step.

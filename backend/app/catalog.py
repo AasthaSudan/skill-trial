@@ -16,8 +16,11 @@ SKILLS = [
     {'slug':'javascript','name':'JavaScript','category':'language','color':'#dcca75','glyph':'braces','description':'Reason about arrays, transformations, correctness, and the cases that are easy to miss.','competencies':['collections','algorithms','edge_cases'],'aliases':['JavaScript','ECMAScript','JS']},
     {'slug':'spring-boot','name':'Spring Boot','category':'framework','color':'#a4d19a','glyph':'leaf','description':'Assess API contracts, validation, service boundaries, persistence, transactions, and exception handling through practical framework scenarios.','competencies':['rest_apis','validation','services','persistence','transactions','exceptions'],'aliases':['Spring Boot','SpringBoot']},
 ]
-for slug,name in [('react','React'),('docker','Docker'),('git','Git'),('nodejs','Node.js'),('aws','AWS'),('mongodb','MongoDB'),('typescript','TypeScript'),('fastapi','FastAPI'),('kubernetes','Kubernetes'),('redis','Redis'),('html','HTML'),('css','CSS'),('csharp','C#'),('cpp','C++'),('go','Go'),('dotnet','.NET')]:
-    SKILLS.append({'slug':slug,'name':name,'category':'tool','color':'#a69cc9','glyph':'code','description':'Recognized on your resume. Practical verification is not available yet.','competencies':[],'aliases':[name, 'Golang'] if slug=='go' else [name]})
+
+# Additional skills use explicit scenario assessments rather than unsupported code runtimes.
+SCENARIO_SKILLS = {'react': {'name': 'React', 'competencies': ['components_state', 'effects_data', 'rendering_accessibility']}, 'docker': {'name': 'Docker', 'competencies': ['images_builds', 'containers_networking', 'volumes_security']}, 'git': {'name': 'Git', 'competencies': ['branching_history', 'merges_conflicts', 'collaboration_safety']}, 'nodejs': {'name': 'Node.js', 'competencies': ['async_execution', 'http_services', 'dependencies_security']}, 'aws': {'name': 'AWS', 'competencies': ['identity_access', 'compute_scaling', 'storage_reliability']}, 'mongodb': {'name': 'MongoDB', 'competencies': ['documents_queries', 'indexes_performance', 'consistency_updates']}, 'typescript': {'name': 'TypeScript', 'competencies': ['types_narrowing', 'generics_contracts', 'runtime_boundaries']}, 'fastapi': {'name': 'FastAPI', 'competencies': ['request_validation', 'dependencies_auth', 'async_persistence']}, 'kubernetes': {'name': 'Kubernetes', 'competencies': ['workloads_services', 'configuration_security', 'reliability_operations']}, 'redis': {'name': 'Redis', 'competencies': ['structures_expiry', 'atomic_operations', 'cache_reliability']}, 'html': {'name': 'HTML', 'competencies': ['document_structure', 'forms_validation', 'semantics_accessibility']}, 'css': {'name': 'CSS', 'competencies': ['cascade_selectors', 'layout_responsiveness', 'accessibility_motion']}, 'csharp': {'name': 'C#', 'competencies': ['types_nullability', 'collections_linq', 'async_resources']}, 'cpp': {'name': 'C++', 'competencies': ['ownership_lifetimes', 'containers_algorithms', 'bounds_correctness']}, 'go': {'name': 'Go', 'competencies': ['values_interfaces', 'goroutines_channels', 'errors_context']}, 'dotnet': {'name': '.NET', 'competencies': ['dependency_injection', 'api_configuration', 'data_lifetimes']}}
+for slug,entry in SCENARIO_SKILLS.items():
+    SKILLS.append({'slug':slug,'name':entry['name'],'category':'language' if slug in ['typescript','csharp','cpp','go'] else 'tool','color':'#a69cc9','glyph':'code','description':'Assess '+entry['name']+' decisions and reasoning through level-specific scenarios. Full application/code execution is not part of this skill assessment.','competencies':entry['competencies'],'aliases':[entry['name'],'Golang'] if slug=='go' else [entry['name']],'assessment_format':'scenario'})
 
 LEVELS = ['beginner','intermediate','advanced']
 def skill(slug):
@@ -102,6 +105,10 @@ def seed(db):
 def practice_variant(content):
     c=copy.deepcopy(content)
     c['title']='Practice: '+c['title']
+    explicit_tests=c.pop('practice_tests',None)
+    if explicit_tests is not None:
+        c['tests']=explicit_tests
+        return c
     if c['type']=='sql':
         from .sql_worker import execute
         for t in c['tests']:

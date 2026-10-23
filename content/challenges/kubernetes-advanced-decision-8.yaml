@@ -1,0 +1,34 @@
+slug: kubernetes-advanced-decision-8
+family: kubernetes.decision-8.advanced
+skill: kubernetes
+type: scenario
+level: advanced
+minutes: 8
+title: Disruption planning
+statement: Kubernetes scenario assessment. A replicated service needs availability during voluntary node
+  maintenance. What helps? Choose the response that satisfies the stated technical requirement. This task
+  assesses decisions and reasoning rather than running a full application.
+competencies:
+- configuration_security
+questions:
+- id: q1
+  prompt: A replicated service needs availability during voluntary node maintenance. What helps?
+  options:
+  - id: q1-1
+    text: A realistic disruption budget plus sufficient replicas and tested graceful termination
+  - id: q1-2
+    text: A disruption budget with only one healthy replica and no spare capacity
+  - id: q1-3
+    text: A policy that deletes all Pods at once
+answers:
+  q1: q1-1
+answer_rationale:
+- A realistic disruption budget plus sufficient replicas and tested graceful termination.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.
+explanation_prompt: Explain why your choice fits this scenario and how you would verify its behavior.
+explanation_rubric:
+- Names the relevant technical boundary.
+- Connects the choice to the failure or correctness requirement.
+- Gives a concrete verification step.

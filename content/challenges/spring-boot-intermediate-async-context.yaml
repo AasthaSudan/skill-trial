@@ -1,0 +1,48 @@
+slug: spring-boot-intermediate-async-context
+family: spring-boot.async-context.intermediate
+skill: spring-boot
+type: scenario
+level: intermediate
+minutes: 6
+title: Keep asynchronous work durable
+statement: An endpoint returns 202 for a background export. The export needs a durable job ID, a clear
+  status response and its own correctly scoped dependencies.
+competencies:
+- rest_apis
+- services
+- persistence
+- transactions
+- exceptions
+questions:
+- id: q1
+  prompt: What makes an accepted export recoverable after restart?
+  options:
+  - id: q1-1
+    text: Persist the job before returning its ID and process it with retry handling
+  - id: q1-2
+    text: Start an untracked thread and forget the request
+  - id: q1-3
+    text: Store only an in-memory boolean in the controller
+- id: q2
+  prompt: How should the worker use persistence?
+  options:
+  - id: q2-1
+    text: Start its own unit of work and store success or failure state
+  - id: q2-2
+    text: Reuse a closed request EntityManager on another thread
+  - id: q2-3
+    text: Assume the request transaction stays open after the response
+answers:
+  q1: q1-1
+  q2: q2-1
+answer_rationale:
+- Durable state preserves the accepted work across restarts.
+- A worker needs a valid unit of work and explicit terminal state.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.
+explanation_prompt: Explain why your choice fits this scenario and how you would verify its behavior.
+explanation_rubric:
+- Names the relevant technical boundary.
+- Connects the choice to the failure or correctness requirement.
+- Gives a concrete verification step.

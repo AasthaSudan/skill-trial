@@ -1,0 +1,29 @@
+slug: go-beginner-decision-2
+family: go.decision-2.beginner
+skill: go
+type: scenario
+level: beginner
+minutes: 4
+title: Slice bounds
+statement: Go scenario assessment. Which requirement makes indexing a slice valid? Choose the response
+  that satisfies the stated technical requirement. This task assesses decisions and reasoning rather than
+  running a full application.
+competencies:
+- goroutines_channels
+questions:
+- id: q1
+  prompt: Which requirement makes indexing a slice valid?
+  options:
+  - id: q1-1
+    text: The index is within the current length
+  - id: q1-2
+    text: The index is less than an unrelated buffer's capacity
+  - id: q1-3
+    text: Every slice always contains at least one element
+answers:
+  q1: q1-1
+answer_rationale:
+- The index is within the current length.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.

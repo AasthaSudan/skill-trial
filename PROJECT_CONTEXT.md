@@ -47,3 +47,7 @@ See `docs/IMPLEMENTATION_STATUS.md` and `docs/PRODUCTION_DEPLOYMENT.md` for the 
 ## Local setup
 
 See `README.md` for Windows and Linux/macOS setup. Docker Desktop and the language images are required for code challenges. Keep `var/encryption.key` with backups; losing it makes encrypted resumes unreadable. Use `PUBLIC_APP_URL` for browser links and configure SMTP credentials outside source control.
+
+## Separate level banks and expanded skill coverage
+
+The latest continuation enables all 21 catalog skills at three distinct difficulty levels in development. Exact-level selection replaces the shared baseline bank. The additional 16 skills use scenario assessments, with no claim of running their compilers or platforms. Added 179 definitions / 358 validated formal-and-practice versions. The full suite now passes 80 backend tests, and the frontend build and three tests pass. See [level assessment update](docs/LEVEL_ASSESSMENTS.md) for current scope and checks. Earlier counts in this document describe earlier rehearsals.

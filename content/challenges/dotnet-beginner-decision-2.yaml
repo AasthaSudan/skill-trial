@@ -1,0 +1,29 @@
+slug: dotnet-beginner-decision-2
+family: dotnet.decision-2.beginner
+skill: dotnet
+type: scenario
+level: beginner
+minutes: 4
+title: Server configuration
+statement: .NET scenario assessment. Where should a deployed app obtain secret configuration? Choose the
+  response that satisfies the stated technical requirement. This task assesses decisions and reasoning
+  rather than running a full application.
+competencies:
+- api_configuration
+questions:
+- id: q1
+  prompt: Where should a deployed app obtain secret configuration?
+  options:
+  - id: q1-1
+    text: An appropriate server-side configuration/secret provider
+  - id: q1-2
+    text: A public static JavaScript file
+  - id: q1-3
+    text: A committed production password in appsettings
+answers:
+  q1: q1-1
+answer_rationale:
+- An appropriate server-side configuration/secret provider.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.

@@ -1,0 +1,34 @@
+slug: redis-advanced-decision-9
+family: redis.decision-9.advanced
+skill: redis
+type: scenario
+level: advanced
+minutes: 8
+title: Failover durability
+statement: Redis scenario assessment. An acknowledged Redis write must survive a specific failure scenario.
+  What must be assessed? Choose the response that satisfies the stated technical requirement. This task
+  assesses decisions and reasoning rather than running a full application.
+competencies:
+- cache_reliability
+questions:
+- id: q1
+  prompt: An acknowledged Redis write must survive a specific failure scenario. What must be assessed?
+  options:
+  - id: q1-1
+    text: Persistence, replication and failover semantics against the required durability contract
+  - id: q1-2
+    text: Assume every Redis mode guarantees synchronous durable replication
+  - id: q1-3
+    text: Treat a successful TCP write as a durable business commit
+answers:
+  q1: q1-1
+answer_rationale:
+- Persistence, replication and failover semantics against the required durability contract.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.
+explanation_prompt: Explain why your choice fits this scenario and how you would verify its behavior.
+explanation_rubric:
+- Names the relevant technical boundary.
+- Connects the choice to the failure or correctness requirement.
+- Gives a concrete verification step.

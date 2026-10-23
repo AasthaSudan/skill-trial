@@ -1,0 +1,29 @@
+slug: git-beginner-decision-3
+family: git.decision-3.beginner
+skill: git
+type: scenario
+level: beginner
+minutes: 4
+title: Inspect a diff
+statement: Git scenario assessment. Before committing, how should you check what will be included? Choose
+  the response that satisfies the stated technical requirement. This task assesses decisions and reasoning
+  rather than running a full application.
+competencies:
+- collaboration_safety
+questions:
+- id: q1
+  prompt: Before committing, how should you check what will be included?
+  options:
+  - id: q1-1
+    text: Inspect the staged diff and status
+  - id: q1-2
+    text: Assume every file in the directory is safe
+  - id: q1-3
+    text: Commit the credentials file to test authentication
+answers:
+  q1: q1-1
+answer_rationale:
+- Inspect the staged diff and status.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.

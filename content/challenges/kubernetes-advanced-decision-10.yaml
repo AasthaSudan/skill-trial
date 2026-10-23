@@ -1,0 +1,37 @@
+slug: kubernetes-advanced-decision-10
+family: kubernetes.decision-10.advanced
+skill: kubernetes
+type: scenario
+level: advanced
+minutes: 8
+title: Persistent recovery
+statement: Kubernetes scenario assessment. A stateful workload loses a node. What must a recovery plan
+  verify? Choose the response that satisfies the stated technical requirement. This task assesses decisions
+  and reasoning rather than running a full application.
+competencies:
+- workloads_services
+- configuration_security
+- reliability_operations
+questions:
+- id: q1
+  prompt: A stateful workload loses a node. What must a recovery plan verify?
+  options:
+  - id: q1-1
+    text: Volume attachment, data integrity, identity and application-level recovery under the storage
+      contract
+  - id: q1-2
+    text: That a replacement Pod has the same color label
+  - id: q1-3
+    text: That every volume can be safely mounted for conflicting writes
+answers:
+  q1: q1-1
+answer_rationale:
+- Volume attachment, data integrity, identity and application-level recovery under the storage contract.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.
+explanation_prompt: Explain why your choice fits this scenario and how you would verify its behavior.
+explanation_rubric:
+- Names the relevant technical boundary.
+- Connects the choice to the failure or correctness requirement.
+- Gives a concrete verification step.

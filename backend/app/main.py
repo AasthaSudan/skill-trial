@@ -302,7 +302,7 @@ def share_public_view(db,share):
             row['challenges']=[{'title':x.get('title'),'type':x.get('type'),'difficulty':x.get('difficulty'),'status':x.get('status'),'ratio':(x.get('evaluation') or {}).get('ratio')} for x in snap.get('challenges',[])]
         reports.append(row)
     return {'label':share.label,'candidate':(owner.profile.get('share_display_name') or owner.name) if options.get('include_name') else 'Candidate','reports':reports,'created':share.created,'expires':share.expires,'fingerprint_note':'Each result is an immutable report snapshot. Private resumes, email addresses, submissions, source code, assessment history, and game data are not shared.'}
-def challenge_view(c):return {'id':c.id,'slug':c.slug,'skill':c.skill,'type':c.type,'title':c.content['title'],'level':c.level,'minutes':c.content.get('minutes',12),'competencies':c.content['competencies'],'pool':c.pool}
+def challenge_view(c):return {'id':c.id,'slug':c.slug,'skill':c.skill,'skill_name':skill(c.skill)['name'],'type':c.type,'title':c.content['title'],'level':c.level,'minutes':c.content.get('minutes',12),'competencies':c.content['competencies'],'pool':c.pool}
 def token_email(db,u,kind):
     token=issue_token(db,u,kind);base=os.environ.get('PUBLIC_APP_URL',os.environ.get('APP_URL','http://127.0.0.1:5173')).rstrip('/');url=f"{base}/{'reset-password' if kind=='reset' else 'verify-email'}?token={token}"
     if os.environ.get('SMTP_HOST'):
@@ -517,20 +517,22 @@ def eligibility(db,u,slug):
     if last and not last.result['result']['infra_incident'] and last.completed+cooldown*3600>now():return {'ok':False,'code':'REASSESS_COOLDOWN','available_at':last.completed+cooldown*3600}
     return {'ok':True}
 
-def assessment_families(db,slug):
-    rows=list(db.scalars(select(Challenge).where(Challenge.skill==slug,Challenge.pool=='assessment',Challenge.status=='published').order_by(Challenge.version)))
+def assessment_families(db,slug,level=None):
+    conditions=[Challenge.skill==slug,Challenge.pool=='assessment',Challenge.status=='published']
+    if level is not None:conditions.append(Challenge.level==level)
+    rows=list(db.scalars(select(Challenge).where(*conditions).order_by(Challenge.version,Challenge.slug)))
     latest={}
-    for row in rows:latest[row.family]=row
+    for row in rows:latest[(row.family,row.level)]=row
     return list(latest.values())
 
 def assessment_levels(db,slug):
     families=assessment_families(db,slug);required=set((skill(slug) or {}).get('competencies',[]))
-    baseline=[ch for ch in families if ch.level!='advanced']
-    covered=set(x for ch in baseline for x in ch.content.get('competencies',[]))
-    levels=['beginner','intermediate'] if len(baseline)>=3 and required and required<=covered else []
-    advanced=[ch for ch in families if ch.level=='advanced']
-    advanced_coverage=set(x for ch in advanced for x in ch.content.get('competencies',[]))
-    if len(advanced)>=4 and required and required<=advanced_coverage:levels.append('advanced')
+    levels=[]
+    for level in ['beginner','intermediate','advanced']:
+        choices=[ch for ch in families if ch.level==level]
+        covered={name for ch in choices for name in ch.content.get('competencies',[])}
+        requirements=policy(slug,level) if required else None
+        if requirements and len(choices)>=max(requirements['min_items'],requirements['at_level']) and required<=covered:levels.append(level)
     return levels
 
 @app.get('/api/v1/assessments/briefing/{claim_id}')
@@ -540,9 +542,7 @@ def briefing(claim_id:str,request:Request,level:str|None=None):
         supported=assessment_levels(db,c.skill)
         if level is None:level=next((x for x in ['intermediate','beginner','advanced'] if x in supported),None)
         if level not in supported:fail('LEVEL_UNAVAILABLE','There is not enough published content for that assessment level.',409,supported_levels=supported)
-        choices=assessment_families(db,c.skill)
-        if level=='advanced':choices=[ch for ch in choices if ch.level=='advanced']
-        else:choices=[ch for ch in choices if ch.level!='advanced']
+        choices=assessment_families(db,c.skill,level)
         ai_available=bool(LLM_READY and setting_value(db,'llm_enabled',False) and (u.preferences or {}).get('ai_explanation_feedback',False) and any(x.content.get('explanation_rubric') for x in choices))
         return {'claim':claim_view(c),'level':level,'tasks':[challenge_view(x) for x in choices],'duration':sum(x.content.get('minutes',12)*60 for x in choices),'policy':policy(c.skill,level),'eligibility':eligibility(db,u,c.skill),'supported_levels':supported,'ai_explanation_available':ai_available,'content_preview':any(x.validation.get('demo_preview') for x in choices)}
 
@@ -571,12 +571,10 @@ def create_attempt(body:AssessmentBody,request:Request):
             if level not in supported:fail('CONTENT_INSUFFICIENT','There is not enough published content for that assessment level.',409,supported_levels=supported)
             e=eligibility(db,u,slug)
             if not e['ok']:fail(e['code'],'Resume your active assessment or wait until the reassessment cooldown ends.',409,**{key:value for key,value in e.items() if key!='code'})
-            choices=assessment_families(db,slug)
-            if level=='advanced':choices=[ch for ch in choices if ch.level=='advanced']
-            else:choices=[ch for ch in choices if ch.level!='advanced']
+            choices=assessment_families(db,slug,level)
             random.SystemRandom().shuffle(choices)
             covered=set(x for ch in choices for x in ch.content['competencies'])
-            if len(choices)<3 or not set(skill(slug)['competencies'])<=covered:fail('CONTENT_INSUFFICIENT','There is not enough validated content for this skill.',503)
+            if len(choices)<policy(slug,level)['min_items'] or not set(skill(slug)['competencies'])<=covered:fail('CONTENT_INSUFFICIENT','There is not enough validated content for this skill.',503)
             claim={'level':c.level,'original_level':c.original_level,'confirmed_skill':slug}
         ai_available=bool(LLM_READY and setting_value(db,'llm_enabled',False) and (u.preferences or {}).get('ai_explanation_feedback',False) and any(c.content.get('explanation_rubric') for c in choices))
         if body.ai_explanation_opt_in and body.mode!='formal':fail('AI_NOT_AVAILABLE','Written-explanation AI feedback is available for formal Trials only.',409)

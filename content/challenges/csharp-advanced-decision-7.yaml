@@ -1,0 +1,34 @@
+slug: csharp-advanced-decision-7
+family: csharp.decision-7.advanced
+skill: csharp
+type: scenario
+level: advanced
+minutes: 8
+title: Concurrent collection
+statement: C# scenario assessment. Multiple threads update shared state with a compound invariant. What
+  is required? Choose the response that satisfies the stated technical requirement. This task assesses
+  decisions and reasoning rather than running a full application.
+competencies:
+- types_nullability
+questions:
+- id: q1
+  prompt: Multiple threads update shared state with a compound invariant. What is required?
+  options:
+  - id: q1-1
+    text: Choose synchronization that protects the entire invariant
+  - id: q1-2
+    text: Assume a List<T> makes every compound operation thread-safe
+  - id: q1-3
+    text: Mark the reference readonly and assume its contents cannot change
+answers:
+  q1: q1-1
+answer_rationale:
+- Choose synchronization that protects the entire invariant.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.
+explanation_prompt: Explain why your choice fits this scenario and how you would verify its behavior.
+explanation_rubric:
+- Names the relevant technical boundary.
+- Connects the choice to the failure or correctness requirement.
+- Gives a concrete verification step.

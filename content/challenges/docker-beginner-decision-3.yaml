@@ -1,0 +1,29 @@
+slug: docker-beginner-decision-3
+family: docker.decision-3.beginner
+skill: docker
+type: scenario
+level: beginner
+minutes: 4
+title: Persistent data
+statement: Docker scenario assessment. A database must survive replacing its container. Where should its
+  data be kept? Choose the response that satisfies the stated technical requirement. This task assesses
+  decisions and reasoning rather than running a full application.
+competencies:
+- volumes_security
+questions:
+- id: q1
+  prompt: A database must survive replacing its container. Where should its data be kept?
+  options:
+  - id: q1-1
+    text: A suitable persistent volume with backup policy
+  - id: q1-2
+    text: Only the disposable writable container layer
+  - id: q1-3
+    text: Inside the image build history
+answers:
+  q1: q1-1
+answer_rationale:
+- A suitable persistent volume with backup policy.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.

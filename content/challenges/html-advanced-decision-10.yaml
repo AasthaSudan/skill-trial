@@ -1,0 +1,36 @@
+slug: html-advanced-decision-10
+family: html.decision-10.advanced
+skill: html
+type: scenario
+level: advanced
+minutes: 8
+title: Progressive form
+statement: HTML scenario assessment. The JavaScript bundle fails to load. What preserves a basic form
+  interaction where feasible? Choose the response that satisfies the stated technical requirement. This
+  task assesses decisions and reasoning rather than running a full application.
+competencies:
+- document_structure
+- forms_validation
+- semantics_accessibility
+questions:
+- id: q1
+  prompt: The JavaScript bundle fails to load. What preserves a basic form interaction where feasible?
+  options:
+  - id: q1-1
+    text: A semantic form with a valid server contract and progressive enhancement
+  - id: q1-2
+    text: An unlabelled div whose only behavior lives in a missing click handler
+  - id: q1-3
+    text: A blank page until every analytics script loads
+answers:
+  q1: q1-1
+answer_rationale:
+- A semantic form with a valid server contract and progressive enhancement.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.
+explanation_prompt: Explain why your choice fits this scenario and how you would verify its behavior.
+explanation_rubric:
+- Names the relevant technical boundary.
+- Connects the choice to the failure or correctness requirement.
+- Gives a concrete verification step.

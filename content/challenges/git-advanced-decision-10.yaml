@@ -1,0 +1,36 @@
+slug: git-advanced-decision-10
+family: git.decision-10.advanced
+skill: git
+type: scenario
+level: advanced
+minutes: 8
+title: Partial backport
+statement: Git scenario assessment. One fix must reach a release branch without unrelated feature commits.
+  What is appropriate? Choose the response that satisfies the stated technical requirement. This task
+  assesses decisions and reasoning rather than running a full application.
+competencies:
+- branching_history
+- merges_conflicts
+- collaboration_safety
+questions:
+- id: q1
+  prompt: One fix must reach a release branch without unrelated feature commits. What is appropriate?
+  options:
+  - id: q1-1
+    text: Cherry-pick the reviewed fix, resolve dependencies and test the release branch
+  - id: q1-2
+    text: Merge every unfinished feature automatically
+  - id: q1-3
+    text: Copy the entire .git directory over the release branch
+answers:
+  q1: q1-1
+answer_rationale:
+- Cherry-pick the reviewed fix, resolve dependencies and test the release branch.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.
+explanation_prompt: Explain why your choice fits this scenario and how you would verify its behavior.
+explanation_rubric:
+- Names the relevant technical boundary.
+- Connects the choice to the failure or correctness requirement.
+- Gives a concrete verification step.

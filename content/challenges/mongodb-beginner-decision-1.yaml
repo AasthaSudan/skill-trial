@@ -1,0 +1,29 @@
+slug: mongodb-beginner-decision-1
+family: mongodb.decision-1.beginner
+skill: mongodb
+type: scenario
+level: beginner
+minutes: 4
+title: Query a document
+statement: MongoDB scenario assessment. How does an application find documents matching a field condition?
+  Choose the response that satisfies the stated technical requirement. This task assesses decisions and
+  reasoning rather than running a full application.
+competencies:
+- documents_queries
+questions:
+- id: q1
+  prompt: How does an application find documents matching a field condition?
+  options:
+  - id: q1-1
+    text: Use a filter on the target collection
+  - id: q1-2
+    text: Rename the database to the filter text
+  - id: q1-3
+    text: Assume every document has the same values
+answers:
+  q1: q1-1
+answer_rationale:
+- Use a filter on the target collection.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.

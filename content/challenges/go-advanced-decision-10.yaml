@@ -1,0 +1,36 @@
+slug: go-advanced-decision-10
+family: go.decision-10.advanced
+skill: go
+type: scenario
+level: advanced
+minutes: 8
+title: Shutdown ordering
+statement: Go scenario assessment. A service must stop workers while preserving accepted jobs. What should
+  it coordinate? Choose the response that satisfies the stated technical requirement. This task assesses
+  decisions and reasoning rather than running a full application.
+competencies:
+- values_interfaces
+- goroutines_channels
+- errors_context
+questions:
+- id: q1
+  prompt: A service must stop workers while preserving accepted jobs. What should it coordinate?
+  options:
+  - id: q1-1
+    text: Stop intake, propagate cancellation, persist required work and wait with a deadline
+  - id: q1-2
+    text: Exit immediately after acknowledging every job
+  - id: q1-3
+    text: Close channels arbitrarily while senders are still active
+answers:
+  q1: q1-1
+answer_rationale:
+- Stop intake, propagate cancellation, persist required work and wait with a deadline.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.
+explanation_prompt: Explain why your choice fits this scenario and how you would verify its behavior.
+explanation_rubric:
+- Names the relevant technical boundary.
+- Connects the choice to the failure or correctness requirement.
+- Gives a concrete verification step.

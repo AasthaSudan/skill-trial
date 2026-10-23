@@ -1,0 +1,34 @@
+slug: mongodb-advanced-decision-8
+family: mongodb.decision-8.advanced
+skill: mongodb
+type: scenario
+level: advanced
+minutes: 8
+title: Pagination drift
+statement: MongoDB scenario assessment. A large changing collection makes skip-based pages expensive and
+  unstable. What is often appropriate? Choose the response that satisfies the stated technical requirement.
+  This task assesses decisions and reasoning rather than running a full application.
+competencies:
+- indexes_performance
+questions:
+- id: q1
+  prompt: A large changing collection makes skip-based pages expensive and unstable. What is often appropriate?
+  options:
+  - id: q1-1
+    text: Use a stable indexed cursor/keyset order with a tie-breaker
+  - id: q1-2
+    text: Fetch the full collection into browser memory
+  - id: q1-3
+    text: Remove ordering to get consistent pages
+answers:
+  q1: q1-1
+answer_rationale:
+- Use a stable indexed cursor/keyset order with a tie-breaker.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.
+explanation_prompt: Explain why your choice fits this scenario and how you would verify its behavior.
+explanation_rubric:
+- Names the relevant technical boundary.
+- Connects the choice to the failure or correctness requirement.
+- Gives a concrete verification step.

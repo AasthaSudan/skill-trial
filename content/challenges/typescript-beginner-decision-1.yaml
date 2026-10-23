@@ -1,0 +1,29 @@
+slug: typescript-beginner-decision-1
+family: typescript.decision-1.beginner
+skill: typescript
+type: scenario
+level: beginner
+minutes: 4
+title: Typed parameter
+statement: TypeScript scenario assessment. What does a parameter annotation provide? Choose the response
+  that satisfies the stated technical requirement. This task assesses decisions and reasoning rather than
+  running a full application.
+competencies:
+- types_narrowing
+questions:
+- id: q1
+  prompt: What does a parameter annotation provide?
+  options:
+  - id: q1-1
+    text: A compile-time constraint checked by TypeScript
+  - id: q1-2
+    text: Automatic validation of every network response at runtime
+  - id: q1-3
+    text: Encryption of the argument
+answers:
+  q1: q1-1
+answer_rationale:
+- A compile-time constraint checked by TypeScript.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.

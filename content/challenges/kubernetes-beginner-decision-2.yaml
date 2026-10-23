@@ -1,0 +1,29 @@
+slug: kubernetes-beginner-decision-2
+family: kubernetes.decision-2.beginner
+skill: kubernetes
+type: scenario
+level: beginner
+minutes: 4
+title: Service discovery
+statement: Kubernetes scenario assessment. How can clients address a changing group of application Pods?
+  Choose the response that satisfies the stated technical requirement. This task assesses decisions and
+  reasoning rather than running a full application.
+competencies:
+- configuration_security
+questions:
+- id: q1
+  prompt: How can clients address a changing group of application Pods?
+  options:
+  - id: q1-1
+    text: Use a Service selecting the intended Pods
+  - id: q1-2
+    text: Hardcode one temporary Pod IP forever
+  - id: q1-3
+    text: Use localhost from every other Pod
+answers:
+  q1: q1-1
+answer_rationale:
+- Use a Service selecting the intended Pods.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.

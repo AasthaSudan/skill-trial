@@ -1,0 +1,40 @@
+slug: spring-boot-beginner-repository-service
+family: spring-boot.repository-service.beginner
+skill: spring-boot
+type: scenario
+level: beginner
+minutes: 4
+title: Connect a service and repository
+statement: An endpoint needs to save a small customer record. Choose basic dependency injection and repository
+  operations rather than manually constructing Spring-managed objects.
+competencies:
+- services
+- persistence
+questions:
+- id: q1
+  prompt: How should the controller receive its service?
+  options:
+  - id: q1-1
+    text: Use constructor injection of the managed service
+  - id: q1-2
+    text: Create new Service() in each request
+  - id: q1-3
+    text: Store it in a mutable static global initialized by the client
+- id: q2
+  prompt: Which repository operation persists a new mapped entity?
+  options:
+  - id: q2-1
+    text: Call the repository save operation through the service
+  - id: q2-2
+    text: Call findById and assume it inserts a row
+  - id: q2-3
+    text: Serialize the entity to a log file instead of the configured database
+answers:
+  q1: q1-1
+  q2: q2-1
+answer_rationale:
+- Constructor injection lets Spring provide configured dependencies.
+- save expresses the persistence operation.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.

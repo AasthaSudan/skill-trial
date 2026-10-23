@@ -1,0 +1,29 @@
+slug: react-beginner-decision-1
+family: react.decision-1.beginner
+skill: react
+type: scenario
+level: beginner
+minutes: 4
+title: Counter state
+statement: React scenario assessment. A button increments a counter shown by the component. Where should
+  its changing value live? Choose the response that satisfies the stated technical requirement. This task
+  assesses decisions and reasoning rather than running a full application.
+competencies:
+- components_state
+questions:
+- id: q1
+  prompt: A button increments a counter shown by the component. Where should its changing value live?
+  options:
+  - id: q1-1
+    text: Component state updated through its setter
+  - id: q1-2
+    text: A local variable reset on every render
+  - id: q1-3
+    text: A mutation of an incoming prop
+answers:
+  q1: q1-1
+answer_rationale:
+- Component state updated through its setter.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.

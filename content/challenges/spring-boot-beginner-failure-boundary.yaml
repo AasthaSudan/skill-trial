@@ -1,0 +1,40 @@
+slug: spring-boot-beginner-failure-boundary
+family: spring-boot.failure-boundary.beginner
+skill: spring-boot
+type: scenario
+level: beginner
+minutes: 4
+title: Handle a missing record and failed write
+statement: A small service reads a record by ID and performs two database updates. Clients need a deliberate
+  missing-record response and the writes must succeed together.
+competencies:
+- transactions
+- exceptions
+questions:
+- id: q1
+  prompt: A record does not exist. What should the HTTP boundary do?
+  options:
+  - id: q1-1
+    text: Map the domain not-found case to a deliberate 404 response
+  - id: q1-2
+    text: Return a Java stack trace with status 200
+  - id: q1-3
+    text: Retry forever without returning a response
+- id: q2
+  prompt: Where should the shared unit of work be declared?
+  options:
+  - id: q2-1
+    text: At the managed service operation with @Transactional
+  - id: q2-2
+    text: Only on the response DTO
+  - id: q2-3
+    text: On a local variable after the first database commit
+answers:
+  q1: q1-1
+  q2: q2-1
+answer_rationale:
+- A deliberate not-found mapping makes the contract explicit.
+- The service boundary groups the writes into one transaction.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.

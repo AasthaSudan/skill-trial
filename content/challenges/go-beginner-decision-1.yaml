@@ -1,0 +1,30 @@
+slug: go-beginner-decision-1
+family: go.decision-1.beginner
+skill: go
+type: scenario
+level: beginner
+minutes: 4
+title: Handle an error
+statement: Go scenario assessment. A function returns a value and an error. What should a caller normally
+  do before trusting the value? Choose the response that satisfies the stated technical requirement. This
+  task assesses decisions and reasoning rather than running a full application.
+competencies:
+- values_interfaces
+questions:
+- id: q1
+  prompt: A function returns a value and an error. What should a caller normally do before trusting the
+    value?
+  options:
+  - id: q1-1
+    text: Check and handle the error according to the operation's contract
+  - id: q1-2
+    text: Ignore every non-nil error automatically
+  - id: q1-3
+    text: Treat the error string as a successful response body
+answers:
+  q1: q1-1
+answer_rationale:
+- Check and handle the error according to the operation's contract.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.

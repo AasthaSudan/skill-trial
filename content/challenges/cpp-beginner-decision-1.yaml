@@ -1,0 +1,29 @@
+slug: cpp-beginner-decision-1
+family: cpp.decision-1.beginner
+skill: cpp
+type: scenario
+level: beginner
+minutes: 4
+title: Owned allocation
+statement: C++ scenario assessment. Which abstraction expresses one object's ownership of a heap resource?
+  Choose the response that satisfies the stated technical requirement. This task assesses decisions and
+  reasoning rather than running a full application.
+competencies:
+- ownership_lifetimes
+questions:
+- id: q1
+  prompt: Which abstraction expresses one object's ownership of a heap resource?
+  options:
+  - id: q1-1
+    text: std::unique_ptr with appropriate construction
+  - id: q1-2
+    text: A raw owning pointer copied freely without a deletion policy
+  - id: q1-3
+    text: A reference to a destroyed local object
+answers:
+  q1: q1-1
+answer_rationale:
+- std::unique_ptr with appropriate construction.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.

@@ -1,0 +1,96 @@
+slug: java-beginner-largest-reading
+family: java.largest-reading.beginner
+skill: java
+type: coding
+level: beginner
+minutes: 6
+title: Find the largest reading
+statement: Return the largest integer in nums without changing the array. Values may all be negative.
+  Return null for an empty array. Do not return 0 merely because no positive value exists. Input contains
+  at most 10,000 signed 32-bit integers. Implement solve(nums).
+competencies: &id001
+- collections
+- algorithms
+- edge_cases
+language: java
+starter: "class Solution {\n  public static Object solve(int[] nums) {\n    return null;\n  }\n}\n"
+reference: class Solution { public static Object solve(int[] nums) { if(nums.length==0)return null; int
+  best=nums[0];for(int n:nums)if(n>best)best=n; return best; } }
+tests:
+- input:
+  - 2
+  - 7
+  - 2
+  - 0
+  expected: 7
+  label: Typical readings
+  visibility: sample
+  competencies: *id001
+- input: []
+  expected: null
+  label: Boundary input
+  visibility: hidden
+  competencies: *id001
+- input:
+  - -7
+  - -3
+  - -8
+  expected: -3
+  label: Empty or negative readings
+  visibility: hidden
+  competencies: *id001
+- input:
+  - 5
+  expected: 5
+  label: Short or repeated readings
+  visibility: hidden
+  competencies: *id001
+- input:
+  - 2147483647
+  - -2147483648
+  expected: 2147483647
+  label: Integer or relationship boundary
+  visibility: hidden
+  competencies: *id001
+practice_tests:
+- input:
+  - 6
+  - 6
+  - 1
+  - 0
+  expected: 6
+  label: Typical readings
+  visibility: sample
+  competencies: *id001
+- input:
+  - -11
+  - -4
+  - -9
+  expected: -4
+  label: Boundary input
+  visibility: hidden
+  competencies: *id001
+- input: []
+  expected: null
+  label: Empty or negative readings
+  visibility: hidden
+  competencies: *id001
+- input:
+  - 3
+  - 3
+  - 3
+  expected: 3
+  label: Short or repeated readings
+  visibility: hidden
+  competencies: *id001
+- input:
+  - 8
+  - 1
+  - 8
+  expected: 8
+  label: Integer or relationship boundary
+  visibility: hidden
+  competencies: *id001
+hints:
+- Trace the loop with an empty array and a negative value.
+- Count only the occurrences or neighboring pairs required by the contract.

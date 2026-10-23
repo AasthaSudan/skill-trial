@@ -1,0 +1,34 @@
+slug: redis-advanced-decision-7
+family: redis.decision-7.advanced
+skill: redis
+type: scenario
+level: advanced
+minutes: 8
+title: Stampede
+statement: Redis scenario assessment. A popular key expires and many clients hit the database at once.
+  What helps? Choose the response that satisfies the stated technical requirement. This task assesses
+  decisions and reasoning rather than running a full application.
+competencies:
+- structures_expiry
+questions:
+- id: q1
+  prompt: A popular key expires and many clients hit the database at once. What helps?
+  options:
+  - id: q1-1
+    text: Use bounded request coalescing or refresh strategies with controlled expiry
+  - id: q1-2
+    text: Let every client run an unbounded refresh
+  - id: q1-3
+    text: Increase key popularity by disabling request limits
+answers:
+  q1: q1-1
+answer_rationale:
+- Use bounded request coalescing or refresh strategies with controlled expiry.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.
+explanation_prompt: Explain why your choice fits this scenario and how you would verify its behavior.
+explanation_rubric:
+- Names the relevant technical boundary.
+- Connects the choice to the failure or correctness requirement.
+- Gives a concrete verification step.

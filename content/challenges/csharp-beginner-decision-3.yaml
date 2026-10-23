@@ -1,0 +1,29 @@
+slug: csharp-beginner-decision-3
+family: csharp.decision-3.beginner
+skill: csharp
+type: scenario
+level: beginner
+minutes: 4
+title: Await result
+statement: C# scenario assessment. How should an async caller obtain the value from a Task<T>? Choose
+  the response that satisfies the stated technical requirement. This task assesses decisions and reasoning
+  rather than running a full application.
+competencies:
+- async_resources
+questions:
+- id: q1
+  prompt: How should an async caller obtain the value from a Task<T>?
+  options:
+  - id: q1-1
+    text: Await it and handle failure under the caller's contract
+  - id: q1-2
+    text: Read it as if the Task itself were T
+  - id: q1-3
+    text: Call an unrelated timer and assume the task finished
+answers:
+  q1: q1-1
+answer_rationale:
+- Await it and handle failure under the caller's contract.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.

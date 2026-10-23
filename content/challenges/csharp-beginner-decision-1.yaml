@@ -1,0 +1,29 @@
+slug: csharp-beginner-decision-1
+family: csharp.decision-1.beginner
+skill: csharp
+type: scenario
+level: beginner
+minutes: 4
+title: Nullable value
+statement: C# scenario assessment. A reference may be null. What makes dereferencing it safe? Choose the
+  response that satisfies the stated technical requirement. This task assesses decisions and reasoning
+  rather than running a full application.
+competencies:
+- types_nullability
+questions:
+- id: q1
+  prompt: A reference may be null. What makes dereferencing it safe?
+  options:
+  - id: q1-1
+    text: Check or narrow its value under an appropriate nullable contract
+  - id: q1-2
+    text: Assume a nullable annotation creates an object automatically
+  - id: q1-3
+    text: Disable every null warning without inspecting callers
+answers:
+  q1: q1-1
+answer_rationale:
+- Check or narrow its value under an appropriate nullable contract.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.

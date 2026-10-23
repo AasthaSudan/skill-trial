@@ -1,0 +1,29 @@
+slug: redis-beginner-decision-2
+family: redis.decision-2.beginner
+skill: redis
+type: scenario
+level: beginner
+minutes: 4
+title: Expiry
+statement: Redis scenario assessment. What does a TTL provide for a cache entry? Choose the response that
+  satisfies the stated technical requirement. This task assesses decisions and reasoning rather than running
+  a full application.
+competencies:
+- atomic_operations
+questions:
+- id: q1
+  prompt: What does a TTL provide for a cache entry?
+  options:
+  - id: q1-1
+    text: An expiration policy for the entry
+  - id: q1-2
+    text: A guarantee the original database row cannot change
+  - id: q1-3
+    text: Authentication of every reader
+answers:
+  q1: q1-1
+answer_rationale:
+- An expiration policy for the entry.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.

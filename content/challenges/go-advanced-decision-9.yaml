@@ -1,0 +1,34 @@
+slug: go-advanced-decision-9
+family: go.decision-9.advanced
+skill: go
+type: scenario
+level: advanced
+minutes: 8
+title: Typed nil interface
+statement: Go scenario assessment. An interface contains a typed nil pointer. Why can a comparison with
+  nil be false? Choose the response that satisfies the stated technical requirement. This task assesses
+  decisions and reasoning rather than running a full application.
+competencies:
+- errors_context
+questions:
+- id: q1
+  prompt: An interface contains a typed nil pointer. Why can a comparison with nil be false?
+  options:
+  - id: q1-1
+    text: The interface still holds a dynamic type as well as a nil dynamic value
+  - id: q1-2
+    text: Interfaces never store type information
+  - id: q1-3
+    text: The compiler silently allocates an instance for every nil pointer
+answers:
+  q1: q1-1
+answer_rationale:
+- The interface still holds a dynamic type as well as a nil dynamic value.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.
+explanation_prompt: Explain why your choice fits this scenario and how you would verify its behavior.
+explanation_rubric:
+- Names the relevant technical boundary.
+- Connects the choice to the failure or correctness requirement.
+- Gives a concrete verification step.

@@ -1,0 +1,29 @@
+slug: html-beginner-decision-3
+family: html.decision-3.beginner
+skill: html
+type: scenario
+level: beginner
+minutes: 4
+title: Semantic action
+statement: HTML scenario assessment. Which element fits an action that submits a form? Choose the response
+  that satisfies the stated technical requirement. This task assesses decisions and reasoning rather than
+  running a full application.
+competencies:
+- semantics_accessibility
+questions:
+- id: q1
+  prompt: Which element fits an action that submits a form?
+  options:
+  - id: q1-1
+    text: A button with the intended type
+  - id: q1-2
+    text: A clickable div with no keyboard behavior
+  - id: q1-3
+    text: A decorative image without alternative text
+answers:
+  q1: q1-1
+answer_rationale:
+- A button with the intended type.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.

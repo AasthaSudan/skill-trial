@@ -1,0 +1,34 @@
+slug: nodejs-advanced-decision-8
+family: nodejs.decision-8.advanced
+skill: nodejs
+type: scenario
+level: advanced
+minutes: 8
+title: Request cancellation
+statement: Node.js scenario assessment. A client disconnects during an expensive downstream operation.
+  What should happen where supported? Choose the response that satisfies the stated technical requirement.
+  This task assesses decisions and reasoning rather than running a full application.
+competencies:
+- http_services
+questions:
+- id: q1
+  prompt: A client disconnects during an expensive downstream operation. What should happen where supported?
+  options:
+  - id: q1-1
+    text: Propagate cancellation with an AbortSignal and release resources
+  - id: q1-2
+    text: Run every abandoned task forever
+  - id: q1-3
+    text: Retain the response object in a global cache
+answers:
+  q1: q1-1
+answer_rationale:
+- Propagate cancellation with an AbortSignal and release resources.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.
+explanation_prompt: Explain why your choice fits this scenario and how you would verify its behavior.
+explanation_rubric:
+- Names the relevant technical boundary.
+- Connects the choice to the failure or correctness requirement.
+- Gives a concrete verification step.

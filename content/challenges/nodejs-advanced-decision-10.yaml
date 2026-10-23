@@ -1,0 +1,36 @@
+slug: nodejs-advanced-decision-10
+family: nodejs.decision-10.advanced
+skill: nodejs
+type: scenario
+level: advanced
+minutes: 8
+title: Dependency compromise
+statement: Node.js scenario assessment. A newly installed package unexpectedly reads credentials. What
+  is the correct response? Choose the response that satisfies the stated technical requirement. This task
+  assesses decisions and reasoning rather than running a full application.
+competencies:
+- async_execution
+- http_services
+- dependencies_security
+questions:
+- id: q1
+  prompt: A newly installed package unexpectedly reads credentials. What is the correct response?
+  options:
+  - id: q1-1
+    text: Contain and rotate exposed credentials, remove the dependency and review provenance
+  - id: q1-2
+    text: Suppress the warning and keep the package
+  - id: q1-3
+    text: Publish the credentials so everyone can reproduce the issue
+answers:
+  q1: q1-1
+answer_rationale:
+- Contain and rotate exposed credentials, remove the dependency and review provenance.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.
+explanation_prompt: Explain why your choice fits this scenario and how you would verify its behavior.
+explanation_rubric:
+- Names the relevant technical boundary.
+- Connects the choice to the failure or correctness requirement.
+- Gives a concrete verification step.

@@ -1,0 +1,34 @@
+slug: nodejs-intermediate-decision-5
+family: nodejs.decision-5.intermediate
+skill: nodejs
+type: scenario
+level: intermediate
+minutes: 6
+title: Rejected request
+statement: Node.js scenario assessment. An awaited downstream call can fail. What should the handler do?
+  Choose the response that satisfies the stated technical requirement. This task assesses decisions and
+  reasoning rather than running a full application.
+competencies:
+- http_services
+questions:
+- id: q1
+  prompt: An awaited downstream call can fail. What should the handler do?
+  options:
+  - id: q1-1
+    text: Catch or propagate the rejection through the framework's error handling
+  - id: q1-2
+    text: Ignore the promise rejection
+  - id: q1-3
+    text: Send success before checking the result
+answers:
+  q1: q1-1
+answer_rationale:
+- Catch or propagate the rejection through the framework's error handling.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.
+explanation_prompt: Explain why your choice fits this scenario and how you would verify its behavior.
+explanation_rubric:
+- Names the relevant technical boundary.
+- Connects the choice to the failure or correctness requirement.
+- Gives a concrete verification step.

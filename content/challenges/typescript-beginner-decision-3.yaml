@@ -1,0 +1,29 @@
+slug: typescript-beginner-decision-3
+family: typescript.decision-3.beginner
+skill: typescript
+type: scenario
+level: beginner
+minutes: 4
+title: Reusable generic
+statement: TypeScript scenario assessment. Why use a generic identity function rather than returning any?
+  Choose the response that satisfies the stated technical requirement. This task assesses decisions and
+  reasoning rather than running a full application.
+competencies:
+- runtime_boundaries
+questions:
+- id: q1
+  prompt: Why use a generic identity function rather than returning any?
+  options:
+  - id: q1-1
+    text: Preserve the relationship between input and output types
+  - id: q1-2
+    text: Make every runtime value have the same type
+  - id: q1-3
+    text: Skip all caller type checking
+answers:
+  q1: q1-1
+answer_rationale:
+- Preserve the relationship between input and output types.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.

@@ -1,0 +1,34 @@
+slug: docker-advanced-decision-8
+family: docker.decision-8.advanced
+skill: docker
+type: scenario
+level: advanced
+minutes: 8
+title: Privilege boundary
+statement: Docker scenario assessment. Untrusted task code must not control the host. Which configuration
+  reduces exposure? Choose the response that satisfies the stated technical requirement. This task assesses
+  decisions and reasoning rather than running a full application.
+competencies:
+- containers_networking
+questions:
+- id: q1
+  prompt: Untrusted task code must not control the host. Which configuration reduces exposure?
+  options:
+  - id: q1-1
+    text: Use non-root execution, dropped capabilities, network limits and no Docker socket mount
+  - id: q1-2
+    text: Mount the host Docker socket into the task
+  - id: q1-3
+    text: Run privileged and mount the host filesystem writable
+answers:
+  q1: q1-1
+answer_rationale:
+- Use non-root execution, dropped capabilities, network limits and no Docker socket mount.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.
+explanation_prompt: Explain why your choice fits this scenario and how you would verify its behavior.
+explanation_rubric:
+- Names the relevant technical boundary.
+- Connects the choice to the failure or correctness requirement.
+- Gives a concrete verification step.

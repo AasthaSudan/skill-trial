@@ -1,0 +1,34 @@
+slug: csharp-advanced-decision-9
+family: csharp.decision-9.advanced
+skill: csharp
+type: scenario
+level: advanced
+minutes: 8
+title: Multiple enumeration
+statement: C# scenario assessment. A deferred query has side effects and is enumerated twice unexpectedly.
+  What is a sound repair? Choose the response that satisfies the stated technical requirement. This task
+  assesses decisions and reasoning rather than running a full application.
+competencies:
+- async_resources
+questions:
+- id: q1
+  prompt: A deferred query has side effects and is enumerated twice unexpectedly. What is a sound repair?
+  options:
+  - id: q1-1
+    text: Remove unintended side effects and materialize or enumerate deliberately
+  - id: q1-2
+    text: Assume IEnumerable guarantees cached results
+  - id: q1-3
+    text: Disable exceptions from the source
+answers:
+  q1: q1-1
+answer_rationale:
+- Remove unintended side effects and materialize or enumerate deliberately.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.
+explanation_prompt: Explain why your choice fits this scenario and how you would verify its behavior.
+explanation_rubric:
+- Names the relevant technical boundary.
+- Connects the choice to the failure or correctness requirement.
+- Gives a concrete verification step.

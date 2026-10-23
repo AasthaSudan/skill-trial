@@ -1,0 +1,29 @@
+slug: git-beginner-decision-1
+family: git.decision-1.beginner
+skill: git
+type: scenario
+level: beginner
+minutes: 4
+title: Save a change
+statement: Git scenario assessment. Which sequence records selected working-tree changes locally? Choose
+  the response that satisfies the stated technical requirement. This task assesses decisions and reasoning
+  rather than running a full application.
+competencies:
+- branching_history
+questions:
+- id: q1
+  prompt: Which sequence records selected working-tree changes locally?
+  options:
+  - id: q1-1
+    text: Stage the intended files and create a commit
+  - id: q1-2
+    text: Push an unstaged directory as a commit
+  - id: q1-3
+    text: Delete .git to save space
+answers:
+  q1: q1-1
+answer_rationale:
+- Stage the intended files and create a commit.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.

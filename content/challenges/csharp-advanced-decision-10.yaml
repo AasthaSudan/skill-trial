@@ -1,0 +1,37 @@
+slug: csharp-advanced-decision-10
+family: csharp.decision-10.advanced
+skill: csharp
+type: scenario
+level: advanced
+minutes: 8
+title: Async resource lifetime
+statement: C# scenario assessment. A method returns a Task using a resource that is disposed before the
+  task completes. What must change? Choose the response that satisfies the stated technical requirement.
+  This task assesses decisions and reasoning rather than running a full application.
+competencies:
+- types_nullability
+- collections_linq
+- async_resources
+questions:
+- id: q1
+  prompt: A method returns a Task using a resource that is disposed before the task completes. What must
+    change?
+  options:
+  - id: q1-1
+    text: Keep the resource alive through the awaited operation and dispose at the correct boundary
+  - id: q1-2
+    text: Dispose it earlier to make execution faster
+  - id: q1-3
+    text: Turn off disposal for the entire application
+answers:
+  q1: q1-1
+answer_rationale:
+- Keep the resource alive through the awaited operation and dispose at the correct boundary.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.
+explanation_prompt: Explain why your choice fits this scenario and how you would verify its behavior.
+explanation_rubric:
+- Names the relevant technical boundary.
+- Connects the choice to the failure or correctness requirement.
+- Gives a concrete verification step.

@@ -1,0 +1,40 @@
+slug: spring-boot-beginner-request-dto
+family: spring-boot.request-dto.beginner
+skill: spring-boot
+type: scenario
+level: beginner
+minutes: 4
+title: Read and validate an API request
+statement: A new POST /profiles endpoint receives JSON. The candidate must identify basic request binding
+  and how invalid input reaches the HTTP client.
+competencies:
+- rest_apis
+- validation
+questions:
+- id: q1
+  prompt: Which parameter binding reads the JSON body?
+  options:
+  - id: q1-1
+    text: A request DTO annotated with @RequestBody
+  - id: q1-2
+    text: A @PathVariable without a matching route variable
+  - id: q1-3
+    text: A JPA entity field annotated @GeneratedValue
+- id: q2
+  prompt: How should a missing required name be rejected?
+  options:
+  - id: q2-1
+    text: Put @NotBlank on the DTO field and use @Valid at the request boundary
+  - id: q2-2
+    text: Use @Autowired on the name field
+  - id: q2-3
+    text: Return success and assume the database fixes it later
+answers:
+  q1: q1-1
+  q2: q2-1
+answer_rationale:
+- '@RequestBody binds the request representation to the DTO.'
+- Boundary validation gives an actionable client error before processing.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.

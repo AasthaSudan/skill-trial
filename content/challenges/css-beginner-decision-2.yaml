@@ -1,0 +1,29 @@
+slug: css-beginner-decision-2
+family: css.decision-2.beginner
+skill: css
+type: scenario
+level: beginner
+minutes: 4
+title: Flexible row
+statement: CSS scenario assessment. Which layout system commonly arranges and aligns items along one axis?
+  Choose the response that satisfies the stated technical requirement. This task assesses decisions and
+  reasoning rather than running a full application.
+competencies:
+- layout_responsiveness
+questions:
+- id: q1
+  prompt: Which layout system commonly arranges and aligns items along one axis?
+  options:
+  - id: q1-1
+    text: Flexbox
+  - id: q1-2
+    text: A database index
+  - id: q1-3
+    text: Only manual whitespace characters
+answers:
+  q1: q1-1
+answer_rationale:
+- Flexbox.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.

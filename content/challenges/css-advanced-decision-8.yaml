@@ -1,0 +1,34 @@
+slug: css-advanced-decision-8
+family: css.decision-8.advanced
+skill: css
+type: scenario
+level: advanced
+minutes: 8
+title: Stacking context
+statement: CSS scenario assessment. A high z-index element remains behind another region. What explains
+  a possible cause? Choose the response that satisfies the stated technical requirement. This task assesses
+  decisions and reasoning rather than running a full application.
+competencies:
+- layout_responsiveness
+questions:
+- id: q1
+  prompt: A high z-index element remains behind another region. What explains a possible cause?
+  options:
+  - id: q1-1
+    text: It belongs to a different stacking context whose parent order limits it
+  - id: q1-2
+    text: z-index numbers are globally comparable across all contexts
+  - id: q1-3
+    text: A larger font always moves an element to the front
+answers:
+  q1: q1-1
+answer_rationale:
+- It belongs to a different stacking context whose parent order limits it.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.
+explanation_prompt: Explain why your choice fits this scenario and how you would verify its behavior.
+explanation_rubric:
+- Names the relevant technical boundary.
+- Connects the choice to the failure or correctness requirement.
+- Gives a concrete verification step.

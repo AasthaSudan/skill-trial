@@ -1,0 +1,29 @@
+slug: aws-beginner-decision-1
+family: aws.decision-1.beginner
+skill: aws
+type: scenario
+level: beginner
+minutes: 4
+title: Workload identity
+statement: AWS scenario assessment. An application on AWS needs to call another AWS service. Which credential
+  approach is preferred? Choose the response that satisfies the stated technical requirement. This task
+  assesses decisions and reasoning rather than running a full application.
+competencies:
+- identity_access
+questions:
+- id: q1
+  prompt: An application on AWS needs to call another AWS service. Which credential approach is preferred?
+  options:
+  - id: q1-1
+    text: Use an appropriate IAM role with temporary credentials
+  - id: q1-2
+    text: Hardcode a root access key in source
+  - id: q1-3
+    text: Share one permanent administrator key with every service
+answers:
+  q1: q1-1
+answer_rationale:
+- Use an appropriate IAM role with temporary credentials.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.

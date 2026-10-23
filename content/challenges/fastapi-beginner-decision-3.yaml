@@ -1,0 +1,29 @@
+slug: fastapi-beginner-decision-3
+family: fastapi.decision-3.beginner
+skill: fastapi
+type: scenario
+level: beginner
+minutes: 4
+title: Injected dependency
+statement: FastAPI scenario assessment. What is Depends used for in a route? Choose the response that
+  satisfies the stated technical requirement. This task assesses decisions and reasoning rather than running
+  a full application.
+competencies:
+- async_persistence
+questions:
+- id: q1
+  prompt: What is Depends used for in a route?
+  options:
+  - id: q1-1
+    text: Declaring a dependency such as an authenticated user or scoped resource
+  - id: q1-2
+    text: Automatically granting every caller administrator access
+  - id: q1-3
+    text: Running every request in a Docker container
+answers:
+  q1: q1-1
+answer_rationale:
+- Declaring a dependency such as an authenticated user or scoped resource.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.

@@ -1,0 +1,34 @@
+slug: git-advanced-decision-7
+family: git.decision-7.advanced
+skill: git
+type: scenario
+level: advanced
+minutes: 8
+title: Recover a local commit
+statement: Git scenario assessment. A local branch pointer moved and a commit seems lost. What can help
+  locate it? Choose the response that satisfies the stated technical requirement. This task assesses decisions
+  and reasoning rather than running a full application.
+competencies:
+- branching_history
+questions:
+- id: q1
+  prompt: A local branch pointer moved and a commit seems lost. What can help locate it?
+  options:
+  - id: q1-1
+    text: Inspect reflog and create a recovery branch at the intended commit
+  - id: q1-2
+    text: Run an aggressive prune immediately
+  - id: q1-3
+    text: Overwrite the repository with an empty folder
+answers:
+  q1: q1-1
+answer_rationale:
+- Inspect reflog and create a recovery branch at the intended commit.
+hints:
+- Identify the requirement and the boundary where it must hold.
+- Compare the failure behavior of every choice.
+explanation_prompt: Explain why your choice fits this scenario and how you would verify its behavior.
+explanation_rubric:
+- Names the relevant technical boundary.
+- Connects the choice to the failure or correctness requirement.
+- Gives a concrete verification step.
