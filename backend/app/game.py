@@ -2,7 +2,7 @@ from datetime import datetime, timedelta, timezone, time
 from zoneinfo import ZoneInfo
 from sqlalchemy import select,func
 from .db import now
-from .models import XP,Activity,Quest,Celebration,OrbitProgress,Attempt,InboxNotification,BadgeDefinition,BadgeAward
+from .models import XP,Activity,Quest,Celebration,OrbitProgress,Attempt,InboxNotification,BadgeDefinition,BadgeAward,Claim
 
 RANKS=[(1,'Spark'),(3,'Ember'),(5,'Flare'),(8,'Comet'),(11,'Nova'),(15,'Pulsar'),(20,'Supernova')]
 BADGE_METRICS={'confirmed_steps','passed_families','edge_case_tests','valid_counterexamples','verified_results','current_streak'}
@@ -99,8 +99,14 @@ def quests(db,u):
 
 def badge_values(db,u):
     events=list(db.scalars(select(Activity).where(Activity.user_id==u.id)))
+    # Current claims preserve credit for accounts created before per-skill events.
+    # Historical events preserve a completed step if a claim is later removed.
+    confirmed={c for c in db.scalars(select(Claim.skill).where(Claim.user_id==u.id,Claim.status=='confirmed'))}
+    confirmed.update(e.facts['skill'] for e in events if e.kind=='confirmed' and e.facts.get('skill'))
+    legacy_confirmed=any(e.kind=='confirmed' for e in events)
+    onboarded=bool(u.profile.get('onboarded') or any(e.kind=='onboard' for e in events))
     return {
-        'confirmed_steps':sum(e.kind in ['onboard','confirmed'] for e in events),
+        'confirmed_steps':int(onboarded)+max(len(confirmed),int(legacy_confirmed)),
         'passed_families':len({e.facts.get('family') for e in events if e.facts.get('family') and e.facts.get('ratio',0)>=.7}),
         'edge_case_tests':sum(int(e.facts.get('edge_passed',0) or 0) for e in events),
         'valid_counterexamples':sum(bool(e.facts.get('counterexample')) for e in events),

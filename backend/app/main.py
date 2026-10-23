@@ -439,7 +439,7 @@ def add_claim(body:ClaimBody,request:Request):
         u=auth(db,request);c=db.scalar(select(Claim).where(Claim.user_id==u.id,Claim.skill==body.skill))
         if c:c.status='confirmed';c.level=body.level
         else:c=Claim(user_id=u.id,skill=body.skill,level=body.level,status='confirmed');db.add(c)
-        db.flush();audit(db,u,'claim.added',c.id);return claim_view(c)
+        db.flush();activity(db,u,'confirmed:'+c.id,'confirmed',{'skill':c.skill});award(db,u,'mission:confirmed',30,'Confirm your claims');audit(db,u,'claim.added',c.id);return claim_view(c)
 
 @app.patch('/api/v1/me/skills/{id}')
 def patch_claim(id:str,body:ClaimPatch,request:Request):
@@ -455,7 +455,7 @@ def patch_claim(id:str,body:ClaimPatch,request:Request):
             if body.selected and c.status!='confirmed':fail('CONFIRM_CLAIM_FIRST','Confirm this claim first.',409)
             c.selected=body.selected
         if c.status=='confirmed':
-            activity(db,u,'confirmed','confirmed');award(db,u,'mission:confirmed',30,'Confirm your claims')
+            activity(db,u,'confirmed:'+c.id,'confirmed',{'skill':c.skill});award(db,u,'mission:confirmed',30,'Confirm your claims')
         audit(db,u,'claim.updated',c.id);return claim_view(c)
 
 @app.post('/api/v1/resumes',status_code=201)
@@ -570,7 +570,7 @@ def create_attempt(body:AssessmentBody,request:Request):
             supported=assessment_levels(db,slug)
             if level not in supported:fail('CONTENT_INSUFFICIENT','There is not enough published content for that assessment level.',409,supported_levels=supported)
             e=eligibility(db,u,slug)
-            if not e['ok']:fail(e['code'],'Resume your active assessment or wait until the reassessment cooldown ends.',409,**e)
+            if not e['ok']:fail(e['code'],'Resume your active assessment or wait until the reassessment cooldown ends.',409,**{key:value for key,value in e.items() if key!='code'})
             choices=assessment_families(db,slug)
             if level=='advanced':choices=[ch for ch in choices if ch.level=='advanced']
             else:choices=[ch for ch in choices if ch.level!='advanced']
@@ -819,6 +819,7 @@ def quest_claim(id:str,request:Request):
         u=auth(db,request);q=owned(db,Quest,id,u)
         current=next((x for x in quests(db,u) if x['id']==id),None)
         if not current or current['progress']<q.target:fail('QUEST_NOT_COMPLETE','Complete the quest before claiming.',409)
+        if q.claimed:return {'ok':True,'shield_earned':False}
         shield_earned=q.kind=='weekly' and not u.profile.get('streak_shields',0)
         q.claimed=True;award(db,u,'quest:'+q.key,q.points,q.title)
         if shield_earned:u.profile={**u.profile,'streak_shields':1}
@@ -904,6 +905,7 @@ def league_membership(body:dict,request:Request):
         u=auth(db,request);member=db.get(LeagueMember,u.id)
         if not body['joined']:
             if member:db.delete(member);audit(db,u,'league.left',member.alias)
+            db.flush()
             return league_view(db,u)
         selected=alias or (member.alias if member else None)
         if selected:
@@ -941,8 +943,8 @@ def dashboard(request:Request):
         if u.profile.get('roles'):
             for role in u.profile.get('roles',[]):
                 targets=role_skills.get(role,[])
-                if targets:goal_progress.append({'label':role,'skills':[{'skill':slug,'name':skill(slug)['name'],'claim':next((c['status'] for c in cs if c['skill']==slug),'not_added'),'assessable':skill(slug)['assessable'],'verification':latest.get(slug,{}).get('result',{}).get('status','not_assessed')} for slug in targets]})
-        elif priorities:goal_progress.append({'label':'Skills in your career goal','skills':[{'skill':slug,'name':skill(slug)['name'],'claim':next((c['status'] for c in cs if c['skill']==slug),'not_added'),'assessable':skill(slug)['assessable'],'verification':latest.get(slug,{}).get('result',{}).get('status','not_assessed')} for slug in priorities]})
+                if targets:goal_progress.append({'label':role,'skills':[{'skill':slug,'name':skill(slug)['name'],'claim':next((c['status'] for c in cs if c['skill']==slug),'not_added'),'assessable':bool(assessment_levels(db,slug)),'verification':latest.get(slug,{}).get('result',{}).get('status','not_assessed')} for slug in targets]})
+        elif priorities:goal_progress.append({'label':'Skills in your career goal','skills':[{'skill':slug,'name':skill(slug)['name'],'claim':next((c['status'] for c in cs if c['skill']==slug),'not_added'),'assessable':bool(assessment_levels(db,slug)),'verification':latest.get(slug,{}).get('result',{}).get('status','not_assessed')} for slug in priorities]})
         focus=next((c for slug in priorities for c in cs if c['skill']==slug and c['status']!='removed' and (not latest.get(slug) or latest[slug]['result']['status']!='verified')),None)
         focus_copy='the roles you selected' if u.profile.get('roles') else 'the goal you described'
         recommendation={'title':'Build evidence for your career direction','text':f"{focus['name']} is connected to {focus_copy}." if focus and priorities else 'Add a skill connected to your career direction.' if priorities else 'Choose the skills that matter for your next role.', 'to':'/app/trials' if focus and focus['status']=='confirmed' else '/app/skills' if focus or priorities else '/app/onboarding','skill':focus['skill'] if focus else None,'reason':'role_priority' if priorities else 'set_role'}

@@ -38,11 +38,11 @@ The owner clarified the delivery target: usable features, without requiring prod
 
 Registration, sessions/CSRF, verification/reset, resume processing and claim review, timed assessment lifecycle, evaluation and reports, history/comparison, practice, learning paths, quests, achievements, and privacy controls are connected. Dashboard recommendations use selected roles/goals; learning paths support archive/restore and sequential waypoint locks. Practice builds separate per-skill Orbit progress and unlocks candidate-only cosmetics. The Practice League is opt-in and shows aliases and practice XP only. A private inbox stores milestone and report-ready events. Reminder and weekly recap email settings start off and respect local quiet hours. Share links default to no candidate name and can be revoked. Data export includes the user's progress, notification, learning, and share records.
 
-Recent migration, retention, AI, admin, runner, and deployment code was deliberately left untested/unbuilt at the owner's request. The current validation manifest has attestations for all 44 expanded variants; the dedicated content validator passed the 12 changed/new Spring Boot variants on 2026-10-23. The prior application test suite and local browser QA happened before this continuation.
+The 2026-10-23 local flow audit passed 51 backend tests, three frontend tests and the production frontend build. Actual local submissions covered SQL, Python, JavaScript, Java and Spring Boot; browser practice reached 100% in both editor modes. Seven localhost signed-runner integration checks and both Alembic revisions on isolated SQLite passed. Provider calls, PostgreSQL and production deployment remain unqualified. See docs/FLOW_AUDIT.md for exact coverage, fixes and limits.
 
 ## Remaining scope
 
-See `docs/IMPLEMENTATION_STATUS.md` and `docs/PRODUCTION_DEPLOYMENT.md` for the current list. The requested feature paths are implemented in source and await the owner's manual runtime check. AI and the remote runner need their external configuration; Docker is required for local code execution. Independent publication review and production provisioning/qualification remain future release tasks. Do not treat source syntax inspection as functional proof.
+See `docs/IMPLEMENTATION_STATUS.md` and `docs/PRODUCTION_DEPLOYMENT.md` for the current list. Core candidate journeys have been exercised locally; this does not establish exhaustive or production qualification. AI and the remote runner need their external configuration; Docker is required for local code execution. Independent publication review and production provisioning/qualification remain future release tasks. Do not treat source syntax inspection as functional proof.
 
 ## Local setup
 

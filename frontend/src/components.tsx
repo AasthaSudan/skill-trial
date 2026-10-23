@@ -15,7 +15,7 @@ export function useAction() {
   const notify = useContext(ToastContext); const [busy, setBusy] = useState(false);
   return { busy, notify, act: async <T,>(fn: () => Promise<T>, message?: string): Promise<T | undefined> => { setBusy(true); try { const value = await fn(); if (message) notify(message); return value; } catch (e) { notify(e instanceof Error ? e.message : 'Please try again.', true); return undefined; } finally { setBusy(false); } } };
 }
-export function Brand({ small = false }: { small?: boolean }) { return <Link to="/" className="brand" aria-label="SkillTrial home"><span className="brand-mark"><Sparkles size={small ? 18 : 22} strokeWidth={1.8} /></span><span>Skill<span className="brand-light">Trial</span><sup>✦</sup></span></Link>; }
+export function Brand({ small = false }: { small?: boolean }) { return <Link to="/" className="brand" aria-label="SkillTrial home"><span className="brand-mark"><ShieldCheck size={small ? 20 : 24} strokeWidth={2} /></span><span>Skill<span className="brand-light">Trial</span></span></Link>; }
 export function Status({ status }: { status?: string }) {
   const map: Record<string, any> = { verified: [ShieldCheck, 'Verified'], partially_verified: [CircleDashed, 'Partially Verified'], not_verified: [CircleX, 'Not Verified'], insufficient_evidence: [CircleHelp, 'Insufficient Evidence'], practice: [Code2, 'Practice'] };
   const [Icon, label] = map[status || ''] || [CircleDashed, 'Not assessed'];

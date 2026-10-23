@@ -79,10 +79,11 @@ def complete(db,a):
                 if related:pathitems.append({'id':name+':practice','type':'practice','competency':name,'title':related[0].content['title'],'challenge_id':related[0].id,'status':'available'})
             db.add(Path(user_id=u.id,attempt_id=a.id,skill=a.skill,items=pathitems))
     else:
-        for path in db.scalars(select(Path).where(Path.user_id==u.id,Path.skill==a.skill)):
+        for path in db.scalars(select(Path).where(Path.user_id==u.id,Path.skill==a.skill,Path.archived==False)):
             changed=copy.deepcopy(path.items)
-            for p in changed:
-                if p.get('challenge_id')==items[0].challenge_id and result['overall'] is not None and result['overall']>=.6:p['status']='completed'
+            for position,p in enumerate(changed):
+                unlocked=all(previous.get('status')=='completed' for previous in changed[:position])
+                if unlocked and p.get('challenge_id')==items[0].challenge_id and result['overall'] is not None and result['overall']>=.6:p['status']='completed'
             path.items=changed
     audit(db,None,'attempt.completed',a.id)
 

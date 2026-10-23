@@ -88,11 +88,11 @@ npm.cmd run build
 npm.cmd audit
 ```
 
-There are 21 workflow/integrity tests, five real Docker tests, and three frontend transport tests. Backend tests use an isolated temporary database and do not modify local account data.
+The latest local audit passed 51 backend tests (including five real Docker tests), three frontend transport tests, and the production frontend build. Backend tests use isolated temporary databases. See [flow audit](docs/FLOW_AUDIT.md) and [hackathon guide](docs/HACKATHON_GUIDE.md) for live rehearsal results and demo steps.
 
 ## Boundaries and data
 
-The requested candidate/admin feature paths are implemented in source, with **local feature use** as the current priority. Restart the API to apply local resource/badge schema additions and enable the marked development content preview. Optional AI needs provider configuration; code execution needs Docker or the remote runner. Tests, builds, and browser checks were skipped at the owner's request, so the latest changes are not runtime-qualified. Production hardening/deployment and independent publication review are future release work. Recruiter accounts/search and full Spring project execution are outside the current implementation; Spring Boot uses scenario assessments. See [implementation status](docs/IMPLEMENTATION_STATUS.md) and the [production runbook](docs/PRODUCTION_DEPLOYMENT.md) for exact boundaries.
+The requested candidate/admin feature paths are implemented in source, with **local feature use** as the current priority. Restart the API to apply local resource/badge schema additions and enable the marked development content preview. Optional AI needs provider configuration; code execution needs Docker or the remote runner. The 2026-10-23 local audit exercised the core candidate journeys, actual grading across all five supported assessment skills, and browser practice in both editor modes. The local test suite and frontend build passed; see the flow audit for exact coverage and limits. Production hardening/deployment and independent publication review are future release work. Recruiter accounts/search and full Spring project execution are outside the current implementation; Spring Boot uses scenario assessments. See [implementation status](docs/IMPLEMENTATION_STATUS.md) and the [production runbook](docs/PRODUCTION_DEPLOYMENT.md) for exact boundaries.
 
 Runtime data is ignored under `var/`. Keep its `encryption.key` with database/file backups; losing it makes encrypted resumes unreadable. Never commit runtime databases, keys, mail, or assessment submissions.
 

@@ -93,7 +93,7 @@ def seed(db):
             if existing and digest(existing.content)==digest(version_content):
                 if existing.reviewer=='development-preview' and not preview:
                     existing.status='published' if approved and report.get('executed') else 'draft';existing.reviewer=None;existing.validation=report
-                elif preview and existing.author=='system' and existing.status=='draft':
+                elif preview and existing.author in ['system','seed'] and existing.status=='draft':
                     existing.status='published';existing.reviewer='development-preview';existing.validation=report
                 continue
             if existing:existing.status='unpublished'
