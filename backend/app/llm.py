@@ -1,12 +1,13 @@
-"""Optional, bounded Anthropic Messages API calls with deterministic fallbacks."""
+"""Optional, bounded Anthropic/Gemini calls with deterministic fallbacks."""
 import json
 import math
 import re
 import unicodedata
 import urllib.error
 import urllib.request
+from urllib.parse import quote
 
-from .config import LLM_API_BASE_URL,LLM_API_KEY,LLM_MODEL,LLM_READY
+from .config import LLM_API_BASE_URL,LLM_API_KEY,LLM_MODEL,LLM_READY,LLM_PROVIDER
 from .catalog import SKILLS
 
 class LLMUnavailable(RuntimeError):
@@ -25,6 +26,7 @@ def _redact(text,names=()):
         r'(?i)(?:password|passwd|api[_ -]?key|secret|token)\s*[:=]\s*[^\s,;]+',
         r'(?i)\b(?:postgres(?:ql)?|mysql|redis)://[^:\s/@]+:[^@\s]+@[^/\s]+',
         r'\bAKIA[0-9A-Z]{16}\b',
+        r'\bAIza[0-9A-Za-z_-]{35}\b',
         r'\b(?:gh[pousr]_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|sk-(?:ant|proj)?[A-Za-z0-9_-]{20,})\b',
         r'(?i)\bBearer\s+[A-Za-z0-9._~+/-]+=*',
     ]
@@ -40,19 +42,38 @@ def _normalized(text):
 
 def _json_response(system,prompt,max_tokens=900):
     if not LLM_READY:raise LLMUnavailable('Optional AI is not configured.')
-    body=json.dumps({'model':LLM_MODEL,'max_tokens':max_tokens,'temperature':0,'system':system,'messages':[{'role':'user','content':prompt}]}).encode()
-    request=urllib.request.Request(LLM_API_BASE_URL+'/v1/messages',data=body,headers={'content-type':'application/json','anthropic-version':'2023-06-01','x-api-key':LLM_API_KEY},method='POST')
+    if LLM_PROVIDER=='gemini':
+        model=LLM_MODEL.removeprefix('models/')
+        body=json.dumps({'systemInstruction':{'parts':[{'text':system}]},'contents':[{'role':'user','parts':[{'text':prompt}]}],'generationConfig':{'maxOutputTokens':max_tokens,'responseMimeType':'application/json'}}).encode()
+        request=urllib.request.Request(LLM_API_BASE_URL+'/v1beta/models/'+quote(model,safe='')+':generateContent',data=body,headers={'content-type':'application/json','x-goog-api-key':LLM_API_KEY},method='POST')
+    elif LLM_PROVIDER=='anthropic':
+        body=json.dumps({'model':LLM_MODEL,'max_tokens':max_tokens,'system':system,'messages':[{'role':'user','content':prompt}]}).encode()
+        request=urllib.request.Request(LLM_API_BASE_URL+'/v1/messages',data=body,headers={'content-type':'application/json','anthropic-version':'2023-06-01','x-api-key':LLM_API_KEY},method='POST')
+    else:raise LLMUnavailable('Unsupported AI provider.')
     try:
         with urllib.request.urlopen(request,timeout=12) as response:
-            raw=response.read(256000)
+            raw=response.read(256001)
+        if len(raw)>256000:raise ValueError('AI response exceeds the size limit')
         payload=json.loads(raw)
-        text=''.join(item.get('text','') for item in payload.get('content',[]) if item.get('type')=='text')
+        if not isinstance(payload,dict):raise ValueError('Invalid provider response')
+        if LLM_PROVIDER=='gemini':
+            candidates=payload.get('candidates')
+            if not isinstance(candidates,list) or not candidates or not isinstance(candidates[0],dict):raise ValueError('No model answer was returned')
+            candidate=candidates[0]
+            if candidate.get('finishReason')!='STOP':raise ValueError('Model answer was blocked or incomplete')
+            content=candidate.get('content')
+            if not isinstance(content,dict) or not isinstance(content.get('parts'),list):raise ValueError('No answer parts were returned')
+            text=''.join(part['text'] for part in content['parts'] if isinstance(part,dict) and isinstance(part.get('text'),str) and not part.get('thought',False))
+        else:
+            content=payload.get('content')
+            if not isinstance(content,list):raise ValueError('No answer content was returned')
+            text=''.join(item['text'] for item in content if isinstance(item,dict) and item.get('type')=='text' and isinstance(item.get('text'),str))
         start=text.find('{')
         if start<0:raise ValueError('No JSON object was returned')
         result,_=json.JSONDecoder().raw_decode(text[start:])
         if not isinstance(result,dict):raise ValueError('Response is not a JSON object')
         return result
-    except (urllib.error.URLError,TimeoutError,OSError,ValueError,KeyError,TypeError,json.JSONDecodeError) as error:
+    except (urllib.error.URLError,TimeoutError,OSError,ValueError,KeyError,TypeError) as error:
         raise LLMUnavailable(type(error).__name__) from error
 
 def extract_claims(text,names=()):

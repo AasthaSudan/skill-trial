@@ -25,7 +25,7 @@ from pydantic import BaseModel,Field,ConfigDict
 from sqlalchemy import select,func,delete,update
 from sqlalchemy.exc import IntegrityError
 
-from .config import VAR,ENV,COOKIE_SECURE,COOLDOWN_H,GRACE,ROOT,RUN_BACKGROUND_WORKER,LLM_READY,LLM_MODEL
+from .config import VAR,ENV,COOKIE_SECURE,COOLDOWN_H,GRACE,ROOT,RUN_BACKGROUND_WORKER,LLM_READY,LLM_MODEL,LLM_PROVIDER
 from .db import Base,engine,tx,now,uid
 from .models import User,AuthSession,Token,Resume,Claim,Challenge,Attempt,Item,Job,XP,Activity,Path,Quest,Audit,Idempotency,Celebration,InboxNotification,OrbitProgress,Notice,ReportShare,ReportShareItem,ShareAccess,AppSetting,LeagueMember,LearningResource,BadgeDefinition,BadgeAward
 from .security import HASHER,DUMMY,CRYPT,auth,owned,hashed,fail,rate,password_ok,issue_token,audit
@@ -1052,7 +1052,7 @@ def admin_ai_challenge_proposal(body:dict,request:Request):
 def admin_ai_status(request:Request):
     with tx() as db:
         auth(db,request,'content.manage')
-        return {'configured':LLM_READY,'enabled':bool(LLM_READY and setting_value(db,'llm_enabled',False)),'model':LLM_MODEL if LLM_READY else None,'types_by_skill':PROPOSAL_TYPES}
+        return {'provider':LLM_PROVIDER,'configured':LLM_READY,'enabled':bool(LLM_READY and setting_value(db,'llm_enabled',False)),'model':LLM_MODEL if LLM_READY else None,'types_by_skill':PROPOSAL_TYPES}
 
 def valid_proposal_shape(content):
     if content.get('level') not in LEVELS or not isinstance(content.get('family'),str) or not 3<=len(content['family'])<=100:return False
@@ -1172,7 +1172,7 @@ def admin_settings_update(body:dict,request:Request):
             else:db.add(AppSetting(key=key,value={'value':value},updated_by=u.id))
         audit(db,u,'admin.settings_updated',','.join(body));return admin_settings_snapshot(db)
 
-def admin_settings_snapshot(db):return {'registration_open':setting_value(db,'registration_open',True),'reassess_cooldown_hours':setting_value(db,'reassess_cooldown_hours',COOLDOWN_H),'llm_configured':LLM_READY,'llm_enabled':bool(LLM_READY and setting_value(db,'llm_enabled',False)),'llm_model':LLM_MODEL if LLM_READY else None}
+def admin_settings_snapshot(db):return {'registration_open':setting_value(db,'registration_open',True),'reassess_cooldown_hours':setting_value(db,'reassess_cooldown_hours',COOLDOWN_H),'llm_provider':LLM_PROVIDER,'llm_configured':LLM_READY,'llm_enabled':bool(LLM_READY and setting_value(db,'llm_enabled',False)),'llm_model':LLM_MODEL if LLM_READY else None}
 
 # The built SPA can be served by the API for a single-process local installation.
 dist=ROOT/'frontend'/'dist'

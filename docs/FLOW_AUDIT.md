@@ -68,3 +68,7 @@ npm --prefix frontend run build
 ```
 
 Backend tests use isolated databases. Live rehearsal checks intentionally created synthetic QA records in the local app.
+
+## Gemini continuation
+
+Added native Gemini generateContent support while retaining Anthropic. The full backend suite now passes **71 tests**, including 20 provider cases. A synthetic Google API request passed with the owner's locally stored key. Tests cover request/auth formatting, structured output, ignored thought parts, blocked/incomplete/malformed/oversized responses, quota/auth/timeouts, supported configuration, quote validation and redaction, and deterministic fallback. No personal resume data was used in the live check. See GEMINI_SETUP.md for activation and SCREENWISE_PITCH.md for the complete presentation script. Historical audit statements above describe the earlier pre-Gemini rehearsal.

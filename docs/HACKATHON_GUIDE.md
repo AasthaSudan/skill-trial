@@ -83,7 +83,7 @@ The UI sends a multipart file upload. The backend reads PDF, DOCX or TXT, extrac
 
 The uploaded bytes are encrypted at rest. Evidence snippets and extraction confidence support review; confidence does not measure proficiency.
 
-Default extraction is deterministic. Optional Anthropic suggestions require configuration and consent; they also remain pending review.
+Default extraction is deterministic. Optional Gemini/Anthropic suggestions require configuration and consent; they also remain pending review.
 
 `backend/app/parsing.py`
 `backend/app/main.py · /resumes`
@@ -241,7 +241,7 @@ Report links can be revoked immediately. A PDF already downloaded by someone is 
 
 ## 16 · Optional AI and the remote runner
 
-Anthropic integration can suggest resume claims, assess an optional scenario explanation, or propose admin challenge content. It needs provider configuration, an administrator switch and the applicable candidate consent.
+Gemini or Anthropic integration can suggest resume claims, assess an optional scenario explanation, or propose admin challenge content. It needs provider configuration, an administrator switch and the applicable candidate consent.
 
 Explanations are capped at 20% of the scenario score and require supporting quotes; deterministic grading is retained when the provider is unavailable. Candidate code and hidden tests are not sent to the AI provider.
 
@@ -271,7 +271,7 @@ Run the backend pytest suite, frontend Vitest suite and frontend build before de
 
 ## 18 · Honest answers for judges
 
-**Is this just an AI wrapper?** No. Core grading is deterministic execution/rubrics. Optional AI is off in the local demo.
+**Is this just an AI wrapper?** No. Core grading is deterministic execution/rubrics. Gemini is configured locally and a synthetic live call passed. Candidate feature use requires explicit consent.
 
 **Is the data hardcoded?** Challenge content and policies are curated inputs. User claims, work, results and progress are stored and computed. Role recommendations currently use explicit role-to-skill mappings.
 
@@ -311,7 +311,7 @@ npm --prefix frontend run dev
 
 Open [the live app](http://127.0.0.1:5173/) and [the API schema](http://127.0.0.1:8000/docs). In the current session these services are already running. Do not start another copy on the same ports.
 
-For verification links locally, use **Settings → Security → Development inbox**. SMTP and AI provider integrations are not configured in this demo. Do not describe them as live cloud integrations.
+For verification links locally, use **Settings → Security → Development inbox**. SMTP remains unconfigured. Gemini is configured locally and a synthetic live check passed. Candidate AI feature use still requires consent.
 
 ## What was actually checked
 

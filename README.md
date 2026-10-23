@@ -50,7 +50,7 @@ The original starter pack has 22 formal definitions and 22 practice variants wit
 6. Follow Learning paths, complete a guide and quick check, start practice, and inspect XP history.
 7. Formal reassessment has a 24-hour cooldown, waived for infrastructure incidents. History preserves all attempts and compares two completed formal results.
 
-Set `PUBLIC_APP_URL` to the browser origin for verification/reset/share links. Set `SMTP_HOST`, `SMTP_PORT`, `SMTP_FROM`, and, when needed, `SMTP_USER`/`SMTP_PASSWORD`. STARTTLS is enabled by default; use `SMTP_SSL=true` for implicit TLS. The development inbox is not a production mail service. Optional Anthropic AI features are off by default and require server configuration, an administrator switch, and relevant candidate consent. Resume text is contact-redacted; AI claims remain pending review. Short written explanations can be submitted for feedback only with per-Trial consent; their score share is capped at 20%. Code, hidden tests, and deterministic grading stay local.
+Set `PUBLIC_APP_URL` to the browser origin for verification/reset/share links. Set `SMTP_HOST`, `SMTP_PORT`, `SMTP_FROM`, and, when needed, `SMTP_USER`/`SMTP_PASSWORD`. STARTTLS is enabled by default; use `SMTP_SSL=true` for implicit TLS. The development inbox is not a production mail service. Optional Gemini/Anthropic AI features are off by default and require server configuration, an administrator switch, and relevant candidate consent. Resume text is contact-redacted; AI claims remain pending review. Short written explanations can be submitted for feedback only with per-Trial consent; their score share is capped at 20%. Code, hidden tests, and deterministic grading stay local.
 
 ## Administration and content
 
@@ -88,7 +88,7 @@ npm.cmd run build
 npm.cmd audit
 ```
 
-The latest local audit passed 51 backend tests (including five real Docker tests), three frontend transport tests, and the production frontend build. Backend tests use isolated temporary databases. See [flow audit](docs/FLOW_AUDIT.md) and [hackathon guide](docs/HACKATHON_GUIDE.md) for live rehearsal results and demo steps.
+The latest local audit passed 71 backend tests (including five real Docker tests), three frontend transport tests, and the production frontend build. Backend tests use isolated temporary databases. See [flow audit](docs/FLOW_AUDIT.md) and [hackathon guide](docs/HACKATHON_GUIDE.md) for live rehearsal results and demo steps.
 
 ## Boundaries and data
 
@@ -97,3 +97,7 @@ The requested candidate/admin feature paths are implemented in source, with **lo
 Runtime data is ignored under `var/`. Keep its `encryption.key` with database/file backups; losing it makes encrypted resumes unreadable. Never commit runtime databases, keys, mail, or assessment submissions.
 
 References: [context](PROJECT_CONTEXT.md), [original specification](docs/SkillTrial_Product_Spec.md), [LLD](docs/SkillTrial_Implementation_Plan_LLD.md), and [archived recruiter design](docs/archive/SkillTrial_LLD_v1.1_with_recruiter_side.md).
+
+## Gemini and presentation guide
+
+See [Gemini setup](docs/GEMINI_SETUP.md) for the root `.env` fields and consent controls, and [screen-by-screen pitch](docs/SCREENWISE_PITCH.md) for the presentation script and architecture. The latest suite has 71 passing backend cases, including 20 provider regression cases. A synthetic live Gemini API check passed.
